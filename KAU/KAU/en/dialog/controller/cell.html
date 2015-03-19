@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="my-cell">
+			<a href ng-click="onCellClick({row:row, col:col})">
+				<h3 class="my-cell-title">
+					<span class="glyphicon glyphicon-arrow-up" aria-hidden="true" ng-show="arrow=='up'"></span>
+					<span class="glyphicon glyphicon-arrow-down" aria-hidden="true" ng-show="arrow=='down'"></span>
+					&nbsp;{{title}}
+				</h3>
+				<h4 class="my-cell-subtitle">
+					{{subtitle1}} <br />
+					<span ng-bind="subtitle2"></span>
+				</h4>
+				<p ng-show="description">{{description}}</p>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,995 @@
+					<div class="row">
+						<div class="col-xs-4">&nbsp;</div>
+						<div class="col-xs-2">
+							<center>
+								<b>Freshmen</b>
+							</center>
+						</div>
+						<div class="col-xs-2">
+							<center>
+								<b>Graduated</b>
+							</center>
+						</div>
+						<div class="col-xs-2">
+							<center>
+								<b>Enrolled</b>
+							</center>
+						</div>
+						<div class="col-xs-2">
+							<center>
+								<b>Aboard</b>
+							</center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">&nbsp;</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<label class="checkbox">M</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">F</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">T</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<label class="checkbox">M</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">F</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">T</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<label class="checkbox">M</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">F</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">T</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<label class="checkbox">M</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">F</label>
+								</div>
+								<div class="col-xs-4">
+									<label class="checkbox">T</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Gender</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.gender.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-12"><b>Nationality</b></div>						
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Saudi</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.saudi.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Non-Saudi</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.nonSaudi.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-12"><b>Degree</b></div>						
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Bachelore</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.bachelore.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Diploma</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.diploma.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Higher Diploma</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.higherDiploma.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-4">MAster</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.master.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">PhD</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.phd.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12"><b>Field</b></div>						
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Education</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.education.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="row">
+						<div class="col-xs-4">Humanities and Arts</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.humanities.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-4">Social Sciences, Business and Law</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.business.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Science</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.science.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4">Engineering, Manufacturing Industries and Construction</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.engieering.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-4">Agriculture</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.agriculture.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-4">Health and Social Services</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.health.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-4">Not known programmes</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.freshmen.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.freshmen.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.freshmen.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.graduated.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.graduated.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.graduated.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.enrolled.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.enrolled.female">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.enrolled.total">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.aboard.male">
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" ng-model="filter.notKnown.aboard.male">
+								</div>
+							</div>
+						</div>
+					</div>

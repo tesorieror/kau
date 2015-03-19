@@ -1,0 +1,40 @@
+<span ng-controller="MainCtrl">
+	<div class="row">
+		<div class="col-xs-12">
+			<div ng-controller="MainCarouselCtrl">
+				<!-- <div style="height: 443px">  -->
+				<div style="height: 443px">
+					<carousel disable-ng-animate interval="myInterval"> <slide ng-repeat="slide in slides" active="slide.active" style="background-color:white;"> <img ng-src="{{slide.image}}" style="margin: auto;">
+					<div class="carousel-caption" style="background-color: rgba(128, 128, 128, 0.5);">
+						<h4>{{slide.title}}</h4>
+						<p>{{slide.text}}</p>
+					</div>
+					</slide> </carousel>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="main-header-panel">
+				<h2>KAU Observatory Unit for Academic Standards and Excellence</h2>
+				<p>The University Higher Education Standards have been highly publicized in recent years, for this we are proposing the to monitor this standard area within the framework of the KAU operating environment analysis.</p>
+			</div>
+		</div>
+	</div>
+	<div class=" row highlights" ng-controller="MainHighlightsCtrl">
+		<div class="col-xs-4">
+			<r-highlight data="highlights[0]"></r-highlight>
+		</div>
+		<div class="col-xs-4">
+			<r-highlight data="highlights[1]"></r-highlight>
+		</div>
+		<div class="col-xs-4">
+			<r-highlight data="highlights[2]"></r-highlight>
+		</div>
+	</div>
+	<div class=" row highlights">
+		<div class="col-xs-12" style="height: 20px">&nbsp;</div>
+	</div>
+
+</span>

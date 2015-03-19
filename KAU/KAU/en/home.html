@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Observatory</title>
+
+
+<!-- Fonts  -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+<!-- ONLINE -->
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!-- AngularJS -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+
+<!-- ngAnimate 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-animate.js" type="text/javascript"></script>
+-->
+<!-- Google Charts -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<!-- Angular JS Google Charts -->
+<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+
+<!-- UI Bootstrap -->
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+
+<!-- OFFLINE -->
+
+<!-- JQuery  
+<script src="../jquery-1.11.2/jquery-1.11.2.min.js"></script> -->
+
+<!-- Bootstrap 
+<link href="../bootstrap-3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../bootstrap-3.3.2/css/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="../bootstrap-3.3.2/js/bootstrap.min.js"></script>-->
+
+<!-- Angular JS 
+<script src="../angular-1.3.9/angular.min.js"></script>-->
+
+<!-- UI Bootstrap -->
+<link href="../ui-bootstrap/ui-bootstrap-tpls-0.12.0.min.css" rel="stylesheet" />
+<!-- 
+<script src="../ui-bootstrap/ui-bootstrap-tpls-0.12.0.min.js" type="text/javascript"></script>
+ -->
+<!-- Angular JS Google Charts 
+<script type="text/javascript" src="../angular-google-chart-0.0.11/ng-google-chart.js"></script>
+-->
+
+<!-- MyApp  -->
+<link href="./bootstrap-custom.css" rel="stylesheet" />
+
+<script type="text/javascript" src="./controller/myApp.js"></script>
+<script type="text/javascript" src="./controller/freshmen.js"></script>
+<script type="text/javascript" src="./controller/dropdown.js"></script>
+<script type="text/javascript" src="./controller/pie.js"></script>
+
+
+<script type="text/javascript" src="./controller/detailModalDialog.js"></script>
+<script type="text/javascript" src="./controller/mainPageCarousel.js"></script>
+<script type="text/javascript" src="./controller/grid.js"></script>
+<script type="text/javascript" src="./controller/cell.js"></script>
+<script type="text/javascript" src="./controller/matrix.js"></script>
+<script type="text/javascript" src="./controller/data.js"></script>
+<script type="text/javascript" src="./controller/highlightModalDialog.js"></script>
+
+</head>
+<!-- 
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color:red;">
+	<!-- Save for Web Slices (css.psd) -->
+
+
+<body ng-app="myApp" style="padding-top: 50px">
+	<!-- style="padding-right: 0px; padding-left: 0px; -->
+	<a name="home"></a>
+	<!--  -->
+
+
+
+
+	<div class="container-fluid">
+
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">KAU Observatory</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<!-- 
+						<li class="active">
+							<a href="#">
+								Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						 -->
+						 <!-- 
+						 
+						<li>
+							<a href="#highlights">Highlights</a>
+						</li> 
+						<li>
+							<a href="#freshmen">Freshmen</a>
+						</li>
+						<li>
+							<a href="#data">Data</a>
+						</li>
+ -->
+						
+						
+						<!-- 
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+								Data
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">Data Analysis</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>  -->
+					</ul>
+					<!-- 
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+								Dropdown
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul> -->
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+
+
+
+		<!--
+		<nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#home"> Home </a>
+					</li>
+					<li>
+						<a href="#highlights">Highlights</a>
+					</li>
+					<li>
+						<a href="#freshmen">Freshmen</a>
+					</li>
+					<li>
+						<a href="#data">Data</a>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Dropdown
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="#">Action</a>
+							</li>
+							<li>
+								<a href="#">Another action</a>
+							</li>
+							<li>
+								<a href="#">Something else here</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Separated link</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">One more separated link</a>
+							</li> 
+				</ul>
+				</li>
+				</ul>
+			</div>
+		</nav>
+ -->
+
+		<div class="row">
+			<div class="col-xs-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div ng-controller="mainPageCarouselCtrl">
+					<div style="height: 444px">
+						<carousel interval="myInterval"> <slide ng-repeat="slide in slides" active="slide.active" style="background-color:white;"> <img ng-src="{{slide.image}}" style="margin: auto;">
+						<div class="carousel-caption" style="background-color: rgba(128, 128, 128, 0.5);">
+							<h4>{{slide.title}}</h4>
+							<p>{{slide.text}}</p>
+						</div>
+						</slide> </carousel>
+					</div>
+				</div>
+				<!--
+				<img src="./img/branding-2.png" alt="Header" class="custom-img-header" />
+				 
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height: 600px;">
+			
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="./img/branding.png" alt="Image 1" />
+							<div class="carousel-caption" style="background: rgba(0, 100, 0, 0.5); text-align: left;">
+								<h3 style="padding: 0px 10px 0px 10px;">Collaboration with KAU Faculties</h3>
+								<p style="padding: 0px 10px 0px 10px;">Work in close collaboration with KAU Faculties and Departments, by offering opportunities to interchange the academic and research data to use it in the planning of an evaluation process.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./img/branding.png" alt="Image 2" />
+							<div class="carousel-caption" style="background: rgba(0, 100, 0, 0.5); text-align: left;">
+								<h3 style="padding: 0px 10px 0px 10px;">Evaluation results meaningful</h3>
+								<p style="padding: 0px 10px 0px 10px;">Make our evaluation results meaningful and prevent evaluation fatigue by ensuring clear and action-oriented feedback of our findings. KAU will have updated data of its progress during the year.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./img/branding.png" alt="Image 3" />
+							<div class="carousel-caption" style="background: rgba(0, 100, 0, 0.5); text-align: left;">
+								<h3 style="padding: 0px 10px 0px 10px;">The goal of the KAU observatory unit</h3>
+								<p style="padding: 0px 10px 0px 10px;">The goal of the Unit is to improve the quality of KAU higher education and draw the action plans to improve. These action plans are given three times per year, to and not just at the end of year.</p>
+							</div>
+						</div>
+
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<!--  style="margin-top: 20px; padding: 20px; border: 1px solid green;"-->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="custom-header-panel">
+					<p class="custom-header-panel-title">KAU Observatory Unit for Academic Standards and Excellence</p>
+					<p class="custom-header-panel-subtitle">
+						<!--  -->
+						The University Higher Education Standards have been highly publicized in recent years, for this we are proposing the to monitor this standard area within the framework of the KAU operating environment analysis.
+					</p>
+				</div>
+			</div>
+		</div>
+		<a name="highlights"></a>
+		<!-- 
+		<div class="row about-us-panel">
+			<div class="col-xs-12">
+				<h2>ABOUT US</h2>
+				<hr />
+				<div class="row">
+					<div class="col-xs-4">
+						<h3>Title</h3>
+						<p>Paragraph</p>
+					</div>
+					<div class="col-xs-4">
+						<h3>Title</h3>
+						<p>Paragraph</p>
+					</div>
+					<div class="col-xs-4">
+						<h3>Title</h3>
+						<p>Paragraph</p>
+					</div>
+				</div>
+			</div>
+		</div>
+ -->
+
+		<div class="row highlight-panel">
+			<div class="col-xs-12">
+				<h2>HIGHLIGHTS 2013</h2>
+				<hr />
+				<my-grid matrix="matrix" ng-controller="matrixCtrl"></my-grid>
+			</div>
+		</div>
+		<a name="freshmen"></a>
+		<span ng-controller="freshmenCtrl">
+			<div class="row freshmen-panel">
+				<div class="col-xs-12">
+					<h2>FRESHMEN 2013</h2>
+					<hr />
+				</div>
+			</div>
+			<div class="row my-panel freshmen-panel">
+				<div class="col-xs-4">
+					<my-pie chart="charts['nationalityPie']" on-ready="chartReady(chartWrapper)" on-select="nationalitySaudiNonSaudi(selectedItems)" on-title-click="nationalityTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">
+					<my-pie chart="charts['degreePie']" on-ready="chartReady(chartWrapper)" on-select="degreeBacheloreDiploma(selectedItems)" on-title-click="degreeTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">
+					<my-pie chart="charts['genderPie']" on-ready="chartReady(chartWrapper)" on-select="genderMaleFemale(selectedItems)" on-title-click="genderTotal(chart)"></my-pie>
+				</div>
+			</div>
+
+			<div class="row my-panel freshmen-panel">
+				<div class="col-xs-4">
+					<my-pie chart="charts['saudiGenderPie']" on-ready="chartReady(chartWrapper)" on-select="saudiGender(selectedItems)" on-title-click="saudiTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">
+					<my-pie chart="charts['bacheloreGenderPie']" on-ready="chartReady(chartWrapper)" on-select="bacheloreGender(selectedItems)" on-title-click="bacheloreTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">&nbsp;</div>
+			</div>
+
+			<div class="row my-panel freshmen-panel">
+				<div class="col-xs-4">
+					<my-pie chart="charts['nonSaudiGenderPie']" on-ready="chartReady(chartWrapper)" on-select="nonsaudiGender(selectedItems)" on-title-click="nonsaudiTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">
+					<my-pie chart="charts['diplomaGenderPie']" on-ready="chartReady(chartWrapper)" on-select="diplomaGender(selectedItems)" on-title-click="diplomaTotal(chart)"></my-pie>
+				</div>
+				<div class="col-xs-4">&nbsp;</div>
+			</div>
+		</span>
+		
+		<a name="data"></a>
+		
+		<span ng-controller="dataCtrl">
+			<div class="row data-panel">
+				<div class="col-xs-12">
+					<h2>DATA</h2>
+					<hr />
+				</div>
+			</div>
+			<div class="row my-panel data-panel">
+				<div class="col-xs-12">
+
+					<tabset justified="true"> <tab heading="Universities" disabled="true">
+					<h3>Not Available yet</h3>
+					</tab> <tab heading="Campuses" disabled="true">
+					<h3>Not Available yet</h3>
+					</tab> <tab heading="Faculties" disabled="true">
+					<h3>Not Available yet</h3>
+					</tab> <tab heading="Students" active="true">
+					<form class="form-inline">
+
+						<div class="btn-group btn-group-justified">
+							<label class="btn btn-default btn-xs" ng-model="indicator.subcategory" btn-radio="'freshmen'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subcategory == 'freshmen'">Freshmen</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subcategory" btn-radio="'enrolled'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subcategory == 'enrolled'">Enrolled</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subcategory" btn-radio="'graduated'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subcategory == 'graduated'">Graduated</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subcategory" btn-radio="'aboard'" uncheckable ng-change="updateChart()" ng-disabled="true">Aboard</label>
+							<!--  -->
+						</div>
+
+						<div class="btn-group btn-group-justified">
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.displayType" btn-radio="'Table'" uncheckable ng-change="updateChart()" ng-disabled="indicator.displayType=='Table'">Table</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.displayType" btn-radio="'ColumnChart'" uncheckable ng-change="updateChart()" ng-disabled="indicator.displayType=='ColumnChart'">Columns</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.displayType" btn-radio="'LineChart'" uncheckable ng-change="updateChart()" ng-disabled="indicator.displayType=='LineChart'">Lines</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.displayType" btn-radio="'PieChart'" uncheckable ng-change="updateChart()" ng-disabled="indicator.displayType=='PieChart'">Pies</label>
+						</div>
+
+
+						<div class="btn-group btn-group-justified">
+							<!-- From split button -->
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									From &nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li ng-repeat="yr in fromYears">
+										<a href ng-click="fromYearClicked(yr)" ng-show="yr <= toYear">{{yr}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-group" style="text-align: center;">{{fromYear}}</div>
+
+							<!-- From split button -->
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									To &nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li ng-repeat="yr in toYears">
+										<a href ng-click="toYearClicked(yr)" ng-show="yr >= fromYear">{{yr}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-group" style="text-align: center;">{{toYear}}</div>
+						</div>
+
+
+
+						<div class="btn-group btn-group-justified" ng-show="indicator.displayType=='ColumnChart' || indicator.displayType=='LineChart'">
+							<!-- From split button -->
+							<div class="btn-group">
+								<button type="button" class="btn btn-default btn-xs" ng-click="indicator.setFilter('gender','all')">All&nbsp;</button>
+							</div>
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									Nationality&nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href ng-click="indicator.setFilter('nationality','Saudi')">Saudi</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('nationality','Non-Saudi')">Non Saudi</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									Degree&nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href ng-click="indicator.setFilter('degree','Bachelore')">Bachelore</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('degree','Diploma')">Diploma</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('degree','Higher Diploma')">Higher Diploma</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('degree','Master')">Master</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('degree','PhD')">PhD</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									Field&nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href ng-click="indicator.setFilter('field','Education')">Education</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Humanities and Arts')">Humanities and Arts</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Social Sciences, Business and Law')">Social Sciences, Business and Law</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Science')">Science</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Engineering, Manufacturing Industries and Construction')">Eng., Manufac. Ind. and Const.</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Agriculture')">Agriculture</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Health and Social Services')">Health and Social Services</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('field','Not known programmes')">Not known programmes</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-group" dropdown>
+								<button type="button" class="btn btn-default dropdown-toggle btn-xs" dropdown-toggle>
+									Adm. Area&nbsp;
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href ng-click="indicator.setFilter('area','Riyad')">Riyad</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Makkah')">Makkah</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Jazan')">Jazan</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Eastern Province')">Eastern Province</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Asir')">Asir</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Al-Qassim')">Al-Qassim</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Ha\'il')">Ha'il</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Al-Madinah')">Al-Madinah</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Al-Baha')">Al-Baha</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Northern Border')">Northern Border</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Tabuk')">Tabuk</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Najran')">Najran</a>
+									</li>
+									<li>
+										<a href ng-click="indicator.setFilter('area','Al-Jawf')">Al-Jawf</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="btn-group btn-group-justified" ng-show="(indicator.displayType == 'PieChart')">
+							<label class="btn btn-default btn-xs" ng-model="indicator.subsubcategory" btn-radio="'gender'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subsubcategory=='gender'">Gender</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subsubcategory" btn-radio="'nationality'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subsubcategory=='nationality'">Nationality</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subsubcategory" btn-radio="'degree'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subsubcategory=='degree'">Degree</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subsubcategory" btn-radio="'field'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subsubcategory=='field'">Field</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.subsubcategory" btn-radio="'area'" uncheckable ng-change="updateChart()" ng-disabled="indicator.subsubcategory=='area'">Area</label>
+						</div>
+
+
+						<div class="btn-group btn-group-justified" ng-show="(indicator.displayType == 'LineChart' || (indicator.displayType == 'PieChart' && indicator.subsubcategory!='gender')) && indicator.subsubcategory!='area'">
+							<label class="btn btn-default btn-xs" ng-model="indicator.gender" btn-radio="'Male'" uncheckable ng-change="updateChart()" ng-disabled="indicator.gender=='Male'">Male</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.gender" btn-radio="'Female'" uncheckable ng-change="updateChart()" ng-disabled="indicator.gender=='Female'">Female</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.gender" btn-radio="'Both'" uncheckable ng-change="updateChart()" ng-hide="indicator.displayType=='PieChart'" ng-disabled="indicator.gender=='Both'">Both</label>
+							<!--  -->
+							<label class="btn btn-default btn-xs" ng-model="indicator.gender" btn-radio="'Total'" uncheckable ng-change="updateChart()" ng-disabled="indicator.gender=='Total'">Total</label>
+						</div>
+
+
+					</form>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<br />
+							<!-- Table -->
+							<div google-chart chart="tableChart" style="width: 100%; height: 100%;" ng-show="indicator.displayType == 'Table'" on-ready="tableReady(chartWrapper)"></div>
+
+							<!-- Column Chart -->
+							<div google-chart chart="columnChart" style="height: 300px;" ng-show="indicator.displayType=='ColumnChart'"></div>
+
+							<!-- Line Chart -->
+							<div google-chart chart="lineChart" style="height: 300px;" ng-show="indicator.displayType=='LineChart'"></div>
+							<!-- Pie Chart -->
+							<div google-chart chart="pieChart" style="height: 400px;" ng-show="indicator.displayType=='PieChart'"></div>
+						</div>
+					</div>
+					</tab> <tab heading="Education" disabled="true">
+					<h3>Not Available yet</h3>
+					</tab> <tab heading="Q & S" disabled="true">
+					<h3>Not Available yet</h3>
+					</tab> </tabset>
+				</div>
+			</div>
+		</span>
+	</div>
+</body>
+</html>
