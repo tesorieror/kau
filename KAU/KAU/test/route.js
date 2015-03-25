@@ -31,12 +31,12 @@ app.config(function($routeProvider, $locationProvider) {
 	}).when('/Freshmen', {
 		templateUrl : './pages/freshmen.html',
 		controller : 'FreshmenCtrl'
-	}).when('/Description', {
+	}).when('/Description/:category/:subcategory/:subsubcategory/:filter', {
 		templateUrl : './pages/description.html',
 		controller : 'DescriptionCtrl'
 	}).otherwise({
 		redirectTo : '/index.html'
 	});
 	// configure html5 to get links working on jsfiddle
-	$locationProvider.html5Mode(true);
+	//$locationProvider.html5Mode(true);
 });

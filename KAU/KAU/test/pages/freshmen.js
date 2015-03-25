@@ -32,7 +32,7 @@ app.controller('FreshmenCtrl',
 							$log.log('Title click nationalityPie');
 							$scope.indicator.setValuesFromArray([ 'Students', 'Freshmen',
 									'Total' ]);
-							$location.path('/Description');
+							$location.path('/Description/Students/Freshmen/Gender/Total');
 							// $scope.openDialog(indicator);
 						},
 						onSelect : function(selectedItems) {

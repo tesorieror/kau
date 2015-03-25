@@ -16,12 +16,12 @@ function Indicator() {
 	years: [];
 }
 
-Indicator.prototype.setValuesFromArray = function(arr) {
-	this.category = (arr.length > 0) ? arr[0] : this.category;
-	this.subcategory = (arr.length > 1) ? arr[1] : this.subcategory;
-	this.subsubcategory = (arr.length > 2) ? arr[2] : this.subsubcategory;
-	this.filter = (arr.length > 3) ? arr[3] : this.filter;
-	this.years = (arr.length > 4) ? arr[4] : this.years;
+Indicator.prototype.setValuesFromArray = function(arr) {	
+	this.category = ('category' in arr) ? arr['category'] : this.category;
+	this.subcategory = ('subcategory' in arr) ? arr['subcategory'] : this.subcategory;
+	this.subsubcategory = ('subcategory' in arr) ? arr['subsubcategory'] : this.subsubcategory;
+	this.filter = ('filter' in arr) ? arr['filter'] : this.filter;
+	this.years = ('years' in arr) ? arr['years'] : this.years;
 }
 
 Indicator.prototype.getDataFilenames = function() {

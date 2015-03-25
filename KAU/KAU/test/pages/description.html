@@ -13,4 +13,70 @@
 		</div>
 	</div>
 
+	<div class="row">
+		<div class="col-xs-12" ng-show="description.category">
+			<h5>Category</h5>
+			<p>{{description.category}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12" ng-show="description.subcategory">
+			<h5>Subcategory</h5>
+			<p>{{description.subcategory}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12" ng-show="description.definition">
+			<h5>Definition</h5>
+			<p>{{description.definition}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div ng-show="description.objective" class="col-xs-12">
+			<h5>Objective</h5>
+			<p>{{description.objective}}</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<h5>Time Series</h5>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="toYear">Chart:&nbsp;&nbsp;</label> <select
+						class="form-control" ng-model="displayType" id="displayType"
+						ng-change="updateData()">
+						<option ng-repeat="t in displayTypes">{{t}}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="fromYear">From:&nbsp;&nbsp;</label> <select
+						class="form-control" ng-model="fromYear" id="fromYear"
+						ng-change="updateData()">
+						<option ng-repeat="yr in fromYears">{{yr}}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="toYear">To:&nbsp;&nbsp;</label> <select
+						class="form-control" ng-model="toYear" id="toYear"
+						ng-change="updateData()">
+						<option ng-repeat="yr in toYears" ng-show="fromYear<=yr">{{yr}}</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<br />
+			<div google-chart chart="chartObject"
+				style="height: 400px; width: 100%;"></div>
+		</div>
+	</div>
 </span>

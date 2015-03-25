@@ -2,7 +2,7 @@ app.directive('rHighlight', function() {
 	return {
 		restrict : 'E',
 		templateUrl : 'directives/r-highlight.html',
-		controller : 'HighlightCtrl',
+		controller : 'RHighlightCtrl',
 		scope : {
 			data : '='
 		},
