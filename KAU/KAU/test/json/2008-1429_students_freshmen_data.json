@@ -1,7 +1,9 @@
 {
-	"Male" : 131893,
-	"Female" : 123728,
-	"Total" : 255621,
+	"Gender":{
+		"Male" : 131893,
+		"Female" : 123728,
+		"Total" : 255621
+	},
 	"Saudi" : {
 		"Male" : 127638,
 		"Female" : 121385,

@@ -168,6 +168,11 @@ div.freshmen h5:hover {
 	line-height: 0.5;
 }
 
+div.freshmen div {
+	display: block;
+	margin: 0 auto;
+}
+
 /**
 * Description panel
 */
@@ -180,11 +185,97 @@ div.description h2 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* About Unit
+*/
+div.about-unit {
+	
+}
+
+div.about-unit h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
 	color: black;
 	text-align: center;
 }
 
+div.about-unit h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
 
+div.about-unit p {
+	font-family: 'Arimo', sans-serif;
+	font-style: normal;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 10px;
+}
 
+/**
+* Goal of the Unit
+*/
+div.goal-unit {
+	
+}
+
+div.goal-unit h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.goal-unit h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.goal-unit p {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 10px;
+}
+
+/**
+* Data Table
+*/
+div.data-table {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*background-color: #FFC386;*/
+}
+
+div.data-table h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}

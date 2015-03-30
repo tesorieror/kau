@@ -29,14 +29,15 @@ app.controller('FreshmenCtrl',
 						},
 						title : 'Student Nationality',
 						onTitleClick : function() {
-							$log.log('Title click nationalityPie');
-							$scope.indicator.setValuesFromArray([ 'Students', 'Freshmen',
-									'Total' ]);
 							$location.path('/Description/Students/Freshmen/Gender/Total');
-							// $scope.openDialog(indicator);
 						},
 						onSelect : function(selectedItems) {
-							$log.log('Select nationalityPie', selectedItems);
+							if (selectedItems[0].row == 0) {
+								$location
+										.path('/Description/Students/Freshmen/Non-Saudi/Total');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Saudi/Total');
+							}
 						},
 						titleTooltip : 'Student Total',
 						subtitleTooltip : 0 + ' (100 %)',
@@ -59,10 +60,15 @@ app.controller('FreshmenCtrl',
 						},
 						title : 'Student Degree',
 						onTitleClick : function() {
-							$log.log('Title click degreePie');
+							$location.path('/Description/Students/Freshmen/Gender/Total');
 						},
 						onSelect : function(selectedItems) {
-							$log.log('Select degreePie', selectedItems);
+							if (selectedItems[0].row == 0) {
+								$location
+										.path('/Description/Students/Freshmen/Bachelore/Total');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Diploma/Total');
+							}
 						},
 						titleTooltip : 'Student Total',
 						subtitleTooltip : 0 + ' (100 %)',
@@ -75,6 +81,16 @@ app.controller('FreshmenCtrl',
 					data : [ [ 'Gender', 'Students' ], [ 'Male', 0 ], [ 'Female', 0 ] ],
 					options : merge(createDefaultOptions(), {
 						title : 'Student Gender',
+						onTitleClick : function() {
+							$location.path('/Description/Students/Freshmen/Gender/Total');
+						},
+						onSelect : function(selectedItems) {
+							if (selectedItems[0].row == 0) {
+								$location.path('/Description/Students/Freshmen/Gender/Male');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Gender/Female');
+							}
+						},
 						titleTooltip : 'Student Total',
 						subtitleTooltip : 0 + ' (100 %)',
 					}),
@@ -87,6 +103,16 @@ app.controller('FreshmenCtrl',
 							[ 'Female', 0 ] ],
 					options : merge(createDefaultOptions(), {
 						title : 'Saudi Student Gender',
+						onTitleClick : function() {
+							$location.path('/Description/Students/Freshmen/Saudi/Total');
+						},
+						onSelect : function(selectedItems) {
+							if (selectedItems[0].row == 0) {
+								$location.path('/Description/Students/Freshmen/Saudi/Male');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Saudi/Female');
+							}
+						},
 						titleTooltip : 'Saudi Total',
 						subtitleTooltip : 0 + ' (100 %)',
 					}),
@@ -99,6 +125,17 @@ app.controller('FreshmenCtrl',
 							[ 'Female', 0 ] ],
 					options : merge(createDefaultOptions(), {
 						title : 'Non-Saudi Student Gender',
+						onTitleClick : function() {
+							$location.path('/Description/Students/Freshmen/Non-Saudi/Total');
+						},
+						onSelect : function(selectedItems) {
+							if (selectedItems[0].row == 0) {
+								$location.path('/Description/Students/Freshmen/Non-Saudi/Male');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Non-Saudi/Female');
+							}
+						},		
+						
 						titleTooltip : 'Non-Saudi Total',
 						subtitleTooltip : 0 + ' (100 %)',
 					})
@@ -111,6 +148,16 @@ app.controller('FreshmenCtrl',
 							[ 'Female', 0 ] ],
 					options : merge(createDefaultOptions(), {
 						title : 'Bachelore Student Gender',
+						onTitleClick : function() {
+							$location.path('/Description/Students/Freshmen/Bachelore/Total');
+						},
+						onSelect : function(selectedItems) {
+							if (selectedItems[0].row == 0) {
+								$location.path('/Description/Students/Freshmen/Bachelore/Male');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Bachelore/Female');
+							}
+						},
 						titleTooltip : 'Bachelore Total',
 						subtitleTooltip : 0 + ' (100 %)',
 					})
@@ -123,6 +170,16 @@ app.controller('FreshmenCtrl',
 							[ 'Female', 0 ] ],
 					options : merge(createDefaultOptions(), {
 						title : 'Diploma Student Gender',
+						onTitleClick : function() {
+							$location.path('/Description/Students/Freshmen/Diploma/Total');
+						},
+						onSelect : function(selectedItems) {
+							if (selectedItems[0].row == 0) {
+								$location.path('/Description/Students/Freshmen/Diploma/Male');
+							} else if (selectedItems[0].row == 1) {
+								$location.path('/Description/Students/Freshmen/Diploma/Female');
+							}
+						},
 						titleTooltip : 'Diploma Total',
 						subtitleTooltip : 0 + ' (100 %)',
 					})

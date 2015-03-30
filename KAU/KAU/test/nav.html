@@ -3,64 +3,164 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1"
+			>
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">KAU Observatory</a>
+			<a class="navbar-brand" href="#/Main">KAU Observatory</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
+
+
+				<!-- 			
 				<li ng-class="{active: '/Main' == $location.path()}">
 					<a href="#/Main"> Home </a>
 					<span class="sr-only">(current)</span>
 				</li>
+ -->
+
+
+				<li class="dropdown">
+					<a
+						ng-class="{active: '/AboutUnit' == $location.path() || '/GoalOfTheUnit' == $location.path() }"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false"
+					>
+						About Us
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#/AboutUnit">About Unit</a>
+						</li>
+						<li>
+							<a href="#/GoalOfTheUnit">Goal of the Unit</a>
+						</li>
+					</ul>
+				</li>
+				<!-- 
 				<li ng-class="{active: '/Highlights'==$location.path()}">
 					<a href="#/Highlights">Highlights</a>
 				</li>
+			 -->
+				<!-- 
 				<li ng-class="{active: '/Freshmen'==$location.path()}">
 					<a href="#/Freshmen"> Freshmen </a>
 				</li>
 				<li>
 					<a href="#data">Data</a>
 				</li>
-
+ -->
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false"
+					>
 						Data
 						<span class="caret"></span>
 					</a>
-					<ul class="dropdown-menu" role="menu">
-						<li>
-							<a href="#">Data Analysis</a>
+					<ul class="dropdown-menu multi-level" role="menu">
+						<li class="dropdown-submenu">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+								aria-expanded="false"
+							> Universities </a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown-submenu">
+									<a href="#/Data/Students/Freshmen">Freshmen</a>
+									<ul class="dropdown-menu" role="menu">
+										<li>
+											<a href="#">Gender</a>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="#">Nationality</a>
+											<ul class="dropdown-menu" role="menu">
+												<li class="dropdown-submenu">
+													<a href="#">Saudi</a>
+													<ul class="dropdown-menu" role="menu">
+														<li>
+															<a href="#">Male</a>
+														</li>
+														<li>
+															<a href="#">Female</a>
+														</li>
+														<li>
+															<a href="#">Both</a>
+														</li>
+														<li>
+															<a href="#">Total</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Non-Saudi</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Degree</a>
+										</li>
+										<li>
+											<a href="#">Field</a>
+										</li>
+										<li>
+											<a href="#">Admin. Area</a>
+										</li>
+									</ul>
+
+
+								</li>
+								<li>
+									<a href="#/Data/Students/Enrolled">Enrolled</a>
+								</li>
+								<li>
+									<a href="#/Data/Students/Graduated">Graduated</a>
+								</li>
+								<li>
+									<a href="#/Data/Students/Aboard">Aboard</a>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<a href="#">Another action</a>
+							<a href="#">Campuses</a>
 						</li>
 						<li>
-							<a href="#">Something else here</a>
+							<a href="#">Faculties</a>
+						</li>
+						<li>
+							<a href="#">Departments</a>
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="#">Separated link</a>
+							<a href="#">Students</a>
 						</li>
-						<li class="divider"></li>
 						<li>
-							<a href="#">One more separated link</a>
+							<a href="#">Education</a>
+						</li>
+						<li>
+							<a href="#">Quality & Services</a>
 						</li>
 					</ul>
 				</li>
 			</ul>
+
+
+
+
+
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a href="Book/Moby">Moby Book</a>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false"
+					>
 						Dropdown
 						<span class="caret"></span>
 					</a>

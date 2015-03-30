@@ -34,9 +34,18 @@ app.config(function($routeProvider, $locationProvider) {
 	}).when('/Description/:category/:subcategory/:subsubcategory/:filter', {
 		templateUrl : './pages/description.html',
 		controller : 'DescriptionCtrl'
+	}).when('/AboutUnit', {
+		templateUrl : './pages/about-unit.html',
+		controller : 'AboutUnitCtrl'
+	}).when('/GoalOfTheUnit', {
+		templateUrl : './pages/goal-of-the-unit.html',
+		controller : 'GoalOfTheUnitCtrl'
+	}).when('/Data/:category/:subcategory', {
+		templateUrl : './pages/data-table.html',
+		controller : 'DataTableCtrl'
 	}).otherwise({
 		redirectTo : '/index.html'
 	});
 	// configure html5 to get links working on jsfiddle
-	//$locationProvider.html5Mode(true);
+	// $locationProvider.html5Mode(true);
 });
