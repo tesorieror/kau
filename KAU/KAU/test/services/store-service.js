@@ -18,6 +18,12 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		return DATA_JSON + 'years.json';
 	}
 
+	function getDataBarGroupsFilename() {
+		return DATA_JSON + 'data-bar-groups.json';
+	}
+	function getDataBarLegendsFilename() {
+		return DATA_JSON + 'data-bar-legends.json';
+	}
 	return {
 		getYears : function() {
 			var deferred = $q.defer();
@@ -69,6 +75,32 @@ app.factory('dataStoreService', function($http, $q, $log) {
 				deferred.reject(errors);
 			}, function(updates) {
 				deferred.update(updates);
+			});
+			return deferred.promise;
+		},
+
+		getDataBarGroups : function() {
+			var deferred = $q.defer();
+			$http.get(getDataBarGroupsFilename()).then(function(result) {
+				deferred.resolve(result.data);
+			}, function(error) {
+				$log.error(error);
+				deferred.reject(error);
+			}, function(update) {
+				deferred.update(update);
+			});
+			return deferred.promise;
+		},
+
+		getDataBarLegends : function() {
+			var deferred = $q.defer();
+			$http.get(getDataBarLegendsFilename()).then(function(result) {
+				deferred.resolve(result.data);
+			}, function(error) {
+				$log.error(error);
+				deferred.reject(error);
+			}, function(update) {
+				deferred.update(update);
 			});
 			return deferred.promise;
 		},

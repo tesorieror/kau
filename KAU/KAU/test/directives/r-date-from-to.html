@@ -1,5 +1,5 @@
 <form class="form-inline" ng-controller="RDateFromToCtrl">
-	<div class="form-group">
+	<div class="form-group form-group-sm">
 		<label for="fromYear">From&nbsp;</label> <select ng-model="period.fromYear"
 			class="form-control" id="fromYear" ng-change="fromChange()"
 			ng-options="yr for yr in period.years | filterFromYears: period.toYear"
@@ -7,7 +7,7 @@
 		</select>
 	</div>
 
-	<div class="form-group">
+	<div class="form-group form-group-sm">
 		<label for="toYear">&nbsp;to&nbsp;</label> <select ng-model="period.toYear"
 			id="toYear" class="form-control" ng-change="toChange()"
 			ng-options="yr for yr in period.years | filterToYears: period.fromYear"

@@ -5,6 +5,7 @@ function Indicator() {
 	subcategory: null;
 	subsubcategory: null;
 	filter: null;
+	group: null;
 	years: [];
 }
 
@@ -19,6 +20,7 @@ Indicator.prototype.setValuesFromArray = function(arr) {
 	this.subsubcategory = ('subcategory' in arr) ? arr['subsubcategory']
 			: this.subsubcategory;
 	this.filter = ('filter' in arr) ? arr['filter'] : this.filter;
+	this.group = ('group' in arr) ? arr['group'] : this.group;
 	this.years = ('years' in arr) ? arr['years'] : this.years;
 }
 

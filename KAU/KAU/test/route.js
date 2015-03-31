@@ -43,6 +43,9 @@ app.config(function($routeProvider, $locationProvider) {
 	}).when('/Data/:category/:subcategory', {
 		templateUrl : './pages/data-table.html',
 		controller : 'DataTableCtrl'
+	}).when('/Data/:category/:subcategory/:group', {
+		templateUrl : './pages/data-bar.html',
+		controller : 'DataBarCtrl'
 	}).otherwise({
 		redirectTo : '/index.html'
 	});
