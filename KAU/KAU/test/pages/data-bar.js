@@ -5,6 +5,8 @@ app.controller("DataBarCtrl",
 				filter : false,
 				period : false
 			};
+			
+			$scope.radioModel = 'Field';
 
 			$scope.filter = {};
 
