@@ -2,6 +2,11 @@ app
 		.controller(
 				"DataTableCtrl",
 				function($http, $q, $log, $routeParams, $scope, dataStoreService) {
+
+					$scope.accordionStatus = {
+						period : false
+					};
+
 					$scope.indicator = new Indicator();
 					$scope.indicator.setValuesFromArray($routeParams);
 					$scope.period = {};

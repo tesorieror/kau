@@ -1,6 +1,11 @@
 app.controller("DataBarCtrl",
 		function($http, $q, $log, $routeParams, $scope, dataStoreService) {
 
+			$scope.accordionStatus = {
+				filter : false,
+				period : false
+			};
+
 			$scope.filter = {};
 
 			$scope.indicator = new Indicator();
@@ -57,6 +62,7 @@ app.controller("DataBarCtrl",
 						"rows" : rows
 					},
 					"options" : {
+//						'legend' : 'bottom',
 						"width" : "100%",
 						"height" : "400px",
 						"isStacked" : true,
@@ -65,10 +71,10 @@ app.controller("DataBarCtrl",
 						"title" : $scope.indicator.group + " "
 								+ $scope.indicator.subcategory + " students" + " from "
 								+ resultKeys[resultKeys.length - 1] + " to " + resultKeys[0],
-					// chartArea : {
-					// width : "80%",
-					// height : "50%"
-					// },
+//						chartArea : {
+//							width : "100%",
+//							height : "50%"
+//						},
 					}
 				};
 				return model;
