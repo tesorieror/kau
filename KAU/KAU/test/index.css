@@ -298,3 +298,15 @@ div.data-bar h2 {
 	color: black;
 	text-align: center;
 }
+
+/**
+* R Hierarchical Filter Four
+*/
+div.rHierarchicalFilterFour {
+
+}
+
+div.rHierarchicalFilterFour {
+	border: 1px lightgrey SOLID;
+	margin: 5px;	
+}

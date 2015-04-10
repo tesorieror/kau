@@ -1,11 +1,13 @@
 app.controller("DataBarCtrl",
 		function($http, $q, $log, $routeParams, $scope, dataStoreService) {
 
+			$scope.hierarchicalFilter = null;
+
 			$scope.accordionStatus = {
 				filter : false,
 				period : false
 			};
-			
+
 			$scope.radioModel = 'Field';
 
 			$scope.filter = {};
@@ -29,20 +31,20 @@ app.controller("DataBarCtrl",
 									$scope.filter[value] = true;
 								});
 
-						$log.log("Indicator ", $scope.indicator);
+						// $log.log("Indicator ", $scope.indicator);
 
 						$scope.subcategories = $scope.groups[$scope.indicator.group];
 
-						$log.log('Groups ', $scope.groups);
-						$log.log('Legends ', $scope.legends);
-						$log.log('Subcategories ', $scope.subcategories);
+						// $log.log('Groups ', $scope.groups);
+						// $log.log('Legends ', $scope.legends);
+						// $log.log('Subcategories ', $scope.subcategories);
 
 						$scope.updateChart();
 
 					});
 
 			$scope.updateChart = function() {
-				$log.log('Filter ', $scope.filter);
+				// $log.log('Filter ', $scope.filter);
 				$scope.indicator.setPeriod($scope.period);
 				dataStoreService.getData($scope.indicator).then(function(data) {
 					// $log.log("Indicator ", $scope.indicator);
@@ -64,7 +66,7 @@ app.controller("DataBarCtrl",
 						"rows" : rows
 					},
 					"options" : {
-//						'legend' : 'bottom',
+						// 'legend' : 'bottom',
 						"width" : "100%",
 						"height" : "400px",
 						"isStacked" : true,
@@ -73,10 +75,10 @@ app.controller("DataBarCtrl",
 						"title" : $scope.indicator.group + " "
 								+ $scope.indicator.subcategory + " students" + " from "
 								+ resultKeys[resultKeys.length - 1] + " to " + resultKeys[0],
-//						chartArea : {
-//							width : "100%",
-//							height : "50%"
-//						},
+					// chartArea : {
+					// width : "100%",
+					// height : "50%"
+					// },
 					}
 				};
 				return model;
@@ -103,7 +105,7 @@ app.controller("DataBarCtrl",
 						});
 				});
 
-				$log.log("Cols ", cols);
+				// $log.log("Cols ", cols);
 
 				return cols;
 			}
@@ -123,10 +125,10 @@ app.controller("DataBarCtrl",
 							val = val[v];
 						});
 
-						$log.log("Filter  ",
-								$scope.filter[$scope.legends[$scope.indicator.group][key]]);
-						$log.log("K ", key);
-						$log.log("V ", value);
+						// $log.log("Filter ",
+						// $scope.filter[$scope.legends[$scope.indicator.group][key]]);
+						// $log.log("K ", key);
+						// $log.log("V ", value);
 						if ($scope.filter[$scope.legends[$scope.indicator.group][key]])
 							row.push({
 								"v" : val
@@ -138,7 +140,7 @@ app.controller("DataBarCtrl",
 					});
 				}
 
-				$log.log("Rows ", rows);
+				//$log.log("Rows ", rows);
 
 				return rows;
 			}
