@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="script"/>
-	<classpathentry including="**" kind="src" path="KAU"/>
+	<classpathentry excluding="angular-1.3.9/|angular-google-chart-0.0.11/|backup/|bootstrap-3.3.2/|capturas/|jquery-1.11.2/|transcripts/|ui-bootstrap/" including="**" kind="src" path="KAU"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
 	<classpathentry kind="output" path=""/>

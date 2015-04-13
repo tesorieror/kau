@@ -24,7 +24,26 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	function getDataBarLegendsFilename() {
 		return DATA_JSON + 'data-bar-legends.json';
 	}
+	function getDataMetadataFilename() {
+		return DATA_JSON + 'data-metadata.json';
+	}
 	return {
+		
+		getDataMetadata : function() {
+			var deferred = $q.defer();
+			// $log.log(getYearsFilename());
+			$http.get(getDataMetadataFilename()).then(function(result) {
+				deferred.resolve(result.data);
+			}, function(error) {
+				$log.error(error);
+				deferred.reject(error);
+			}, function(update) {
+				deferred.update(update);
+			});
+			return deferred.promise;
+		},
+		
+		
 		getYears : function() {
 			var deferred = $q.defer();
 			// $log.log(getYearsFilename());

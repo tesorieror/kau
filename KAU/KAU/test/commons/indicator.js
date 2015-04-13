@@ -9,6 +9,25 @@ function Indicator() {
 	years: [];
 }
 
+Indicator.prototype.getTitle = function() {
+	var answer = '';
+	answer = answer + (this.filter ? (this.filter + ' ') : '');
+	answer = answer + (this.subsubcategory ? (this.subsubcategory + ' ') : '');
+	answer = answer + (this.group ? (this.group + ' ') : '');
+	answer = answer + (this.subcategory ? (this.subcategory + ' ') : '');
+	answer = answer + (this.category ? (this.category + ' ') : '');
+	return answer.toLowerCase().firstToUpper();
+}
+
+Indicator.prototype.getSubTitle = function() {
+	var answer = '';
+	if (this.years) {
+		answer = answer + ' (' + this.years[this.years.length - 1] + ' to '
+				+ this.years[0] + ')';
+	}
+	return answer.toLowerCase().firstToUpper();
+}
+
 Indicator.prototype.setPeriod = function(p) {
 	this.years = p.getPeriod();
 }
