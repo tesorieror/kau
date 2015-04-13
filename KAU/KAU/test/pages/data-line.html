@@ -1,6 +1,92 @@
 <div class="row data-line">
 	<div class="col-xs-12">
-		<h2>{{indicator.category}}&nbsp;{{indicator.subcategory}}&nbsp;{{indicator.group}}&nbsp;{{indicator.subsubcategory}}</h2>
+		<h2>{{indicator.subcategory}}&nbsp;{{indicator.category}}&nbsp;{{indicator.group}}&nbsp;{{indicator.subsubcategory}}</h2>
 		<hr />
+	</div>
+</div>
+<div class="row data-bar">
+	<div class="col-xs-12">
+		<accordion> <accordion-group is-open="accordionStatus.category">
+		<accordion-heading> Category <i
+			class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.category, 'glyphicon-chevron-right': !accordionStatus.category}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm" ng-repeat="level in levels[0]"
+			style="margin: 0px;"
+		>
+			<label> <input type="radio" ng-model="indicator.category"
+				ng-change="categoryChanged()" value="{{level}}"
+			> {{level}}
+			</label>
+		</div>
+		</accordion-group> <accordion-group is-open="accordionStatus.subcategory"> <accordion-heading>
+		Subcategory <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.subcategory, 'glyphicon-chevron-right': !accordionStatus.subcategory}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm" ng-repeat="level in levels[1]"
+			style="margin: 0px;"
+		>
+			<label> <input type="radio" ng-model="indicator.subcategory" ng-change="subcategoryChanged()"
+				value="{{level}}"
+			> {{level}}
+			</label>
+		</div>
+		</accordion-group> <accordion-group is-open="accordionStatus.group"> <accordion-heading>
+		Group <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.group, 'glyphicon-chevron-right': !accordionStatus.group}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm" ng-repeat="level in levels[2]" ng-change="groupChanged()"
+			style="margin: 0px;"
+		>
+			<label> <input type="radio" ng-model="indicator.group"
+				value="{{level}}"
+			> {{level}}
+			</label>
+		</div>
+		</accordion-group> <accordion-group is-open="accordionStatus.subsubcategory">
+		<accordion-heading> Subsubcategory <i
+			class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.subsubcategory, 'glyphicon-chevron-right': !accordionStatus.subsubcategory}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm" ng-repeat="level in levels[3]"
+			style="margin: 0px;"
+		>
+			<label> <input type="radio" ng-model="indicator.subsubcategory"
+				value="{{level}}"
+			> {{level}}
+			</label>
+		</div>
+		</accordion-group> <accordion-group is-open="accordionStatus.filter"> <accordion-heading>
+		Filter <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.filter, 'glyphicon-chevron-right': !accordionStatus.filter}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm" ng-repeat="level in levels[4]"
+			style="margin: 0px;"
+		>
+			<label> <input type="radio" ng-model="indicatror.filter"
+				value="{{level}}"
+			> {{level}}
+			</label>
+		</div>
+		</accordion-group> <!-- 
+		<accordion-group is-open="accordionStatus.period"> <accordion-heading>
+		Period <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.period, 'glyphicon-chevron-right': !accordionStatus.period}"
+		></i> </accordion-heading> <r-date-from-to period="period" from-change="updateChart()"
+			to-change="updateChart()"
+		></r-date-from-to> </accordion-group> Separate groups <accordion-group is-open="accordionStatus.filter">
+		<accordion-heading> Filter <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.filter, 'glyphicon-chevron-right': !accordionStatus.filter}"
+		></i> </accordion-heading>
+		<div class="form-group form-group-sm"
+			ng-repeat="col in legends[indicator.group]" style="margin: 0px;"
+		>
+			<label> <input type="checkbox" ng-model="filter[col]"
+				ng-change="updateChart()"
+			> {{col}}
+			</label>
+		</div>
+		</accordion-group> 
+		--> </accordion>
 	</div>
 </div>
