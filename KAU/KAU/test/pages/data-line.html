@@ -6,87 +6,76 @@
 </div>
 <div class="row data-bar">
 	<div class="col-xs-12">
-		<accordion> <accordion-group is-open="accordionStatus.category">
-		<accordion-heading> Category <i
+		<accordion> <accordion-group is-open="accordionStatus.category"
+			ng-show="data"
+		> <accordion-heading> Category <i
 			class="pull-right glyphicon"
 			ng-class="{'glyphicon-chevron-down': accordionStatus.category, 'glyphicon-chevron-right': !accordionStatus.category}"
 		></i> </accordion-heading>
-		<div class="form-group form-group-sm" ng-repeat="level in levels[0]"
+		<div class="form-group form-group-sm" ng-repeat="cat in data"
 			style="margin: 0px;"
 		>
-			<label> <input type="radio" ng-model="indicator.category"
-				ng-change="categoryChanged()" value="{{level}}"
-			> {{level}}
+			<label> <input type="radio" ng-model="selected[0]"
+				ng-change="categoryChanged()" ng-value="cat"
+			> {{cat.name}}
 			</label>
 		</div>
-		</accordion-group> <accordion-group is-open="accordionStatus.subcategory"> <accordion-heading>
-		Subcategory <i class="pull-right glyphicon"
+		</accordion-group> <accordion-group is-open="accordionStatus.subcategory"
+			ng-show="selected[0].children.length"
+		> <accordion-heading> Subcategory <i
+			class="pull-right glyphicon"
 			ng-class="{'glyphicon-chevron-down': accordionStatus.subcategory, 'glyphicon-chevron-right': !accordionStatus.subcategory}"
 		></i> </accordion-heading>
-		<div class="form-group form-group-sm" ng-repeat="level in levels[1]"
-			style="margin: 0px;"
+		<div class="form-group form-group-sm"
+			ng-repeat="subcat in selected[0].children" style="margin: 0px;"
 		>
-			<label> <input type="radio" ng-model="indicator.subcategory" ng-change="subcategoryChanged()"
-				value="{{level}}"
-			> {{level}}
+			<label> <input type="radio" ng-model="selected[1]"
+				ng-change="subcategoryChanged()" ng-value="subcat"
+			> {{subcat.name}}
 			</label>
 		</div>
-		</accordion-group> <accordion-group is-open="accordionStatus.group"> <accordion-heading>
-		Group <i class="pull-right glyphicon"
+		</accordion-group> <accordion-group is-open="accordionStatus.group"
+			ng-show="selected[1].children.length"
+		> <accordion-heading> Group <i
+			class="pull-right glyphicon"
 			ng-class="{'glyphicon-chevron-down': accordionStatus.group, 'glyphicon-chevron-right': !accordionStatus.group}"
 		></i> </accordion-heading>
-		<div class="form-group form-group-sm" ng-repeat="level in levels[2]" ng-change="groupChanged()"
-			style="margin: 0px;"
+		<div class="form-group form-group-sm"
+			ng-repeat="group in selected[1].children" style="margin: 0px;"
 		>
-			<label> <input type="radio" ng-model="indicator.group"
-				value="{{level}}"
-			> {{level}}
+			<label> <input type="radio" ng-model="selected[2]"
+				ng-change="groupChanged()" ng-value="group"
+			> {{group.name}}
 			</label>
 		</div>
-		</accordion-group> <accordion-group is-open="accordionStatus.subsubcategory">
-		<accordion-heading> Subsubcategory <i
+		</accordion-group> <accordion-group is-open="accordionStatus.subsubcategory"
+			ng-show="selected[2].children.length"
+		> <accordion-heading> Subsubcategory <i
 			class="pull-right glyphicon"
 			ng-class="{'glyphicon-chevron-down': accordionStatus.subsubcategory, 'glyphicon-chevron-right': !accordionStatus.subsubcategory}"
 		></i> </accordion-heading>
-		<div class="form-group form-group-sm" ng-repeat="level in levels[3]"
-			style="margin: 0px;"
+		<div class="form-group form-group-sm"
+			ng-repeat="subsubcat in selected[2].children" style="margin: 0px;"
 		>
-			<label> <input type="radio" ng-model="indicator.subsubcategory"
-				value="{{level}}"
-			> {{level}}
+			<label> <input type="radio" ng-model="selected[3]"
+				ng-change="subsubcategoryChanged()" ng-value="subsubcat"
+			> {{subsubcat.name}}
 			</label>
 		</div>
-		</accordion-group> <accordion-group is-open="accordionStatus.filter"> <accordion-heading>
-		Filter <i class="pull-right glyphicon"
-			ng-class="{'glyphicon-chevron-down': accordionStatus.filter, 'glyphicon-chevron-right': !accordionStatus.filter}"
-		></i> </accordion-heading>
-		<div class="form-group form-group-sm" ng-repeat="level in levels[4]"
-			style="margin: 0px;"
-		>
-			<label> <input type="radio" ng-model="indicatror.filter"
-				value="{{level}}"
-			> {{level}}
-			</label>
-		</div>
-		</accordion-group> <!-- 
-		<accordion-group is-open="accordionStatus.period"> <accordion-heading>
-		Period <i class="pull-right glyphicon"
-			ng-class="{'glyphicon-chevron-down': accordionStatus.period, 'glyphicon-chevron-right': !accordionStatus.period}"
-		></i> </accordion-heading> <r-date-from-to period="period" from-change="updateChart()"
-			to-change="updateChart()"
-		></r-date-from-to> </accordion-group> Separate groups <accordion-group is-open="accordionStatus.filter">
-		<accordion-heading> Filter <i class="pull-right glyphicon"
+		</accordion-group> <accordion-group is-open="accordionStatus.filter"
+			ng-show="selected[3].children.length"
+		> <accordion-heading> Filter <i
+			class="pull-right glyphicon"
 			ng-class="{'glyphicon-chevron-down': accordionStatus.filter, 'glyphicon-chevron-right': !accordionStatus.filter}"
 		></i> </accordion-heading>
 		<div class="form-group form-group-sm"
-			ng-repeat="col in legends[indicator.group]" style="margin: 0px;"
+			ng-repeat="(index,filter) in selected[3].children" style="margin: 0px;"
 		>
-			<label> <input type="checkbox" ng-model="filter[col]"
-				ng-change="updateChart()"
-			> {{col}}
+			<label> <input type="radio" ng-model="selected[4]"
+				ng-change="filterChanged()" ng-value="filter"
+			> {{filter}}
 			</label>
 		</div>
-		</accordion-group> 
-		--> </accordion>
+		</accordion-group></accordion>
 	</div>
 </div>
