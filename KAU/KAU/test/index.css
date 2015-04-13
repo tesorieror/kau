@@ -310,3 +310,25 @@ div.rHierarchicalFilterFour {
 	border: 1px lightgrey SOLID;
 	margin: 5px;	
 }
+
+
+/**
+* Data Bar
+*/
+div.data-line {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*background-color: #FFC386;*/
+}
+
+div.data-line h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+
