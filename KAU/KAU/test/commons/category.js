@@ -4,7 +4,10 @@ function Category() {
 }
 
 Category.prototype.fromJSON = function(data) {
-	this.name
+//	this.name
+//	this.subcategories
+	
+	
 }
 
 app.controller('TempCtrl', function($scope, $log, $location, dataStoreService) {

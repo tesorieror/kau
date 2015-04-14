@@ -28,7 +28,7 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		return DATA_JSON + 'data-metadata.json';
 	}
 	return {
-		
+
 		getDataMetadata : function() {
 			var deferred = $q.defer();
 			// $log.log(getYearsFilename());
@@ -42,8 +42,7 @@ app.factory('dataStoreService', function($http, $q, $log) {
 			});
 			return deferred.promise;
 		},
-		
-		
+
 		getYears : function() {
 			var deferred = $q.defer();
 			// $log.log(getYearsFilename());
@@ -80,13 +79,16 @@ app.factory('dataStoreService', function($http, $q, $log) {
 				yearCalls.push($http.get(fn));
 			});
 
-			// $log.log('Indicator data filenames ',indicator.getDataFilenames());
-
+			$log.log('Indicator data filenames ', indicator.getDataFilenames());
+			$log.log('yearCalls ', yearCalls);
+			
 			var deferred = $q.defer();
 			$q.all(yearCalls).then(function(results) {
 				var answer = [];
+				$log.log('years ', indicator.years);
+				$log.log('results ', results);
 				angular.forEach(indicator.years, function(yr, i) {
-					answer[yr] = results[i].data
+					answer[yr] = results[i].data;
 				});
 				deferred.resolve(answer);
 			}, function(errors) {

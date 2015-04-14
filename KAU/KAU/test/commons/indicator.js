@@ -10,12 +10,14 @@ function Indicator() {
 }
 
 Indicator.prototype.getTitle = function() {
+	
 	var answer = '';
 	answer = answer + (this.filter ? (this.filter + ' ') : '');
 	answer = answer + (this.subsubcategory ? (this.subsubcategory + ' ') : '');
 	answer = answer + (this.group ? (this.group + ' ') : '');
 	answer = answer + (this.subcategory ? (this.subcategory + ' ') : '');
 	answer = answer + (this.category ? (this.category + ' ') : '');
+//	console.log(answer);
 	return answer.toLowerCase().firstToUpper();
 }
 

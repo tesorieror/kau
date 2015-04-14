@@ -47,8 +47,8 @@ app.controller("DataBarCtrl",
 				// $log.log('Filter ', $scope.filter);
 				$scope.indicator.setPeriod($scope.period);
 				dataStoreService.getData($scope.indicator).then(function(data) {
-					// $log.log("Indicator ", $scope.indicator);
-					// $log.log("Data ", data);
+//					$log.log("Indicator ", $scope.indicator);
+//					$log.log("Data ", data);
 					$scope.barChart = buildChart(data);
 					// $log.log("Bar Chart: ", $scope.barChart);
 				});
