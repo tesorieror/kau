@@ -25,6 +25,9 @@ app.config(function($routeProvider, $locationProvider) {
 	}).when('/Main', {
 		templateUrl : './pages/main.html',
 		controller : 'MainCtrl'
+	}).when('/Data/Students', {
+		templateUrl : './pages/students.html',
+		controller : 'StudentsCtrl'
 	}).when('/Highlights', {
 		templateUrl : './pages/highlights.html',
 		controller : 'HighlightsCtrl'

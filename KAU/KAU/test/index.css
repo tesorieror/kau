@@ -303,14 +303,13 @@ div.data-bar h2 {
 * R Hierarchical Filter Four
 */
 div.rHierarchicalFilterFour {
-
+	
 }
 
 div.rHierarchicalFilterFour {
 	border: 1px lightgrey SOLID;
-	margin: 5px;	
+	margin: 5px;
 }
-
 
 /**
 * Data Bar
@@ -331,4 +330,27 @@ div.data-line h2 {
 	text-align: center;
 }
 
+/**
+* Filter
+*/
 
+form.r-selection div {
+	margin-bottom: 2px;
+}
+
+input.r-selection-filter{
+/*	width: 100%;*/		
+}
+
+
+div.r-selection-container {
+	height: 200px;
+	overflow: auto;
+	border: 2px INSET lightgrey;
+	border-radius: 3px;
+	/*padding: 5px;*/	
+}
+
+div.r-selection-container div {
+	margin: 1px 2px 0px 2px;
+}

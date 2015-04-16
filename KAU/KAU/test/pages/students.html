@@ -1,0 +1,34 @@
+<div class="row">
+	<div class="col-xs-3">
+		<label>Filter</label>
+		<!-- 
+		<select ng-options="c.name for c in category.children" ng-model="selection[0]"
+			size="10" style="width: 100%" ng-change="changed(c)"
+		></select>		
+		-->
+		<r-selection items="category.children" selection="sel" label="name"
+			changed="changed(item)"
+		></r-selection>
+	</div>
+	<div class="col-xs-3">
+		<label>Filter</label>
+		<select ng-options="c.name for c in selection[0].children" style="width: 100%"
+			ng-model="selection[1]" size="10" ng-change="changed(c)"
+		></select>
+	</div>
+	<div class="col-xs-3">
+		<p>Filter</p>
+		<select class="select-toggle"
+			ng-options="c.name for c in selection[1].children" style="width: 100%"
+			ng-model="selection[2]" multiple="multiple" size="10" ng-change="changed(c)"
+			ng-click="clicked($event)" ng-mousedown="mousedown($event)"
+		></select>
+	</div>
+	<div class="col-xs-3">
+		<p>Filter</p>
+		<select class="select-toggle" ng-options="c for c in selection[2].children"
+			style="width: 100%" ng-model="selection[3]" multiple="multiple" size="10"
+			ng-change="changed(c)"
+		></select>
+	</div>
+</div>
