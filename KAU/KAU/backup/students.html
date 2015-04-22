@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-xs-3">
+		<label>Subcategories</label>
+		<r-selection items="subcategories" selection="subcategorySelection"
+			label="name" changed="subcategoryChanged(item)"
+		></r-selection>
+	</div>
+	<div class="col-xs-3">
+		<label>Subsubcategory Groups</label>
+		<r-selection items="subcategoryGroups" selection="subcategoryGroupSelection"
+			label="name" changed="subcategoryGroupChanged(item)"
+		></r-selection>
+	</div>
+	<div class="col-xs-3">
+		<label>Subsubcatergories</label>
+		<r-selection items="subsubcategories" selection="subsubcategorySelection"
+			label="name" changed="subsubcategoryChanged(item)"
+		></r-selection>
+	</div>
+	<div class="col-xs-3">
+		<label>Filters</label>
+		<r-selection items="filters" selection="filterSelection"
+			label="name" changed="filterChanged(item)"
+		></r-selection>
+	</div>
+</div>

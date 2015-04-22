@@ -333,24 +333,45 @@ div.data-line h2 {
 /**
 * Filter
 */
-
-form.r-selection div {
+form.r-multiple-selection div {
 	margin-bottom: 2px;
 }
 
-input.r-selection-filter{
-/*	width: 100%;*/		
+input.r-multiple-selection-filter {
+	/*	width: 100%;*/	
 }
 
-
-div.r-selection-container {
-	height: 200px;
+div.r-multiple-selection-container {
+	height: 150px;
 	overflow: auto;
 	border: 2px INSET lightgrey;
 	border-radius: 3px;
-	/*padding: 5px;*/	
+	/*padding: 5px;*/
 }
 
-div.r-selection-container div {
+div.r-multiple-selection-container div {
+	margin: 1px 2px 0px 2px;
+}
+
+/**
+* Single Selection
+*/
+form.r-single-selection div {
+	margin-bottom: 2px;
+}
+
+input.r-single-selection-filter {
+	/*	width: 100%;*/	
+}
+
+div.r-single-selection-container {
+	height: 150px;
+	overflow: auto;
+	border: 2px INSET lightgrey;
+	border-radius: 3px;
+	/*padding: 5px;*/
+}
+
+div.r-single-selection-container div {
 	margin: 1px 2px 0px 2px;
 }

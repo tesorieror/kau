@@ -1,34 +1,29 @@
 <div class="row">
 	<div class="col-xs-3">
-		<label>Filter</label>
-		<!-- 
-		<select ng-options="c.name for c in category.children" ng-model="selection[0]"
-			size="10" style="width: 100%" ng-change="changed(c)"
-		></select>		
-		-->
-		<r-selection items="category.children" selection="sel" label="name"
-			changed="changed(item)"
-		></r-selection>
+		<label>Subcategories</label>
+		<r-single-selection items="filter.subcategories"
+			selection="filter.subcategorySelection" label="name"
+			changed="subcategoryChanged(item)"
+		></r-single-selection>
 	</div>
 	<div class="col-xs-3">
-		<label>Filter</label>
-		<select ng-options="c.name for c in selection[0].children" style="width: 100%"
-			ng-model="selection[1]" size="10" ng-change="changed(c)"
-		></select>
+		<label>Subsubcategory Groups</label>
+		<r-multiple-selection items="filter.subcategoryGroups"
+			selection="filter.subcategoryGroupSelection" label="name"
+			changed="subcategoryGroupChanged(item)"
+		></r-multiple-selection>
 	</div>
 	<div class="col-xs-3">
-		<p>Filter</p>
-		<select class="select-toggle"
-			ng-options="c.name for c in selection[1].children" style="width: 100%"
-			ng-model="selection[2]" multiple="multiple" size="10" ng-change="changed(c)"
-			ng-click="clicked($event)" ng-mousedown="mousedown($event)"
-		></select>
+		<label>Subsubcatergories</label>
+		<r-multiple-selection items="filter.subsubcategories"
+			selection="filter.subsubcategorySelection" label="name"
+			changed="subsubcategoryChanged(item)"
+		> </r-multiple-selection>
 	</div>
 	<div class="col-xs-3">
-		<p>Filter</p>
-		<select class="select-toggle" ng-options="c for c in selection[2].children"
-			style="width: 100%" ng-model="selection[3]" multiple="multiple" size="10"
-			ng-change="changed(c)"
-		></select>
+		<label>Filters</label>
+		<r-multiple-selection items="filter.filters"
+			selection="filter.filterSelection" label="name" changed="filterChanged(item)"
+		></r-multiple-selection>
 	</div>
 </div>

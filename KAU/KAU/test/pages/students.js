@@ -1,76 +1,115 @@
-app.controller("StudentsCtrl",
-		function($http, $q, $log, $routeParams, $scope, dataStoreService) {
-			$log.info("Students controller running...");
+app
+		.controller(
+				"StudentsCtrl",
+				function($http, $q, $log, $routeParams, $scope, dataStoreService) {
+					$log.info("Students controller running...");
 
-			var categoryName = "Students";
-			$scope.category = null;
-			$scope.selection = [];
-			var oldSelection = [];
+					var categoryName = "Students";
+					$scope.category = null;
 
-			dataStoreService.getDataMetadata().then(function(result) {
-				$scope.category = result.filter(function(e, i, a) {
-					return e.name == categoryName;
-				})[0];
+					$scope.filter = {};
 
-				$scope.sel = {};
+					$scope.filter.subcategories = [];
+					$scope.filter.subcategoryGroups = [];
+					$scope.filter.subsubcategories = [];
+					$scope.filter.filters = [];
+					$scope.filter.subcategorySelection = [];
+					$scope.filter.subcategoryGroupSelection = [];
+					$scope.filter.subsubcategorySelection = [];
+					$scope.filter.filterSelection = [];
 
-				// angular.forEach($scope.category.children, function(v, k) {
-				// $scope.sel[k] = true;
-				// });
+					dataStoreService
+							.getDataMetadata()
+							.then(
+									function(result) {
+										$scope.category = result.filter(function(e, i, a) {
+											return e.name == categoryName;
+										})[0];
 
-				$log.log("Selection original", $scope.sel);
-			});
+										// Initialize selection
+										$scope.filter.subcategories = $scope.category.children;
+										$scope.filter.subcategorySelection = $scope.filter.subcategories
+												.map(function(v,iv, a) {
+													return null;
+												});
+										if ($scope.filter.subcategories.length > 0) {
+											$scope.filter.subcategorySelection[0] = $scope.filter.subcategories[0];
+										}
 
-			$scope.changed = function(item) {
-				$log.log("Changed", item);
-				$log.log("Selection", $scope.sel);
-			}
+										$log.log("initial ", $scope.filter.subcategorySelection);
+										$scope
+												.subcategoryChanged($scope.filter.subcategorySelection);
 
-			$scope.mousedown = function($event) {
-				// $log.log("Down data", $event.target);
-				// $log.log("Down selection", $scope.selection[2]);
-				// oldSelection = $scope.selection[2] == null ? [] : $scope.selection[2]
-				// .slice();
+									});
 
-				var element = $scope.selection[1].children[$event.target.value];
+					$scope.subcategoryChanged = function(c) {
+						$log.log("Subcategory selected", c);
+						$log.log("Subcategory selection",
+								$scope.filter.subcategorySelection);
 
-				if ($scope.selection[2].indexOf(element) >= 0)
-					$scope.selection[2].splice($scope.selection[2].indexOf(element), 1);
-			}
+						// Initialize subcategory group
+						var subcat = $scope.filter.subcategorySelection.reduce(
+								function(prev, act, index, arr) {
+									return prev == null ? act : prev;
+								}, null);
+						$scope.filter.subcategoryGroups = subcat != null ? subcat.children
+								: [];
+						$scope.filter.subcategoryGroupSelection = $scope.filter.subcategoryGroups
+								.map(function(v, i, a) {
+									return (i == 0) ? v : null;
+								});
+						// Propagate selection change
+						$scope
+								.subcategoryGroupChanged($scope.filter.subcategoryGroupSelection);
 
-			$scope.clicked = function($event) {
-				// $log.log("Clicked Event", $event);
-				$log.log("Click Event", $event);
-				$log.log("Click Event", $event.target.selected);
+					}
 
-				// $log.log("Click Selection", $scope.selection[2]);
-				// $log.log("Click Selection from children",
-				// $scope.selection[1].children[$event.target.value]);
-				// if (oldSelection
-				// .indexOf($scope.selection[1].children[$event.target.value]) >= 0)
-				// $scope.selection[2].splice($scope.selection[2]
-				// .indexOf($scope.selection[1].children[$event.target.value]), 1);
-				// else
-				// $scope.selection[2]
-				// .push($scope.selection[1].children[$event.target.value]);
+					$scope.subcategoryGroupChanged = function(c) {
+						$log.log("Subcategory group selected", c);
+						$log.log("Subcategory group selection",
+								$scope.filter.subcategoryGroupSelection);
 
-				// if ($event.target.tagName.toLowerCase() == "option") {
-				//
-				// $scope.selection[2] = [];
-				//
-				// // if (!$event.target.selected)
-				// // $event.target.selected = false;
-				// // else
-				// // $event.target.selected = true;
-				//
-				// // $log.log($event);
-				//
-				// // $log.log($event.target);
-				//
-				// // $log.log($event.target.parentElement);
-				// // $log.log($scope.selection);
-				// // $log.log($scope.selection[2]);
-				// }
-			}
+						// Initialize subcategory group
+						var subcatgroup = $scope.filter.subcategoryGroupSelection.reduce(
+								function(prev, act, index, arr) {
+									return prev == null ? act : prev;
+								}, null);
 
-		});
+						$scope.filter.subsubcategories = subcatgroup != null ? subcatgroup.children
+								: [];
+
+						$scope.filter.subsubcategorySelection = $scope.filter.subsubcategories
+								.map(function(v, i, a) {
+									return (i == 0) ? v : null;
+								});
+
+						// Propagate selection change
+						$scope.subsubcategoryChanged($scope.filter.subsubcategorySelection);
+					}
+
+					$scope.subsubcategoryChanged = function(c) {
+						$log.log("Subsubcategory selected", c);
+						$log.log("Subsubcategory selection",
+								$scope.filter.subsubcategorySelection);
+
+						// Initialize subsubcategory
+						var subsubcat = $scope.filter.subsubcategorySelection.reduce(
+								function(prev, act, index, arr) {
+									return prev == null ? act : prev;
+								}, null);
+						$scope.filter.filters = subsubcat != null ? subsubcat.children : [];
+
+						$scope.filter.filterSelection = $scope.filter.filters
+								.map(function(v, i, a) {
+									return (i == 0) ? v : null;
+								});
+						// Propagate selection change
+						$scope.filterChanged($scope.filter.filterSelection);
+					}
+
+					$scope.filterChanged = function(c) {
+						$log.log("Filter selected", c);
+						$log.log("Filter selection", $scope.filter.filterSelection);
+					}
+
+				});

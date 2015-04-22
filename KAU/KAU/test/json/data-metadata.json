@@ -1,268 +1,502 @@
 [ {
 	"name" : "Students",
-	"children" : [
-			{
-				"name" : "Freshmen",
-				"children" : [
-						{
-							"name" : "Gender",
-							"children" : [ {
-								"name" : "Male",
-								"children" : []
-							}, {
-								"name" : "Female",
-								"children" : []
-							} ]
-						},
-						{
-							"name" : "Nationality",
-							"children" : [ {
-								"name" : "Saudi",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Non-Saudi",
-								"children" : [ "Male", "Female", "Total" ]
-							} ]
-						},
-						{
-							"name" : "Degree",
-							"children" : [ {
-								"name" : "Bachelore",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Diploma",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Higher Diploma",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Master",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "PhD",
-								"children" : [ "Male", "Female", "Total" ]
-							} ]
-						},
-						{
-							"name" : "Field",
-							"children" : [
-									{
-										"name" : "Education",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Humanities and Arts",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Social Sciences: Business and Law",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Science",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Engineering: Manufacturing Industries and Construction",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Agriculture",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Health and Social Services",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Not known programmes",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									} ]
-						}, {
-							"name" : "Adminsitrative Areas",
-							"children" : [ {
-								"name" : "Riyad",
-								"children" : []
-							}, {
-								"name" : "Makkah",
-								"children" : []
-							}, {
-								"name" : "Jazan",
-								"children" : []
-							}, {
-								"name" : "Eastern Province",
-								"children" : []
-							}, {
-								"name" : "Asir",
-								"children" : []
-							}, {
-								"name" : "Al-Qassim",
-								"children" : []
-							}, {
-								"name" : "Ha'il",
-								"children" : []
-							}, {
-								"name" : "Al-Madinah",
-								"children" : []
-							}, {
-								"name" : "Al-Baha",
-								"children" : []
-							}, {
-								"name" : "Northern Border",
-								"children" : []
-							}, {
-								"name" : "Tabuk",
-								"children" : []
-							}, {
-								"name" : "Najran",
-								"children" : []
-							}, {
-								"name" : "Al-Jawf",
-								"children" : []
-							} ]
-						} ]
-			},
-			{
-				"name" : "Enrolled",
-				"children" : [
-						{
-							"name" : "Gender",
-							"children" : [ {
-								"name" : "Male",
-								"children" : []
-							}, {
-								"name" : "Female",
-								"children" : []
-							} ]
-						},
-						{
-							"name" : "Nationality",
-							"children" : [ {
-								"name" : "Saudi",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Non-Saudi",
-								"children" : [ "Male", "Female", "Total" ]
-							} ]
-						},
-						{
-							"name" : "Degree",
-							"children" : [ {
-								"name" : "Bachelore",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Diploma",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Higher Diploma",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "Master",
-								"children" : [ "Male", "Female", "Total" ]
-							}, {
-								"name" : "PhD",
-								"children" : [ "Male", "Female", "Total" ]
-							} ]
-						},
-						{
-							"name" : "Field",
-							"children" : [
-									{
-										"name" : "Education",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Humanities and Arts",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Social Sciences: Business and Law",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Science",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Engineering: Manufacturing Industries and Construction",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Agriculture",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Health and Social Services",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									},
-									{
-										"name" : "Not known programmes",
-										"children" : [ "Male", "Female",
-												"Total" ]
-									} ]
-						}, {
-							"name" : "Adminsitrative Areas",
-							"children" : [ {
-								"name" : "Riyad",
-								"children" : []
-							}, {
-								"name" : "Makkah",
-								"children" : []
-							}, {
-								"name" : "Jazan",
-								"children" : []
-							}, {
-								"name" : "Eastern Province",
-								"children" : []
-							}, {
-								"name" : "Asir",
-								"children" : []
-							}, {
-								"name" : "Al-Qassim",
-								"children" : []
-							}, {
-								"name" : "Ha'il",
-								"children" : []
-							}, {
-								"name" : "Al-Madinah",
-								"children" : []
-							}, {
-								"name" : "Al-Baha",
-								"children" : []
-							}, {
-								"name" : "Northern Border",
-								"children" : []
-							}, {
-								"name" : "Tabuk",
-								"children" : []
-							}, {
-								"name" : "Najran",
-								"children" : []
-							}, {
-								"name" : "Al-Jawf",
-								"children" : []
-							} ]
-						} ]
-			}, {
-				"name" : "Graduated",
+	"children" : [ {
+		"name" : "Freshmen",
+		"children" : [ {
+			"name" : "Gender",
+			"children" : [ {
+				"name" : "Male",
 				"children" : []
 			}, {
-				"name" : "Aboard",
+				"name" : "Female",
 				"children" : []
 			} ]
+		}, {
+			"name" : "Nationality",
+			"children" : [ {
+				"name" : "Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Non-Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Higher Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Field",
+			"children" : [ {
+				"name" : "Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences: Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering: Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Adminsitrative Areas",
+			"children" : [ {
+				"name" : "Riyad",
+				"children" : []
+			}, {
+				"name" : "Makkah",
+				"children" : []
+			}, {
+				"name" : "Jazan",
+				"children" : []
+			}, {
+				"name" : "Eastern Province",
+				"children" : []
+			}, {
+				"name" : "Asir",
+				"children" : []
+			}, {
+				"name" : "Al-Qassim",
+				"children" : []
+			}, {
+				"name" : "Ha'il",
+				"children" : []
+			}, {
+				"name" : "Al-Madinah",
+				"children" : []
+			}, {
+				"name" : "Al-Baha",
+				"children" : []
+			}, {
+				"name" : "Northern Border",
+				"children" : []
+			}, {
+				"name" : "Tabuk",
+				"children" : []
+			}, {
+				"name" : "Najran",
+				"children" : []
+			}, {
+				"name" : "Al-Jawf",
+				"children" : []
+			} ]
+		} ]
+	}, {
+		"name" : "Enrolled",
+		"children" : [ {
+			"name" : "Gender",
+			"children" : [ {
+				"name" : {
+					"name" : "Male",
+					"children" : []
+				},
+				"children" : []
+			}, {
+				"name" : {
+					"name" : "Female",
+					"children" : []
+				},
+				"children" : []
+			} ]
+		}, {
+			"name" : "Nationality",
+			"children" : [ {
+				"name" : "Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Non-Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Higher Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Field",
+			"children" : [ {
+				"name" : "Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences: Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering: Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Adminsitrative Areas",
+			"children" : [ {
+				"name" : "Riyad",
+				"children" : []
+			}, {
+				"name" : "Makkah",
+				"children" : []
+			}, {
+				"name" : "Jazan",
+				"children" : []
+			}, {
+				"name" : "Eastern Province",
+				"children" : []
+			}, {
+				"name" : "Asir",
+				"children" : []
+			}, {
+				"name" : "Al-Qassim",
+				"children" : []
+			}, {
+				"name" : "Ha'il",
+				"children" : []
+			}, {
+				"name" : "Al-Madinah",
+				"children" : []
+			}, {
+				"name" : "Al-Baha",
+				"children" : []
+			}, {
+				"name" : "Northern Border",
+				"children" : []
+			}, {
+				"name" : "Tabuk",
+				"children" : []
+			}, {
+				"name" : "Najran",
+				"children" : []
+			}, {
+				"name" : "Al-Jawf",
+				"children" : []
+			} ]
+		} ]
+	}, {
+		"name" : "Graduated",
+		"children" : []
+	}, {
+		"name" : "Aboard",
+		"children" : []
+	} ]
 } ]
