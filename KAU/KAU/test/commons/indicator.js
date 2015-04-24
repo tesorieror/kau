@@ -6,18 +6,19 @@ function Indicator() {
 	subsubcategory: null;
 	filter: null;
 	group: null;
-	years: [];
+	period: null;
+	// years: [];
 }
 
 Indicator.prototype.getTitle = function() {
-	
+
 	var answer = '';
 	answer = answer + (this.filter ? (this.filter + ' ') : '');
 	answer = answer + (this.subsubcategory ? (this.subsubcategory + ' ') : '');
 	answer = answer + (this.group ? (this.group + ' ') : '');
 	answer = answer + (this.subcategory ? (this.subcategory + ' ') : '');
 	answer = answer + (this.category ? (this.category + ' ') : '');
-//	console.log(answer);
+	// console.log(answer);
 	return answer.toLowerCase().firstToUpper();
 }
 
@@ -50,8 +51,13 @@ Indicator.prototype.getDataFilenames = function() {
 	var subcategory = this.subcategory.toLowerCase();
 	// var subsubcategoty = this.subsubcategory.toLowerCase();
 	// var filter = this.filter.toLowerCase();
+
+	console.log('[Indicator] category ', category);
+	console.log('[Indicator] subcategory ', subcategory);
+	console.log('[Indicator] period ', this.period.getPeriod());
+	console.log(this.period);
 	var result = [];
-	angular.forEach(this.years, function(yr) {
+	angular.forEach(this.period.getPeriod(), function(yr) {
 		result.push(DATA_JSON + yr + '_' + category + '_' + subcategory
 				+ '_data.json')
 	});

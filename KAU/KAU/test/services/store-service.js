@@ -72,27 +72,25 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		},
 
 		getData : function(indicator) {
-			// $log.log("Data indicator: ", indicator);
-
+			$log.log("[DataStoreService] Data indicator: ", indicator);
 			var yearCalls = [];
 			angular.forEach(indicator.getDataFilenames(), function(fn) {
 				yearCalls.push($http.get(fn));
 			});
-
-			$log.log('Indicator data filenames ', indicator.getDataFilenames());
-			$log.log('yearCalls ', yearCalls);
-			
+			$log.log('[DataStoreService] Indicator data filenames ', indicator
+					.getDataFilenames());
+			$log.log('[DataStoreService] yearCalls ', yearCalls);
 			var deferred = $q.defer();
 			$q.all(yearCalls).then(function(results) {
 				var answer = [];
-				$log.log('years ', indicator.years);
-				$log.log('results ', results);
-				angular.forEach(indicator.years, function(yr, i) {
+				$log.log('[DataStoreService] years ', indicator.period.getPeriod());
+				$log.log('[DataStoreService] results ', results);
+				angular.forEach(indicator.period.getPeriod(), function(yr, i) {
 					answer[yr] = results[i].data;
 				});
 				deferred.resolve(answer);
 			}, function(errors) {
-				$log.error(errors);
+				$log.error("[DataStoreService] ", errors);
 				deferred.reject(errors);
 			}, function(updates) {
 				deferred.update(updates);

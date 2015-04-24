@@ -3,17 +3,19 @@
 		<div class="form-group form-group-sm">
 			<div class="btn-toobar" role="toolbar">
 				<input class="input-sm r-single-selection-filter" type="text"
-					ng-model="filterString" placeholder="Enter filter string"
+					ng-model="filterString" placeholder="Filter" size="10"
 				/>
 				<div class="btn-group">
-					<button class=" btn btn-default btn-sm " ng-click="clearFilterString()">
+					<button class=" btn btn-default btn-sm pull-right" ng-click="clearFilterString()">
 						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 					</button>
 				</div>
 			</div>
 		</div>
 	</form>
-	<div class="form-group form-group-sm r-single-selection-container">
+	<div class="form-group form-group-sm r-single-selection-container"
+		style="margin-bottom: 2px;"
+	>
 		<div class="form-group form-group-sm"
 			ng-repeat="item in items|filter:{name:filterString}"
 		>
