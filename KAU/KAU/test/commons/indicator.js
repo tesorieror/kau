@@ -52,10 +52,10 @@ Indicator.prototype.getDataFilenames = function() {
 	// var subsubcategoty = this.subsubcategory.toLowerCase();
 	// var filter = this.filter.toLowerCase();
 
-	console.log('[Indicator] category ', category);
-	console.log('[Indicator] subcategory ', subcategory);
-	console.log('[Indicator] period ', this.period.getPeriod());
-	console.log(this.period);
+//	console.log('[Indicator] category ', category);
+//	console.log('[Indicator] subcategory ', subcategory);
+//	console.log('[Indicator] period ', this.period.getPeriod());
+//	console.log(this.period);
 	var result = [];
 	angular.forEach(this.period.getPeriod(), function(yr) {
 		result.push(DATA_JSON + yr + '_' + category + '_' + subcategory

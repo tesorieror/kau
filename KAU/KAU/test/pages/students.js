@@ -2,7 +2,7 @@ app
 		.controller(
 				"StudentsCtrl",
 				function($http, $q, $log, $routeParams, $scope, dataStoreService, $filter) {
-					$log.info("Students controller running...");
+					// $log.info("Students controller running...");
 
 					$scope.chartBuilders = [];
 					$scope.chartBuilders[0] = new TableChartBuilder();
@@ -13,6 +13,8 @@ app
 					$scope.dataFilterString = '';
 
 					$scope.chart = {};
+
+					$scope.plainData = [];
 
 					var categoryName = "Students";
 					$scope.category = null;
@@ -40,7 +42,7 @@ app
 							.then(
 									function(result) {
 										$scope.period = new Period(result[0]);
-										$log.log($scope.period);
+										// $log.log($scope.period);
 										$scope.category = result[1].filter(function(e, i, a) {
 											return e.name == categoryName;
 										})[0];
@@ -55,7 +57,7 @@ app
 											$scope.filter.subcategorySelection[0] = $scope.filter.subcategories[0];
 										}
 
-										$log.log("initial ", $scope.filter.subcategorySelection);
+										// $log.log("initial ", $scope.filter.subcategorySelection);
 										$scope
 												.subcategoryChanged($scope.filter.subcategorySelection);
 
@@ -139,7 +141,7 @@ app
 					$scope.filterChanged = function(c) {
 						// $log.log("Filter selected", c);
 						// $log.log("Filter selection", $scope.filter.filterSelection);
-						$log.log('chart built!', $scope.builder);
+						// $log.log('chart built!', $scope.builder);
 						updateChart();
 
 					}
@@ -164,37 +166,26 @@ app
 
 						dataStoreService.getData(indicator).then(
 								function(data) {
-									$log.log('Indicator: ', indicator);
-									$log.log('Data: ', data);
-									$log.log('Data filter string ', $scope.dataFilterString);
-
-									friends = [ {
-										name : 'John',
-										phone : '555-1276'
-									}, {
-										name : 'Mary',
-										phone : '800-BIG-MARY'
-									}, {
-										name : 'Mike',
-										phone : '555-4321'
-									}, {
-										name : 'Adam',
-										phone : '555-5678'
-									}, {
-										name : 'Julie',
-										phone : '555-8765'
-									}, {
-										name : 'Juliette',
-										phone : '555-5678'
-									} ];
-
-									
-									$log.log('Friends data ', $filter('filter')(friends,
-											$scope.dataFilterString));
-
-									var data2 = data;
-									$scope.chart = $scope.builder.build(data2);
+									// $log.log('Indicator: ', indicator);
+									// $log.log('Data: ', data);
+									// $log.log('Data filter string ', $scope.dataFilterString);
+									var chart = $scope.builder.build(data);
+									chart.data.rows = $filter('filter')(chart.data.rows,
+											$scope.dataFilterString);
+//									chart.data.rows = $filter('strict')(chart.data.rows);
+									$scope.chart = chart;
+									// $log.log('Chart data ', $scope.chart.data.rows);
 								});
+
+						// dataStoreService.getNewData().then(
+						// function(result) {
+						// $scope.plainData = result;
+						// $log.log('Plain data ', $scope.plainData);
+						// $log.log('Filter ', $scope.dataFilterString);
+						// $log.log('Plain data filtered', $filter('filter')(
+						// $scope.plainData, $scope.dataFilterString));
+						// });
+
 					}
 
 				});

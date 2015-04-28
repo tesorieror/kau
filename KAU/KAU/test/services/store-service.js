@@ -27,7 +27,26 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	function getDataMetadataFilename() {
 		return DATA_JSON + 'data-metadata.json';
 	}
+
+	function getPlainDataFilename() {
+		return DATA_JSON + 'data.json';
+	}
+
 	return {
+
+		getNewData : function() {
+			var deferred = $q.defer();
+			// $log.log(getYearsFilename());
+			$http.get(getPlainDataFilename()).then(function(result) {
+				deferred.resolve(result.data);
+			}, function(error) {
+				$log.error(error);
+				deferred.reject(error);
+			}, function(update) {
+				deferred.update(update);
+			});
+			return deferred.promise;
+		},
 
 		getDataMetadata : function() {
 			var deferred = $q.defer();
@@ -72,19 +91,19 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		},
 
 		getData : function(indicator) {
-			$log.log("[DataStoreService] Data indicator: ", indicator);
+			// $log.log("[DataStoreService] Data indicator: ", indicator);
 			var yearCalls = [];
 			angular.forEach(indicator.getDataFilenames(), function(fn) {
 				yearCalls.push($http.get(fn));
 			});
-			$log.log('[DataStoreService] Indicator data filenames ', indicator
-					.getDataFilenames());
-			$log.log('[DataStoreService] yearCalls ', yearCalls);
+			// $log.log('[DataStoreService] Indicator data filenames ', indicator
+			// .getDataFilenames());
+			// $log.log('[DataStoreService] yearCalls ', yearCalls);
 			var deferred = $q.defer();
 			$q.all(yearCalls).then(function(results) {
 				var answer = [];
-				$log.log('[DataStoreService] years ', indicator.period.getPeriod());
-				$log.log('[DataStoreService] results ', results);
+				// $log.log('[DataStoreService] years ', indicator.period.getPeriod());
+				// $log.log('[DataStoreService] results ', results);
 				angular.forEach(indicator.period.getPeriod(), function(yr, i) {
 					answer[yr] = results[i].data;
 				});

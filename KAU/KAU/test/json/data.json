@@ -1,0 +1,333 @@
+[ {
+	"type" : "Category",
+	"name" : "Students",
+	"children" : [ {
+		"type" : "Category",
+		"name" : "Freshmen",
+		"children" : [ {
+			"type" : "Category",
+			"name" : "Gender",
+			"children" : [ {
+				"type" : "Data",
+				"key" : "Male",
+				"value" : "164787"
+			}, {
+				"type" : "Data",
+				"key" : "Female",
+				"value" : "132845"
+			}, {
+				"type" : "Data",
+				"key" : "Total",
+				"value" : "297632"
+			} ]
+		}, {
+			"type" : "Category",
+			"name" : "Nationality",
+			"children" : [ {
+				"type" : "Category",
+				"name" : "Saudi",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "159558"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "130147"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "289705"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Non-Saudi",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "5229"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "2698"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "297632"
+				} ]
+			} ]
+		}, {
+			"type" : "Category",
+			"name" : "Degree",
+			"children" : [ {
+				"type" : "Category",
+				"name" : "Bachelore",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "114222"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "113503"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "227725"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Diploma",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "13795"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "42556"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "297632"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Higher Diploma",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "2304"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "1513"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "3817"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Master",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "5120"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "3735"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "8855"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "PhD",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "585"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "299"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "884"
+				} ]
+			} ]
+		}, {
+			"type" : "Category",
+			"name" : "Field",
+			"children" : [ {
+				"type" : "Category",
+				"name" : "Education",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "7261"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "9194"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "16455"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "33245"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "51481"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "84726"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Social Sciences: Business and Law",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "23715"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "19722"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "43437"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Science",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "15834"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "18650"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "34484"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Engineering: Manufacturing Industries and Construction",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "33700"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "3667"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "37367"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Agriculture",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "1305"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "26"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "1331"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "11683"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "9691"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "21347"
+				} ]
+			}, {
+				"type" : "Category",
+				"name" : "Not known programmes",
+				"children" : [ {
+					"type" : "Data",
+					"key" : "Male",
+					"value" : "38044"
+				}, {
+					"type" : "Data",
+					"key" : "Female",
+					"value" : "20414"
+				}, {
+					"type" : "Data",
+					"key" : "Total",
+					"value" : "58458"
+				} ]
+			} ]
+		}, {
+			"type" : "Category",
+			"name" : "Adminsitrative Areas",
+			"children" : [ {
+				"type" : "Data",
+				"key" : "Riyad",
+				"value" : "107733"
+			}, {
+				"type" : "Data",
+				"key" : "Makkah",
+				"value" : "73822"
+			}, {
+				"type" : "Data",
+				"key" : "Jazan",
+				"value" : "8612"
+			}, {
+				"type" : "Data",
+				"key" : "Eastern Province",
+				"value" : "30011"
+			}, {
+				"type" : "Data",
+				"key" : "Asir",
+				"value" : "13427"
+			}, {
+				"type" : "Data",
+				"key" : "Al-Qassim",
+				"value" : "13691"
+			}, {
+				"type" : "Data",
+				"key" : "Ha'il",
+				"value" : "7359"
+			}, {
+				"type" : "Data",
+				"key" : "Al-Madinah",
+				"value" : "18507"
+			}, {
+				"type" : "Data",
+				"key" : "Al-Baha",
+				"value" : "4741"
+			}, {
+				"type" : "Data",
+				"key" : "Northern Border",
+				"value" : "2853"
+			}, {
+				"type" : "Data",
+				"key" : "Tabuk",
+				"value" : "6780"
+			}, {
+				"type" : "Data",
+				"key" : "Najran",
+				"value" : "4205"
+			}, {
+				"type" : "Data",
+				"key" : "Al-Jawf",
+				"value" : "5891"
+			} ]
+		} ]
+	} ]
+} ]
