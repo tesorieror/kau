@@ -1,4 +1,4 @@
-[ [ {
+[ {
 	"title" : "3,686",
 	"subtitle1" : "KAU publications",
 	"subtitle2" : "during 2004",
@@ -19,7 +19,7 @@
 	"url" : "#",
 	"arrow" : "up",
 	"description" : "KAU has published 700 articles in Medicine during 2014. It represents an increment of the 33.8 % regarding to the last year"
-} ], [ {
+}, {
 	"title" : "646",
 	"subtitle1" : "KAU publications",
 	"subtitle2" : "in Mathematics",
@@ -40,4 +40,4 @@
 	"url" : "#",
 	"arrow" : "up",
 	"description" : "KAU has published 599 articles in Physics during 2014. It represents an increment of the 26.4 % regarding to the last year"
-} ] ]
+} ]

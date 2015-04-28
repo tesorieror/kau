@@ -1,0 +1,377 @@
+/**
+* Patch Bootstrap Angular
+*/
+.nav, .pagination, .carousel, .panel-title a {
+	cursor: pointer;
+}
+
+.fill {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background-color: #990000;
+	padding: 10px;
+	color: #efefef;
+}
+
+/**
+* Main header panel
+*/
+div.main-header-panel {
+	/*background-color: #83d9bf;*/
+	background-color: #669999;
+	color: white;
+	text-align: right;
+	padding: 2em 1em 2em 1em;
+}
+
+div.main-header-panel h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	text-align: right;
+	color: white;
+	font-size: 1.8em;
+	line-height: 1.6em;
+	display: block;
+}
+
+div.main-header-panel p {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	text-align: right;
+	color: white;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	display: block;
+}
+
+/**
+* Highlight panel
+*/
+div.highlights {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	background-color: #FFC386;
+}
+
+div.highlights h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* r-highlight
+*/
+div.r-highlight {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	background-color: #FFE0C0;
+}
+
+div.r-highlight h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	color: grey;
+	padding-top: 1em;
+}
+
+div.r-highlight h4 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	color: darkgrey;
+}
+
+div.r-highlight p {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	text-align: left;
+	padding: 0em 1em 1em 1em;
+}
+
+/**
+* Highlight panel link
+*/
+div.r-highlight  a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+div.r-highlight  a:link {
+	text-decoration: none;
+	color: black;
+}
+
+div.r-highlight  a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+div.r-highlight  a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+div.r-highlight  a:active {
+	text-decoration: none;
+	color: black;
+}
+
+/**
+* Freshmen panel
+*/
+div.freshmen {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*	background-color: #81adfe;*/
+	background-color: #DCE5FA;
+}
+
+div.freshmen h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.freshmen h5 {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+div.freshmen h5:hover {
+	cursor: pointer;
+}
+
+.freshmen-tooltip+.tooltip>.tooltip-inner {
+	background-color: #fff;
+	border: 1px solid lightgrey;
+	color: black;
+	font-size: 8pt;
+	line-height: 0.5;
+}
+
+div.freshmen div {
+	display: block;
+	margin: 0 auto;
+}
+
+/**
+* Description panel
+*/
+div.description {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+}
+
+div.description h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* About Unit
+*/
+div.about-unit {
+	
+}
+
+div.about-unit h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.about-unit h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.about-unit p {
+	font-family: 'Arimo', sans-serif;
+	font-style: normal;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 10px;
+}
+
+/**
+* Goal of the Unit
+*/
+div.goal-unit {
+	
+}
+
+div.goal-unit h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.goal-unit h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.goal-unit p {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 10px;
+}
+
+/**
+* Data Table
+*/
+div.data-table {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*background-color: #FFC386;*/
+}
+
+div.data-table h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* Data Bar
+*/
+div.data-bar {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*background-color: #FFC386;*/
+}
+
+div.data-bar h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* R Hierarchical Filter Four
+*/
+div.rHierarchicalFilterFour {
+	
+}
+
+div.rHierarchicalFilterFour {
+	border: 1px lightgrey SOLID;
+	margin: 5px;
+}
+
+/**
+* Data Bar
+*/
+div.data-line {
+	margin: 0px 0px 0px 0px;
+	padding: 0em 1em 1em 1em;
+	/*background-color: #FFC386;*/
+}
+
+div.data-line h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+/**
+* Filter
+*/
+form.r-multiple-selection div {
+	margin-bottom: 2px;
+}
+
+input.r-multiple-selection-filter {
+	/*	width: 100%;*/	
+}
+
+div.r-multiple-selection-container {
+	height: 150px;
+	overflow: auto;
+	border: 2px INSET lightgrey;
+	border-radius: 3px;
+	/*padding: 5px;*/
+}
+
+div.r-multiple-selection-container div {
+	margin: 1px 2px 0px 2px;
+}
+
+/**
+* Single Selection
+*/
+form.r-single-selection div {
+	margin-bottom: 2px;
+}
+
+input.r-single-selection-filter {
+	/*	width: 100%;*/	
+}
+
+div.r-single-selection-container {
+	height: 150px;
+	overflow: auto;
+	border: 2px INSET lightgrey;
+	border-radius: 3px;
+	/*padding: 5px;*/
+}
+
+div.r-single-selection-container div {
+	margin: 1px 2px 0px 2px;
+}

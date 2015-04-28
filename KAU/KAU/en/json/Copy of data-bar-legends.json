@@ -1,0 +1,42 @@
+{
+  "Gender" : [ 
+	  ["Male"],
+	  ["Female"] 
+	],
+	"Nationality" : [ 
+	  ["Saudi"], 
+	  ["Non-Saudi"] 
+	],
+	"Degree" : [
+	  ["Diploma"], 
+	  ["Bachelore"], 
+	  ["Higher Diploma"], 
+	  ["Master"],
+		["PhD"]
+	],
+	"Field" : [ 
+		["Education"], 
+		["Humanities and Arts"],
+		["Social Sciences, Business and Law"], 
+		["Science"],
+		["Engineering, Manufacturing Industries and Construction"],
+		["Agriculture"], 
+		["Health and Social Services"],
+		["Not known programmes"] 
+  ],
+	"Administrative Areas" : [ 
+ 		["Riyad"],
+ 		["Makkah"],
+ 		["Jazan"],
+ 		["Eastern Province"], 
+ 		["Asir"],
+ 		["Al-Qassim"],
+ 		["Ha'il"],
+ 		["Al-Madinah"],
+ 		["Al-Baha"],
+ 		["Northern Border"],
+ 		["Tabuk"],
+ 		["Najran"],
+ 		["Al-Jawf"]
+ 	]
+}

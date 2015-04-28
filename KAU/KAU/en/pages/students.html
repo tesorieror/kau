@@ -1,0 +1,89 @@
+<div class="row ">
+	<div class="col-xs-12">
+		<accordion> <accordion-group is-open="accordionStatus.filter">
+		<accordion-heading> Filter <i class="pull-right glyphicon"
+			ng-class="{'glyphicon-chevron-down': accordionStatus.filter, 'glyphicon-chevron-right': !accordionStatus.filter}"
+		></i></accordion-heading>
+		<div class="row" style="margin-bottom: 5px">
+			<div class="col-xs-12">
+				<div style="border: 2px NONE lightgray; padding: 2px">
+					<r-date-from-to period="period" from-change="updateChart()"
+						to-change="updateChart()"
+					></r-date-from-to>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div style="border: 2px NONE lightgray; padding: 2px; margin-bottom: 5px;">
+					<label>Chart type&nbsp;</label> <label> <input type="radio"
+						ng-model="builder" ng-change="chartTypeChanged(chartBuilders[0])"
+						ng-value="chartBuilders[0]"
+					> Table
+					</label> <label> <input type="radio" ng-model="builder"
+						ng-change="chartTypeChanged(chartBuilders[1])" ng-value="chartBuilders[1]"
+					> Bar
+					</label> <label> <input type="radio" ng-model="builder"
+						ng-change="chartTypeChanged(chartBuilders[2])" ng-value="chartBuilders[2]"
+					> Line
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3" style="padding-right: 2px">
+				<!-- <label>Subcategories</label>  -->
+				<r-single-selection items="filter.subcategories"
+					selection="filter.subcategorySelection" label="name"
+					changed="subcategoryChanged(item)"
+				></r-single-selection>
+			</div>
+			<div class="col-xs-3" style="padding-right: 2px; padding-left: 2px;">
+				<!-- 
+		<label>Subsubcategory Groups</label> -->
+				<r-multiple-selection items="filter.subcategoryGroups"
+					selection="filter.subcategoryGroupSelection" label="name"
+					changed="subcategoryGroupChanged(item)"
+				></r-multiple-selection>
+			</div>
+			<div class="col-xs-3" style="padding-right: 2px; padding-left: 2px;">
+				<!-- 
+		<label>Subsubcatergories</label>  -->
+				<r-multiple-selection items="filter.subsubcategories"
+					selection="filter.subsubcategorySelection" label="name"
+					changed="subsubcategoryChanged(item)"
+				> </r-multiple-selection>
+			</div>
+			<div class="col-xs-3" style="padding-left: 2px;">
+				<!-- 
+		<label>Filters</label> -->
+				<r-multiple-selection items="filter.filters"
+					selection="filter.filterSelection" label="name"
+					changed="filterChanged(item)"
+				></r-multiple-selection>
+			</div>
+		</div>
+		</accordion-group></accordion>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<form>
+			<input class="input-sm" type="text" ng-model="dataFilterString"
+				placeholder="Filter" ng-change="dataFilterStringChanged()"
+			/><br />
+			<!-- 		<span ng-repeat="r in test">
+				{{r.c[0].v}}
+
+				<span ng-repeat="r in chart.data.rows | filter : dataFilterString">
+				<span ng-repeat="v in r.c">{{v.v}} - </span> 
+				<br />
+			</span>-->
+		</form>
+	</div>
+</div>
+<div class="row data-table">
+	<div class="col-xs-12">
+		<div google-chart chart="chart" style="width: 100%; height: 100%;"></div>
+	</div>
+</div>

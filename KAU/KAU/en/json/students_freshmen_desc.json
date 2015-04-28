@@ -1,4 +1,4 @@
-{"Male":{
+{"Gender":{"Male":{
 		"title" : "Freshmen Students (Males)",
 		"category" : "Students",
 		"subcategory" : "Freshmen",
@@ -13,7 +13,7 @@
 		"category" : "Students",
 		"subcategory" : "Freshmen",
 		"objective" : "Total number of Freshmen Students  in tertiary programmes (ISCED 5A or 5B) regardless of age, in a given school year,  in all private and public educational institutions"
-	},
+	}},
 	"Saudi":{"Male":{
 		"title" : "Freshmen Students (Saudi Males)",
 		"category" : "Students",
