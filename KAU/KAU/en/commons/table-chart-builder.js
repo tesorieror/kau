@@ -1,5 +1,6 @@
 function TableChartBuilder() {
 	this.indicator = null;
+	this.type = "Table";
 };
 
 // TableChartBuilder.prototype.build = function(indicator) {
@@ -101,7 +102,10 @@ TableChartBuilder.prototype.buildRows = function(result) {
 			if (isNaN(yearData[yearDataKeys[k]])) {
 				var nestedKeys = Object.keys(yearData[yearDataKeys[k]]);
 				for (k2 in nestedKeys) {
-					rows[row]["c"][col]["v"] = yearData[yearDataKeys[k]][nestedKeys[k2]];
+					rows[row]["c"][col]["v"] = yearData[yearDataKeys[k]][nestedKeys[k2]];					
+					$log.log("Row", row);
+					$log.log("Col", col);
+					$log.log("Data ", rows[row]["c"][col]["v"]);
 					row++;
 				}
 			} else {

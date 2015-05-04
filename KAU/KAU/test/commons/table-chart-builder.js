@@ -1,5 +1,8 @@
 function TableChartBuilder() {
+
+	this.type = 'Table';
 	this.indicator = null;
+
 };
 
 // TableChartBuilder.prototype.build = function(indicator) {

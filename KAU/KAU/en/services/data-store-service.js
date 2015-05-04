@@ -1,0 +1,220 @@
+/**
+ * New node file
+ */
+
+/**
+ * Factory for data access
+ */
+
+app.factory('dataStoreService', function($http, $q, $log) {
+
+	var JSON_PATH = '../en/json/';
+	var PLAIN_FILE = 'data.json';
+	var METADATA_FILE = 'data/metadata.json';
+	var ABOUT_UNIT_FILE = 'about-unit.json';
+	var YEARS_FILE = 'years.json';
+
+	function toJsonDescriptionFilename(indicator) {
+		var category = indicator.category.toLowerCase();
+		var subcategory = indicator.subcategory.toLowerCase();
+		return JSON_PATH + category + '_' + subcategory + '_desc.json';
+	}
+
+	function getDataBarGroupsFilename() {
+		return JSON_PATH + 'data-bar-groups.json';
+	}
+	function getDataBarLegendsFilename() {
+		return JSON_PATH + 'data-bar-legends.json';
+	}
+
+	/**
+	 * New version
+	 */
+
+	function createDeferredFunction(filename) {
+		$log.info("Deferred Function for path: ", filename);
+		return function() {
+			var deferred = $q.defer();
+			$http.get(filename).then(function(result) {
+				deferred.resolve(result.data);
+			}, function(error) {
+				$log.error(error);
+				deferred.reject(error);
+			}, function(update) {
+				deferred.update(update);
+			});
+			return deferred.promise;
+		}
+	}
+
+	function dataFilenameFor(categoryPath, year) {
+		// $log.log("Category Path", categoryPath);
+		if (categoryPath.length < 2)
+			throw {
+			  message : "Not enough information to locate data from categoryPath",
+			  categoryPath : categoryPath
+			}
+		else {
+			return 'data/' + categoryPath[0] + '/' + categoryPath[1] + '/' + year
+			    + '.json';
+		}
+	}
+
+	/**
+	 * Return
+	 */
+
+	return {
+	  getNewData : createDeferredFunction(JSON_PATH + PLAIN_FILE),
+	  getDataMetadata : createDeferredFunction(JSON_PATH + METADATA_FILE),
+	  getYears : createDeferredFunction(JSON_PATH + YEARS_FILE),
+	  getAboutUnit : createDeferredFunction(JSON_PATH + ABOUT_UNIT_FILE),
+
+	  // getDataForYear :
+	  // createDeferredFunction("../en/json/data/students/freshmen/2010-1431.json"),
+
+	  getDataForYear : function(categoryPath, year) {
+		  return createDeferredFunction(
+		      JSON_PATH + dataFilenameFor(categoryPath, year))();
+	  },
+
+	  getDataForYears : function(categoryPath, years) {
+		  var yearCalls = [];
+		  years.forEach(function(year, ind, arr) {
+			  yearCalls.push(createDeferredFunction(dataFilenameFor(categoryPath,
+			      year)));
+		  });
+		  var deferred = $q.defer();
+		  $q.all(yearCalls).then(function(results) {
+			  var answer = [];
+			  results.forEach(function(curr, ind, arr) {
+				  answer[years[ind]] = results[ind].data;
+			  });
+			  deferred.resolve(answer);
+		  }, function(errors) {
+			  deferred.reject(errors);
+		  }, function(updates) {
+			  deferred.update(updates);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getDataBarGroups : function() {
+		  var deferred = $q.defer();
+		  $http.get(getDataBarGroupsFilename()).then(function(result) {
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  $log.error(error);
+			  deferred.reject(error);
+		  }, function(update) {
+			  deferred.update(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getDataBarLegends : function() {
+		  var deferred = $q.defer();
+		  $http.get(getDataBarLegendsFilename()).then(function(result) {
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  $log.error(error);
+			  deferred.reject(error);
+		  }, function(update) {
+			  deferred.update(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getHighlights : function() {
+		  var deferred = $q.defer();
+		  $http.get(JSON_PATH + 'highlights.json').then(function(result) {
+			  // $log.log("Result", result.data);
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  deferred.reject(error);
+			  $log.error(error);
+		  }, function(update) {
+			  deferred.update(update);
+			  $log.error(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getCategories : function() {
+		  var deferred = $q.defer();
+		  $http.get(JSON_PATH + 'categories.json').then(function(result) {
+			  // $log.log("Result", result.data);
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  deferred.reject(error);
+			  $log.error(error);
+		  }, function(update) {
+			  deferred.update(update);
+			  $log.error(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getSubCategories : function(category) {
+		  var deferred = $q.defer();
+		  $http.get(JSON_PATH + category + '.json').then(function(result) {
+			  // $log.log("Result", result.data);
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  deferred.reject(error);
+			  $log.error(error);
+		  }, function(update) {
+			  deferred.update(update);
+			  $log.error(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getDescriptionFor : function(indicator) {
+		  var deferred = $q.defer();
+		  $log.log(toJsonDescriptionFilename(indicator));
+		  $http.get(toJsonDescriptionFilename(indicator)).then(function(result) {
+			  deferred.resolve(result.data);
+		  }, function(error) {
+			  // $log.error(error);
+			  deferred.reject(error);
+		  }, function(update) {
+			  deferred.update(update);
+		  });
+		  return deferred.promise;
+	  },
+
+	  getData : function(indicator) {
+		  // $log.log("[DataStoreService] Data indicator: ",
+		  // indicator);
+		  var yearCalls = [];
+		  angular.forEach(indicator.getDataFilenames(), function(fn) {
+			  yearCalls.push($http.get(fn));
+		  });
+		  // $log.log('[DataStoreService] Indicator data
+		  // filenames ',
+		  // indicator
+		  // .getDataFilenames());
+		  // $log.log('[DataStoreService] yearCalls ',
+		  // yearCalls);
+		  var deferred = $q.defer();
+		  $q.all(yearCalls).then(function(results) {
+			  var answer = [];
+			  // $log.log('[DataStoreService] years ',
+			  // indicator.period.getPeriod());
+			  // $log.log('[DataStoreService] results
+			  // ', results);
+			  angular.forEach(indicator.period.getPeriod(), function(yr, i) {
+				  answer[yr] = results[i].data;
+			  });
+			  deferred.resolve(answer);
+		  }, function(errors) {
+			  $log.error("[DataStoreService] ", errors);
+			  deferred.reject(errors);
+		  }, function(updates) {
+			  deferred.update(updates);
+		  });
+		  return deferred.promise;
+	  },
+	};
+});

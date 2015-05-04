@@ -1,17 +1,17 @@
-<form class="form-inline" ng-controller="RDateFromToCtrl">
+<div data-ng-controller="RDateFromToCtrl">
 	<div class="form-group form-group-sm">
-		<label for="fromYear">From&nbsp;</label> <select ng-model="period.fromYear"
-			class="form-control" id="fromYear" ng-change="fromChange()"
-			ng-options="yr for yr in period.years | filterFromYears: period.toYear"
-		>
+		<label for="fromYear">From&nbsp;</label> <select
+			data-ng-model="period.fromYear" class="form-control" id="fromYear"
+			data-ng-change="updatePeriod(); fromChange()"
+			data-ng-options="yr for yr in years | filterFromYears: period.toYear">
 		</select>
 	</div>
 
 	<div class="form-group form-group-sm">
-		<label for="toYear">To&nbsp;</label> <select ng-model="period.toYear"
-			id="toYear" class="form-control" ng-change="toChange()"
-			ng-options="yr for yr in period.years | filterToYears: period.fromYear"
-		>
+		<label for="toYear">To&nbsp;</label> <select
+			data-ng-model="period.toYear" id="toYear" class="form-control"
+			data-ng-change="updatePeriod(); toChange()"
+			data-ng-options="yr for yr in years | filterToYears: period.fromYear">
 		</select>
 	</div>
-</form>
+</div>
