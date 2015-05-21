@@ -11,12 +11,11 @@ app.directive('rHierarchicalFilterFour', function() {
 		// toChange : '&'
 		},
 	};
-});
+});  
 
 app
 		.controller('RHierarchicalFilterFourCtrl', 
 				function($scope, $log) {
-
 					$scope.data = {
 						"Enrolled" : {
 							"Gender" : {
