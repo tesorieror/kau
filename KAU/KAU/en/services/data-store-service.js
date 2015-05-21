@@ -10,15 +10,10 @@ app.factory('dataStoreService', function($http, $q, $log) {
 
 	var JSON_PATH = '../en/json/';
 	var PLAIN_FILE = 'data.json';
-	var METADATA_FILE = 'data/metadata.json';
+	var DESCRIPTION_FILE = 'description.json';
+	var METADATA_FILE = 'metadata.json';
 	var ABOUT_UNIT_FILE = 'about-unit.json';
 	var YEARS_FILE = 'years.json';
-
-	function toJsonDescriptionFilename(indicator) {
-		var category = indicator.category.toLowerCase();
-		var subcategory = indicator.subcategory.toLowerCase();
-		return JSON_PATH + category + '_' + subcategory + '_desc.json';
-	}
 
 	function getDataBarGroupsFilename() {
 		return JSON_PATH + 'data-bar-groups.json';
@@ -38,7 +33,6 @@ app.factory('dataStoreService', function($http, $q, $log) {
 			$http.get(filename).then(function(result) {
 				deferred.resolve(result.data);
 			}, function(error) {
-				$log.error(error);
 				deferred.reject(error);
 			}, function(update) {
 				deferred.update(update);
@@ -66,37 +60,29 @@ app.factory('dataStoreService', function($http, $q, $log) {
 
 	return {
 	  getNewData : createDeferredFunction(JSON_PATH + PLAIN_FILE),
-	  getDataMetadata : createDeferredFunction(JSON_PATH + METADATA_FILE),
+	  getDataMetadata : createDeferredFunction(JSON_PATH + 'data/'
+	      + METADATA_FILE),
+	  getMetadata : function(path) {
+		  return createDeferredFunction(JSON_PATH + path + '/' + METADATA_FILE)();
+	  },
 	  getYears : createDeferredFunction(JSON_PATH + YEARS_FILE),
 	  getAboutUnit : createDeferredFunction(JSON_PATH + ABOUT_UNIT_FILE),
-
-	  // getDataForYear :
-	  // createDeferredFunction("../en/json/data/students/freshmen/2010-1431.json"),
 
 	  getDataForYear : function(categoryPath, year) {
 		  return createDeferredFunction(
 		      JSON_PATH + dataFilenameFor(categoryPath, year))();
 	  },
 
-	  getDataForYears : function(categoryPath, years) {
-		  var yearCalls = [];
-		  years.forEach(function(year, ind, arr) {
-			  yearCalls.push(createDeferredFunction(dataFilenameFor(categoryPath,
-			      year)));
-		  });
-		  var deferred = $q.defer();
-		  $q.all(yearCalls).then(function(results) {
-			  var answer = [];
-			  results.forEach(function(curr, ind, arr) {
-				  answer[years[ind]] = results[ind].data;
-			  });
-			  deferred.resolve(answer);
-		  }, function(errors) {
-			  deferred.reject(errors);
-		  }, function(updates) {
-			  deferred.update(updates);
-		  });
-		  return deferred.promise;
+	  getDataForPath : function(path) {
+		  return createDeferredFunction(
+		      JSON_PATH + path[0] + '/' + path[1] + '/' + path[2] + '/'
+		          + _.last(path) + '.json')();
+	  },
+
+	  getDescriptionForPath : function(path) {
+		  return createDeferredFunction(
+		      JSON_PATH + path[0] + '/' + path[1] + '/' + path[2] + '/'
+		          + DESCRIPTION_FILE)();
 	  },
 
 	  getDataBarGroups : function() {
@@ -166,20 +152,6 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		  }, function(update) {
 			  deferred.update(update);
 			  $log.error(update);
-		  });
-		  return deferred.promise;
-	  },
-
-	  getDescriptionFor : function(indicator) {
-		  var deferred = $q.defer();
-		  $log.log(toJsonDescriptionFilename(indicator));
-		  $http.get(toJsonDescriptionFilename(indicator)).then(function(result) {
-			  deferred.resolve(result.data);
-		  }, function(error) {
-			  // $log.error(error);
-			  deferred.reject(error);
-		  }, function(update) {
-			  deferred.update(update);
 		  });
 		  return deferred.promise;
 	  },

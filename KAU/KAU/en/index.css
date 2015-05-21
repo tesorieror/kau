@@ -338,7 +338,8 @@ form.r-multiple-selection div {
 }
 
 input.r-multiple-selection-filter {
-	/*	width: 100%;*/	
+	/*	width: 100%;*/
+	
 }
 
 div.r-multiple-selection-container {
@@ -361,7 +362,8 @@ form.r-single-selection div {
 }
 
 input.r-single-selection-filter {
-	/*	width: 100%;*/	
+	/*	width: 100%;*/
+	
 }
 
 div.r-single-selection-container {
@@ -395,4 +397,110 @@ div.students h2 {
 	text-align: center;
 }
 
+.modal-dialog {
+	top: 450px;
+}
 
+/**
+* Data
+*/
+div.data {
+	
+}
+
+div.data h2 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.data h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: black;
+	text-align: center;
+}
+
+div.data p {
+	font-family: 'Arimo', sans-serif;
+	font-style: normal;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 10px;
+}
+
+/**
+* Thumbnail
+*/
+div.thumbnail.data {
+	background-color: beige;
+	border: 0px NONE black;
+}
+
+div.thumbnail.data h3 {
+	margin: 0px;
+}
+
+div.thumbnail.data p {
+	font-family: 'Arimo', sans-serif;
+	font-style: normal;
+	text-align: left;
+	margin: 5px;
+}
+
+div.thumbnail.data a img {
+	padding: 20px;
+	opacity: .5;
+}
+
+div.thumbnail.data a img:hover {
+	padding: 20px;
+	opacity: 1;
+}
+
+/**
+* thumbnail-image
+*/
+div.thumbnail.thumbnail-image {
+	background-color: beige;
+	/* border: 0px NONE black;
+	box-shadow: NONE;*/
+}
+
+div.thumbnail.thumbnail-image h3 {
+	font-family: 'Lato', sans-serif;
+	font-style: bold;
+	font-weight: 900;
+	margin: 0px;
+	color: black;
+	text-align: center;
+}
+
+div.thumbnail.thumbnail-image p {
+	font-family: 'Arimo', sans-serif;
+	font-style: normal;
+	text-align: left;
+	margin: 5px;
+}
+
+div.thumbnail.thumbnail-image a img {
+	padding: 20px;
+	opacity: .5;
+}
+
+div.thumbnail.thumbnail-image a img:hover {
+	padding: 20px;
+	opacity: 1;
+}
+
+div.thumbnail.thumbnail-image div.caption {
+	/*background-color: green;*/
+	height: 100px;
+}

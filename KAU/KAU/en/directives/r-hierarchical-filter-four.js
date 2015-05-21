@@ -14,8 +14,7 @@ app.directive('rHierarchicalFilterFour', function() {
 });
 
 app
-		.controller(
-				'RHierarchicalFilterFourCtrl',
+		.controller('RHierarchicalFilterFourCtrl', 
 				function($scope, $log) {
 
 					$scope.data = {
@@ -174,8 +173,8 @@ app
 					$scope.levels[3] = $scope.data[$scope.selection[0]][$scope.selection[1]][$scope.selection[2]];
 					$scope.selection[3] = $scope.levels[3][0];
 
-					$log.log('Levels ', $scope.levels);
-					$log.log('Selection ', $scope.selection);
+//					$log.log('Levels ', $scope.levels);
+//					$log.log('Selection ', $scope.selection);
 					// $scope.selection[2] = {
 					// "Saudi" : true,
 					// "Non-Saudi" : true
@@ -189,10 +188,10 @@ app
 					// [ "Enrolled", "Nationality", "Saudi", null ];
 
 					$scope.subcatSelected = function(subcat) {
-						$log.log('Subcat ', subcat);
+//						$log.log('Subcat ', subcat);
 					}
 					$scope.subsubcatSelected = function(subsubcat) {
-						$log.log('Subcat ', subcat);
+//						$log.log('Subcat ', subcat);
 					}
 					
 					$scope.selectionChanged(){

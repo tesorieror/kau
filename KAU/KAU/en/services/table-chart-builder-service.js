@@ -1,104 +1,78 @@
-app.factory('tableChartBuilderService', function($http, $q, $log) {
-
-	var indicator = null;
-	var type = "Table";
+app.factory('tableChartBuilderService', function($http, $q, $log,
+    categoryService, periodService) {
 
 	return {
-		build : function(result) {
-			var cols = buildCols(result);
-			var rows = buildRows(result);
-			var chart = {
-			  "type" : 'Table',
-			  "displayed" : true,
-			  "data" : {
-			    "cols" : cols,
-			    "rows" : rows
-			  },
-			  "options" : {
-			    "width" : "100%",
-			    "height" : "100%",
-			    "pageSize" : "10",
-			    "page" : "enable",
-			    "showRowNumber" : false,
-			    "sort" : "enable"
-			  }
-			};
-			return chart;
-		}
-	}
+	  chart : null,
 
-	function buildCols(result) {
-		var cols = [ {
-		  "id" : "indicator",
-		  "label" : "Indicator",
-		  "type" : "string",
-		  "p" : {},
-		} ];
+	  build : function(data) {
+		  this.chart = {
+		    "type" : 'Table',
+		    "displayed" : true,
+		    "data" : {
+		      "cols" : this.buildCols(),
+		      "rows" : this.buildRows(data)
+		    },
+		    "options" : {
+		      "width" : "670",
+		      "height" : "450",
+		      "pageSize" : "10",
+		      "page" : "enable",
+		      "showRowNumber" : false,
+		      "sort" : "enable"
+		    }
+		  };
+		  return this.chart;
+	  },
 
-		for (yr in result) {
-			// Cols
-			cols.push({
-			  "id" : "year-" + yr,
-			  "label" : yr,
-			  "type" : "number",
-			  "p" : {}
-			});
-		}
-		return cols;
-	}
+	  buildCols : function() {
+		  return _.reduce(periodService.period, function(cols, yr) {
+			  cols.push({
+			    "id" : "year-" + yr,
+			    "label" : yr,
+			    "type" : "number",
+			    "p" : {}
+			  });
+			  return cols;
+		  }, [ {
+		    "id" : "indicator",
+		    "label" : "Indicator",
+		    "type" : "string",
+		    "p" : {},
+		  } ]);
 
-	function rowKeys(obj) {
-		var keys = Object.keys(obj);
-		return keys.reduce(function(prev, k, ind, arr) {
-			var answer;
-			if (!isNaN(obj[k])) {
-				var base = [];
-				base.push(k);
-				prev.push(base);
-				answer = prev;
-			} else {
-				var children = rowKeys(obj[k]);
-				var procChildren = children.map(function(curr, ind, arr) {
-					var answer = curr;
-					curr.push(k);
-					return curr;
-				});
-				answer = prev.concat(procChildren);
-			}
-			return answer;
-		}, []);
-	}
+	  },
 
-	function rowValue(obj, key) {
-		return key.reduceRight(function(prev, k, ind, arr) {
-			return prev[k];
-		}, obj);
-	}
+	  buildRows : function(data) {
+		  var self = this;
+		  return _.map(categoryService.getRelativeKeysForCategoryPath(), function(
+		      key) {
+			  // $log.log("Key", key);
+			  return {
+				  "c" : _.reduce(periodService.period, function(acc, year) {
+					  acc.push({
+						  "v" : self.rowValue(data[year], key)
+					  });
+					  return acc;
+				  }, [ {
+					  "v" : self.rowLabel(key)
+				  } ])
+			  };
+		  });
+	  },
 
-	function rowLabel(key) {
-		// Get Value
-		return key.reduce(function(prev, k, ind, arr) {
-			return prev.concat(k).concat(" ");
-		}, "");
-	}
+	  rowValue : function(obj, key) {
+		  // $log.log("Obj ",obj,"Key", key);
+		  return _.reduce(key, function(acc, k) {
+			  return acc[k];
+		  }, obj);
+	  },
 
-	function buildRows(result) {
-		// Collect years
-		var years = Object.keys(result);
-		// Collect metadata
-		var keys = rowKeys(result[years[0]]);
-
-		return keys.map(function(key, ind, arr) {
-			return {
-				"c" : years.reduce(function(prev, year, ind, arr) {
-					prev.push({
-						"v" : rowValue(result[year], key)
-					});
-					return prev;
-				}, [ {
-					"v" : rowLabel(key)
-				} ])
-			}
-		});
+	  rowLabel : function(key) {
+		  // $log.log("Key", key);
+		  // Get Value
+		  return _.reduce(key, function(acc, k) {
+			  return acc.concat(k).concat(" ");
+		  }, "");
+	  }
 	}
 });

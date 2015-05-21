@@ -1,12 +1,16 @@
 app.factory('columnChartBuilderService', function($http, $q, $log) {
 
-	var indicator = null;
 	var type = "ColumnChart";
 
 	return {
-		build : function(result, base) {
-			var cols = buildCols(result);
-			var rows = buildRows(result, base);
+		build : function(result, categoryPath, filter) {
+//			$log.log(this.filter);
+			var cols = buildCols(result, categoryPath[categoryPath.length - 1].name,
+			    filter);
+
+			var rows = buildRows(result, categoryPath[categoryPath.length - 1].name,
+			    filter);
+			
 			var chart = {
 			  "type" : type,
 			  "displayed" : true,
@@ -15,111 +19,119 @@ app.factory('columnChartBuilderService', function($http, $q, $log) {
 			    "rows" : rows
 			  },
 			  "options" : {
-			    "width" : "100%",
-			    "height" : "100%",
-			    "pageSize" : "10",
-			    "page" : "enable",
-			    "showRowNumber" : false,
-			    "sort" : "enable"
+			    "isStacked" : true,
+			    "backgroundColor" : "transparent",
+			    "chartArea" : {
+			      "left" : "100",
+			      "top" : "20",
+			      "height" : "350"
+			    },
+			    "titlePosition" : "none",
+			    "title" : buildTitle(result, categoryPath) + " "
+			        + buildSubtitle(result),
+			    "legend" : {
+			      "position" : "right",
+			      "maxLines" : "3",
+			      "textStyle" : {
+				      "fontSize" : "11"
+			      },
+			    },
+			    "vAxis" : {
+				    "title" : "Students"
+			    },
+			    "hAxis" : {
+				    "title" : "Years"
+			    }
 			  }
 			};
+			// $log.log("Column Chart ", chart);
 			return chart;
 		}
 	}
 
-	function buildCols(result) {
-		var cols = [ {
+	function buildTitle(result, categoryPath) {
+		return categoryPath[1].name + " " + categoryPath[0].name + " by "
+		    + categoryPath[2].name;
+	}
+
+	function buildSubtitle(result) {
+		var keys = Object.keys(result);
+		return "from " + keys[0] + " to " + keys[keys.length - 1];
+	}
+
+	function buildCols(result, base, filter) {
+		// Collect years
+		var years = Object.keys(result);
+		// Collect metadata
+		var keys = rowKeys(result[years[0]][base], base, filter).map(
+		    function(curr, ind, arr) {
+			    return curr[1];
+		    });
+
+		return keys.reduce(function(prev, curr, ind, arr) {
+			prev.push({
+			  "id" : curr + "ID",
+			  "label" : curr,
+			  "type" : "number",
+			  "p" : {}
+			});
+			return prev;
+		}, [ {
 		  "id" : "indicator",
 		  "label" : "Indicator",
 		  "type" : "string",
 		  "p" : {},
-		} ];
-		for (yr in result) {
-			// Cols
-			cols.push({
-			  "id" : "year-" + yr,
-			  "label" : yr,
-			  "type" : "number",
-			  "p" : {}
-			});
-		}
-		return cols;
+		} ]);
 	}
 
-	function buildRows(result, base) {
+	function buildRows(result, base, filter) {
 		// Collect years
 		var years = Object.keys(result);
 		// Collect metadata
-		var keys = Object.keys(base.reduce(function(prev, curr, ind, arr) {
-			
-		}, result[years[0]]));
-
-		return keys.map(function(key, ind, arr) {
+		var keys = rowKeys(result[years[0]][base], base, filter);
+		// $log.log("buildRows keys", keys);
+		return years.map(function(year, ind, arr) {
 			return {
-				"c" : years.reduce(function(prev, year, ind, arr) {
+				"c" : keys.reduce(function(prev, key, ind, arr) {
 					prev.push({
 						"v" : rowValue(result[year], key)
 					});
 					return prev;
 				}, [ {
-					"v" : rowLabel(key)
+					"v" : year
 				} ])
 			}
 		});
 	}
 
-	function rowKeys(obj) {
+	function rowKeys(obj, base, filter) {
+		// $log.log("rowKeys obj", obj);
 		var keys = Object.keys(obj);
-		return keys.reduce(function(prev, k, ind, arr) {
-			var answer;
-			if (!isNaN(obj[k])) {
-				var base = [];
-				base.push(k);
-				prev.push(base);
-				answer = prev;
-			} else {
-				var children = rowKeys(obj[k]);
-				var procChildren = children.map(function(curr, ind, arr) {
-					var answer = curr;
-					curr.push(k);
-					return curr;
-				});
-				answer = prev.concat(procChildren);
-			}
-			return answer;
+		keys = keys.reduce(function(prev, key, ind, arr) {
+			if (!isNaN(obj[key]))
+				if (key != "Total")
+					prev.push([ base, key ]);
+				else
+					;
+			else
+				prev.push([ base, key, "Total" ]);
+			return prev;
 		}, []);
+
+//		$log.log("Filter", filter);
+
+		keys = keys.filter(function(curr, ind, arr) {
+			return filter.indexOf(curr[1]) > -1;
+		}); // Filter Data
+
+//		$log.log("Keys", keys);
+		return keys;
 	}
 
 	function rowValue(obj, key) {
-		return key.reduceRight(function(prev, k, ind, arr) {
+		return key.reduce(function(prev, k, ind, arr) {
 			return prev[k];
 		}, obj);
 	}
 
-	function rowLabel(key) {
-		// Get Value
-		return key.reduce(function(prev, k, ind, arr) {
-			return prev.concat(k).concat(" ");
-		}, "");
-	}
-
-	function buildRows(result) {
-		// Collect years
-		var years = Object.keys(result);
-		// Collect metadata
-		var keys = rowKeys(result[years[0]]);
-
-		return keys.map(function(key, ind, arr) {
-			return {
-				"c" : years.reduce(function(prev, year, ind, arr) {
-					prev.push({
-						"v" : rowValue(result[year], key)
-					});
-					return prev;
-				}, [ {
-					"v" : rowLabel(key)
-				} ])
-			}
-		});
-	}
 });

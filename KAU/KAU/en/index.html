@@ -13,6 +13,10 @@
 <!-- JQuery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Underscore -->
+<script type="text/javascript" src="./underscore/underscore-min.js"></script>
+
+
 <!-- Bootstrap -->
 <!-- Latest compiled and minified CSS  -->
 <link rel="stylesheet"
@@ -36,8 +40,7 @@
 <!-- Google Charts -->
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <!-- Angular JS Google Charts -->
-<script
-	src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+<script src="./angular-google-chart-0.0.11/ng-google-chart.js"></script>
 <!-- UI Bootstrap JS -->
 <script
 	src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
@@ -58,6 +61,11 @@
 	src="./services/table-chart-builder-service.js"></script>
 <script type="text/javascript"
 	src="./services/column-chart-builder-service.js"></script>
+<script type="text/javascript"
+	src="./services/line-chart-builder-service.js"></script>
+<script type="text/javascript" src="./services/category-service.js"></script>
+<script type="text/javascript" src="./services/period-service.js"></script>
+
 <script type="text/javascript" src="route.js"></script>
 <link href="animations.css" rel="stylesheet" type="text/css">
 
@@ -71,8 +79,8 @@
 <script type="text/javascript" src="./directives/r-pie.js"></script>
 <!--  Highlights page-->
 <script type="text/javascript" src="./pages/highlights.js"></script>
-<!--  Freshmen page-->
-<script type="text/javascript" src="./pages/freshmen.js"></script>
+<!--  Table Data page-->
+<script type="text/javascript" src="./pages/table.js"></script>
 <!--  Description page-->
 <script type="text/javascript" src="./pages/description.js"></script>
 <!-- About Unit -->
@@ -94,13 +102,25 @@
 -->
 <!-- Data Line -->
 <script type="text/javascript" src="./pages/data-line.js"></script>
-<!-- Students Line -->
-<script type="text/javascript" src="./pages/students.js"></script>
+<!-- Category Line -->
+<script type="text/javascript" src="./pages/category.js"></script>
 <!-- r-selection directive -->
 <script type="text/javascript"
 	src="./directives/r-multiple-selection.js"></script>
 <!-- r-single-selection directive -->
 <script type="text/javascript" src="./directives/r-single-selection.js"></script>
+<!-- r-single-selection directive -->
+<script type="text/javascript" src="./pages/data-descriptor.js"></script>
+
+<script type="text/javascript" src="./pages/data.js"></script>
+
+
+<script type="text/javascript" src="./directives/r-thumbnail-image.js"></script>
+
+<!--  Column Bar Data page-->
+<script type="text/javascript" src="./pages/bar.js"></script>
+
+
 
 <script type="text/javascript">
 	angular.element(document.getElementsByTagName('head')).append(

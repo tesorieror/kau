@@ -103,9 +103,9 @@ TableChartBuilder.prototype.buildRows = function(result) {
 				var nestedKeys = Object.keys(yearData[yearDataKeys[k]]);
 				for (k2 in nestedKeys) {
 					rows[row]["c"][col]["v"] = yearData[yearDataKeys[k]][nestedKeys[k2]];					
-					$log.log("Row", row);
-					$log.log("Col", col);
-					$log.log("Data ", rows[row]["c"][col]["v"]);
+//					$log.log("Row", row);
+//					$log.log("Col", col);
+//					$log.log("Data ", rows[row]["c"][col]["v"]);
 					row++;
 				}
 			} else {
