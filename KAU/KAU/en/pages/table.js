@@ -3,8 +3,8 @@
  */
 
 app.controller('TableCtrl',
-    function($scope, $log, $location, $q, $route, $filter, $location,
-        dataStoreService) {
+    function($scope, $modal, $log, $location, $q, $route, $filter, $location,
+        $window, dataStoreService) {
 
 	    var metadata;
 	    var years;
@@ -15,9 +15,9 @@ app.controller('TableCtrl',
 	    var subcategoryName = $route.current.params.subcategory;
 
 	    $log.info("Loading Table Data Controller");
-	    $log.info("Location path", $location.path());
-	    $log.info("Route parameters", $route.current.params);
-	    $log.info("Template", $route.current.templateUrl);
+	    // $log.info("Location path", $location.path());
+	    // $log.info("Route parameters", $route.current.params);
+	    // $log.info("Template", $route.current.templateUrl);
 
 	    $q.all(
 	        [ dataStoreService.getMetadata(rootPathName),
@@ -77,23 +77,34 @@ app.controller('TableCtrl',
 	    $scope.chartSelectedItem = function(selectedItems, selectedItem,
 	        chartWrapper) {
 		    // $log.log("Selected", selectedItem);
-		    $log.log("Object",
-		        $scope.chart.data.rows[selectedItem.row]["c"][0]["k"]);
+		    // $log.log("Object",
+		    // $scope.chart.data.rows[selectedItem.row]["c"][0]["k"]);
+
+		    // Patch to unselect row
 		    chartWrapper.getChart().setSelection(null);
 
+		    // Get the key from the row
 		    var key = $scope.chart.data.rows[selectedItem.row]["c"][0]["k"];
 
-		    var subsubcategoryName = key[0];
-		    var subsubsubcategoryName = key[1];
-		    var subsubsubsubcategoryName = key[2];
-		    var path = "/description/" + rootPathName + "/category/"
-		        + categoryName + "/subcategory/" + subcategoryName
-		        + "/subsubcategory/" + subsubcategoryName + "/subsubsubcategory/"
-		        + subsubsubcategoryName + "/";
-		    if (key.length > 2)
-			    path = path + "subsubsubsubcategory/" + subsubsubsubcategoryName;
-		    //$log.log(path);
-		    $location.path(path);
+		    /**
+				 * Route Path
+				 */
+		    // var subsubcategoryName = key[0];
+		    // var subsubsubcategoryName = key[1];
+		    // var subsubsubsubcategoryName = key[2];
+		    // var path = "/description/" + rootPathName + "/category/" +
+		    // categoryName
+		    // + "/subcategory/" + subcategoryName + "/subsubcategory/"
+		    // + subsubcategoryName + "/subsubsubcategory/"
+		    // + subsubsubcategoryName + "/";
+		    // if (key.length > 2)
+		    // path = path + "subsubsubsubcategory/" + subsubsubsubcategoryName;
+		    // // $log.log(path);
+		    // //$location.path(path);
+		    // Build the path
+		    var path = [ rootPathName, categoryName, subcategoryName ].concat(key);
+		    // Open dialog
+		    $scope.openDescriptionDialog('lg', path);
 	    }
 
 	    // Period
@@ -240,5 +251,32 @@ app.controller('TableCtrl',
 				    }));
 			    }, []);
 	    }
+
+	    /**
+			 * Dialog description
+			 */
+	    $scope.openDescriptionDialog = function(size, path) {
+
+		    var dialogResult = null;
+
+		    var modalInstance = $modal.open({
+		      animation : $scope.animationsEnabled,
+		      templateUrl : './pages/data-descriptor.html',
+		      controller : 'DataDescriptorCtrl',
+		      size : size,
+		      resolve : {
+			      path : function() {
+				      return path;
+			      }
+		      }
+		    });
+
+		    modalInstance.result.then(function(result) {
+			    dialogResult = result;
+			    $log.info('Dialog result', dialogResult);
+		    }, function() {
+			    $log.info('Modal dismissed at: ' + new Date());
+		    });
+	    };
 
     });

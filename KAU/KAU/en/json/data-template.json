@@ -1,9 +1,0 @@
-[ {
-	"type" : "Category",
-	"name" : "categoryName",
-	"children" : [ {
-		"type" : "Data",
-		"key" : "dataKey",
-		"value" : "dataValue"
-	} ]
-} ]

@@ -29,7 +29,11 @@ app
 	          label : "Line",
 	          id : "LineChart",
 	          draw : buildLineChart
-	        }, ];
+	        }, {
+	          label : "Pie",
+	          id : "PieChart",
+	          draw : buildPieChart
+	        } ];
 
 	        $scope.chartType = $scope.chartTypes[0];
 
@@ -106,7 +110,6 @@ app
 			        $log.log("Data", data);
 			        $scope.chartObject = $scope.chartType.draw(data);
 			        $log.log("Chart Object", $scope.chartObject);
-
 		        });
 	        }
 
@@ -114,39 +117,55 @@ app
 					 * Chart builder
 					 */
 
-	        function buildColumnChart() {
+	        function buildColumnChart(data) {
+
 		        var rows = [];
 		        var actual = -1;
 		        var last = -1;
 		        var total = 0;
-		        for (yr in $scope.data) {
-			        var value = $scope.data[yr];
-			        if (yr >= $scope.indicator.fromYear
-			            && yr <= $scope.indicator.toYear) {
-				        var val = value[$scope.indicator.subsubcategory][$scope.indicator.filter];
-				        total = total + val;
-			        }
-		        }
 
-		        for (yr in $scope.data) {
-			        var value = $scope.data[yr];
-			        if (yr >= $scope.indicator.fromYear
-			            && yr <= $scope.indicator.toYear) {
-				        last = actual;
-				        actual = value[$scope.indicator.subsubcategory][$scope.indicator.filter];
-				        var growth = (actual / total) * 100;
+		        var period = Object.keys(data).reverse();
+		        $log.log(period);
+		        var to = _.last(period);
+		        var from = _.first(period);
+		        $log.log("From", from, "To", to);
 
-				        rows.push({
-					        "c" : [ {
-						        "v" : yr
-					        }, {
-						        "v" : actual
-					        }, {
-						        "v" : growth
-					        } ]
-				        });
-			        }
-		        }
+		        period
+		            .forEach(function(yr) {
+			            var value = data[yr];
+			            if (yr >= from && yr <= to) {
+				            val = value[$routeParams.subsubcategory][$routeParams.subsubsubcategory];
+				            if ($routeParams.subsubsubsubcategory)
+					            val = val[$routeParams.subsubsubsubcategory];
+				            total = total + val;
+			            }
+		            });
+
+		        period
+		            .forEach(function(yr) {
+			            var value = data[yr];
+			            if (yr >= from && yr <= to) {
+				            last = actual;
+
+				            actual = value[$routeParams.subsubcategory][$routeParams.subsubsubcategory];
+				            if ($routeParams.subsubsubsubcategory)
+					            actual = actual[$routeParams.subsubsubsubcategory];
+
+				            var growth = (actual / total) * 100;
+
+				            rows.push({
+					            "c" : [ {
+						            "v" : yr
+					            }, {
+						            "v" : actual
+					            }, {
+						            "v" : growth
+					            } ]
+				            });
+			            }
+		            });
+
+		        $log.log("Rows", rows);
 
 		        return {
 		          "type" : 'ColumnChart',
@@ -197,14 +216,14 @@ app
 
 	        }
 
-	        function buildLineChart() {
-		        var chData = buildColumnChart();
+	        function buildLineChart(data) {
+		        var chData = buildColumnChart(data);
 		        chData['type'] = 'LineChart';
 		        return chData;
 	        }
 
-	        function buildPieChart() {
-		        var chData = buildColumnChart();
+	        function buildPieChart(data) {
+		        var chData = buildColumnChart(data);
 		        chData["options"]["legend"]["position"] = "right";
 		        chData['type'] = 'PieChart';
 		        return chData;
@@ -220,7 +239,7 @@ app
 		        var last = -1;
 
 		        var period = Object.keys(data).reverse();
-		        $log.log(period);
+		        // $log.log(period);
 
 		        period
 		            .forEach(function(yr) {

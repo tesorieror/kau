@@ -12,7 +12,7 @@ app.controller('CategoryCtrl', function($scope, $log, $location, $route,
 	var rootPathName = path[1];
 
 	$log.info("Loading Category Controller");
-	$log.log($route.current.params);
+//	$log.log($route.current.params);
 
 	// Title
 	$scope.title = ((subcategoryName == null) ? "" : (subcategoryName

@@ -15,9 +15,9 @@ app.controller('BarCtrl', function($scope, $log, $location, $q, $route,
 	var subsubcategoryName = $route.current.params.subsubcategory;
 
 	$log.info("Loading Column Bar Data Controller");
-	$log.info("Location path", $location.path());
-	$log.info("Route parameters", $route.current.params);
-	$log.info("Template", $route.current.templateUrl);
+	// $log.info("Location path", $location.path());
+	// $log.info("Route parameters", $route.current.params);
+	// $log.info("Template", $route.current.templateUrl);
 
 	$q
 	    .all(

@@ -1,39 +1,35 @@
 <div>
+	<!-- 
 	<div class="row">
 		<div class="col-xs-12">
 			<img src="./img/about-unit.jpg" style="width: 100%" />
 		</div>
 	</div>
-
+ -->
 	<div class="row data">
 		<div class="col-xs-12">
 			<h2>{{title}}</h2>
 		</div>
 	</div>
-
 	<div class="row ">
 		<div class="col-xs-12">
 			<div class="panel panel-success">
 				<div class="panel-body">
 					<div class="btn-group">
 						<label class="btn btn-primary" ng-click="goToParent()" uncheckable><span
-								class="glyphicon glyphicon-arrow-up"></span>
-							&nbsp;{{parent.name}}</label>
+								class="glyphicon glyphicon-arrow-up"
+							></span> &nbsp;{{parent.name}}</label>
 					</div>
-
 					<div class="btn-group">
-						<label class="btn btn-success"
-							ng-repeat="subcat in actual.children"
-							ng-click="subsubcategoryClicked(subcat)" uncheckable><span
-								class="glyphicon glyphicon-arrow-down"></span>
+						<label class="btn btn-success" ng-repeat="subcat in actual.children"
+							ng-click="subsubcategoryClicked(subcat)" uncheckable
+						><span class="glyphicon glyphicon-arrow-down"></span>
 							&nbsp;{{subcat.name}}</label>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 	<div class="row ">
 		<div class="col-xs-12">
 			<div class="panel panel-success">
@@ -42,42 +38,38 @@
 						<div class="form-group form-group-sm">
 							<label class="control-label" for="searchString">Search <input
 								class="form-control" id="searchString" type="text"
-								ng-model="searchString" placeholder="Filter"
-								ng-change="chartRefresh()" />
+								ng-model="searchString" placeholder="Filter" ng-change="chartRefresh()"
+							/>
 							</label>
 						</div>
-
 						<div class="form-group form-group-sm">
 							<label for="fromYear">From&nbsp;</label> <select ng-model="from"
 								class="form-control" id="fromYear" ng-change="periodChanged()"
-								ng-options="yr as yr for yr in years | filterFromYears: to">
+								ng-options="yr as yr for yr in years | filterFromYears: to"
+							>
 							</select>
 						</div>
-
 						<div class="form-group form-group-sm">
-							<label for="toYear">To&nbsp;</label> <select ng-model="to"
-								id="toYear" class="form-control" ng-change="periodChanged()"
-								ng-options="yr for yr in years | filterToYears: from">
+							<label for="toYear">To&nbsp;</label> <select ng-model="to" id="toYear"
+								class="form-control" ng-change="periodChanged()"
+								ng-options="yr for yr in years | filterToYears: from"
+							>
 							</select>
 						</div>
-
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<!-- Table Chart -->
-
-
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="panel panel-success">
 				<div class="panel-body">
 					<div google-chart chart="chart" on-ready="chartReady(chartWrapper)"
 						on-select="chartSelectedItem(selectedItems, selectedItem, chartWrapper)"
-						on-click="chartClicked(chart)"
-						style="width: 700px; height: 450px;"></div>
+						on-click="chartClicked(chart)" style="width: 700px; height: 450px;"
+					></div>
 				</div>
 			</div>
 		</div>

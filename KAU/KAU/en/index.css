@@ -1,4 +1,12 @@
 /**
+* DD patch
+*/
+
+dd {
+	margin-bottom: 10px;
+}
+
+/**
 * Patch Bootstrap Angular
 */
 .nav, .pagination, .carousel, .panel-title a {
@@ -395,10 +403,6 @@ div.students h2 {
 	margin-bottom: 40px;
 	color: black;
 	text-align: center;
-}
-
-.modal-dialog {
-	top: 450px;
 }
 
 /**

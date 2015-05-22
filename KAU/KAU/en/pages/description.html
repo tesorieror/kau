@@ -57,7 +57,7 @@
 				<dt>Chart type</dt>
 				<dd>
 					<select class="form-control" ng-model="chartType" id="chartType"
-						ng-change="refreshChart()"
+						ng-change="chartRefresh()"
 						ng-options="cht as cht.label for cht in chartTypes">
 					</select>
 				</dd>
