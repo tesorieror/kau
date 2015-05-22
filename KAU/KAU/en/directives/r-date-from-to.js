@@ -8,7 +8,7 @@ app.directive('rDateFromTo', function() {
 	    from : '=',
 	    to : '=',
 	    onChange : '&'
-	  },
+	  }
 	};
 });
 
