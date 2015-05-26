@@ -1,9 +1,152 @@
 /**
+* Check button
+*/
+div.checkButton {
+	display: inline-block;
+	border-radius: 4px;
+	box-sizing: border-box;
+	/*border: 1px SOLID blue;*/
+	padding: 10px 15px 10px 15px;
+/*  	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;"*/
+}
+
+div.checkButton:hover {
+	background-color: #060;
+	
+}
+
+div.checkButton input {
+	/*margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;*/	
+}
+
+div.checkButton a {
+	color: black;
+}
+
+div.checkButton a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+/**
+* Nav
+*/
+/**
+* Level 1
+*/
+ul.nav-pills.kau {
+	background-color: rgb(245, 245, 245);
+	/*margin-bottom: 5px;*/
+}
+
+ul.nav-pills.kau li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+ul.nav-pills.kau li a {
+	color: #060;
+}
+
+ul.nav-pills.kau li.active a {
+	background-color: #060;
+	color: white;
+}
+
+ul.nav-pills.kau li a:hover {
+	background-color: #060;
+	color: white;
+}
+
+/**
+* Level 1
+*/
+ul.nav-pills.kau li.dropdown ul.dropdown-menu {
+	color: #060;
+	background-color: rgb(245, 245, 245);
+}
+
+ul.nav-pills.kau li.dropdown ul.dropdown-menu li a {
+	color: #060;
+	background-color: rgb(245, 245, 245);
+}
+
+ul.nav-pills.kau li.dropdown ul.dropdown-menu li.active a {
+	color: white;
+	background-repeat: no-repeat;
+	background-image: none;
+	background-attachment: inherit;
+	background-color: #060;
+}
+
+ul.nav-pills.kau li.dropdown ul.dropdown-menu li a:hover {
+	color: white;
+	background-repeat: no-repeat;
+	background-image: none;
+	background-attachment: inherit;
+	background-color: #060;
+}
+
+/**
+* Level 2
+*/
+ul.nav-pills.kau2 {
+	background-color: #CCE0FF;
+}
+
+ul.nav-pills.kau2 li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+ul.nav-pills.kau2 li a {
+	/*color: #060;*/
+	
+}
+
+ul.nav-pills.kau2 li.active a {
+	/*background-color: #060;
+	color: white;*/
+	
+}
+
+ul.nav-pills.kau2 li a:hover {
+	background-color: rgb(51, 122, 183);
+	color: white;	
+}
+
+/**
 * DD patch
 */
-
 dd {
 	margin-bottom: 10px;
+}
+
+/**
+* Carousel right
+*/
+div.carousel-caption-right {
+	/*background-color: rgba(80, 80, 80, 0.5) !important;*/
+	background-color: #f0ab3f !important;
+	text-shadow: none;
+	color: black;
+	left: 500px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+}
+
+div.carousel-caption-right p {
+	text-align: left;
 }
 
 /**
@@ -23,10 +166,26 @@ dd {
 }
 
 /**
-* Main header panel
+* Main header
 */
-div.main-header-panel {
-	/*background-color: #83d9bf;*/
+div.main-header {
+	/*background-color: #669999;*/
+	background-color: #37a846; /*#0f5934;*/
+	color: white;
+	text-align: center;
+	padding: 1em 1em 1em 1em;
+}
+
+div.main-header h1 {
+	/*font-family: 'Lato', sans-serif;*/
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/**
+* Main header panel
+
+div.main-header-panel {	
 	background-color: #669999;
 	color: white;
 	text-align: right;
@@ -54,6 +213,7 @@ div.main-header-panel p {
 	line-height: 1.2em;
 	display: block;
 }
+*/
 
 /**
 * Highlight panel
@@ -88,7 +248,7 @@ div.r-highlight h3 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
-	color: grey;
+	color: black;
 	padding-top: 1em;
 }
 
@@ -96,7 +256,7 @@ div.r-highlight h4 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
-	color: darkgrey;
+	color: grey;
 }
 
 div.r-highlight p {
@@ -206,13 +366,17 @@ div.about-unit {
 	
 }
 
+div.about-unit div blockquote {
+	border-left-color: #61210B;
+}
+
 div.about-unit h2 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: black;
+	color: #61210B;
 	text-align: center;
 }
 
@@ -220,9 +384,9 @@ div.about-unit h3 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
-	margin-top: 60px;
-	margin-bottom: 40px;
-	color: black;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: #61210B;
 	text-align: center;
 }
 
@@ -241,13 +405,17 @@ div.goal-unit {
 	
 }
 
+div.goal-unit div blockquote {
+	border-left-color: #61210B;
+}
+
 div.goal-unit h2 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: black;
+	color: #61210B;
 	text-align: center;
 }
 
@@ -255,9 +423,9 @@ div.goal-unit h3 {
 	font-family: 'Lato', sans-serif;
 	font-style: bold;
 	font-weight: 900;
-	margin-top: 60px;
-	margin-bottom: 40px;
-	color: black;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: #61210B;
 	text-align: center;
 }
 
@@ -418,7 +586,7 @@ div.data h2 {
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: black;
+	color: rgb(51, 122, 183);
 	text-align: center;
 }
 

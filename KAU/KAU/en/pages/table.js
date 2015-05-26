@@ -6,6 +6,9 @@ app.controller('TableCtrl',
     function($scope, $modal, $log, $location, $q, $route, $filter, $location,
         $window, dataStoreService) {
 
+	    // Navigation active item
+	    $scope.activePath = $location.path();
+
 	    var metadata;
 	    var years;
 	    var path = $location.path();
@@ -13,6 +16,11 @@ app.controller('TableCtrl',
 	    var rootPathName = path.split("/")[1];
 	    var categoryName = $route.current.params.category;
 	    var subcategoryName = $route.current.params.subcategory;
+
+	    // Export category names
+	    $scope.rootPathName = rootPathName;
+	    $scope.categoryName = categoryName;
+	    $scope.subcategoryName = subcategoryName;
 
 	    $log.info("Loading Table Data Controller");
 	    // $log.info("Location path", $location.path());
@@ -39,6 +47,11 @@ app.controller('TableCtrl',
 
 		    $scope.actual = _.detect($scope.parent.children, function(subcat) {
 			    return subcat.name.firstToUpper() == subcategoryName.firstToUpper();
+		    });
+
+		    // Subcategories
+		    $scope.subcategoryNames = _.map($scope.parent.children, function(data) {
+			    return data.name;
 		    });
 
 		    // Period

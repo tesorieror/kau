@@ -5,6 +5,9 @@
 app.controller('BarCtrl', function($scope, $log, $location, $q, $route,
     $filter, $location, dataStoreService) {
 
+	// Navigation active item
+	$scope.activePath = $location.path();
+
 	var metadata;
 	var years;
 	var path = $location.path();
@@ -14,10 +17,14 @@ app.controller('BarCtrl', function($scope, $log, $location, $q, $route,
 	var subcategoryName = $route.current.params.subcategory;
 	var subsubcategoryName = $route.current.params.subsubcategory;
 
+	// Export category names
+
+	$scope.rootPathName = rootPathName;
+	$scope.categoryName = categoryName;
+	$scope.subcategoryName = subcategoryName;
+	$scope.subsubcategoryName = subsubcategoryName;
+
 	$log.info("Loading Column Bar Data Controller");
-	// $log.info("Location path", $location.path());
-	// $log.info("Route parameters", $route.current.params);
-	// $log.info("Template", $route.current.templateUrl);
 
 	$q
 	    .all(
@@ -47,6 +54,21 @@ app.controller('BarCtrl', function($scope, $log, $location, $q, $route,
 		    function(cat) {
 			    return cat.name.toUpperCase() == subsubcategoryName.toUpperCase();
 		    });
+
+		// Subsubsubcategory
+		$scope.subcategoryNames = _.map($scope.category.children, function(cat) {
+			return cat.name;
+		});
+
+		// Subsubsubcategory
+		$scope.subsubcategoryNames = _.map($scope.subcategory.children, function(
+		    cat) {
+			return cat.name;
+		});
+
+		$log.log("ActivePath", $scope.activePath);
+		$log.log('/' + $scope.rootPathName + '/category/' + $scope.categoryName
+		    + '/subcategory/' + $scope.subcategoryName + '/subsubcategory/');
 
 		// Period
 		$scope.years = years;

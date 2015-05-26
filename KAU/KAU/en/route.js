@@ -26,7 +26,7 @@ app
 	          templateUrl : 'chapter.html',
 	          controller : 'ChapterCtrl'
 	        })
-	        .when('/Main', {
+	        .when('/main', {
 	          templateUrl : './pages/main.html',
 	          controller : 'MainCtrl'
 	        })
@@ -50,11 +50,11 @@ app
 	              templateUrl : './pages/description.html',
 	              controller : 'DescriptionCtrl'
 	            })
-	        .when('/AboutUnit', {
+	        .when('/aboutUnit', {
 	          templateUrl : './pages/about-unit.html',
 	          controller : 'AboutUnitCtrl'
 	        })
-	        .when('/GoalOfTheUnit', {
+	        .when('/goalOfUnit', {
 	          templateUrl : './pages/goal-of-the-unit.html',
 	          controller : 'GoalOfTheUnitCtrl'
 	        })
