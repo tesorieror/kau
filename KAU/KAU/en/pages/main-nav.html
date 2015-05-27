@@ -1,0 +1,59 @@
+
+<ul class="nav nav-pills kau">
+	<li role="presentation" ng-class="{active: activePath == '/main'}">
+		<a href="#/main">Home</a>
+	</li>
+	<li role="presentation" class="dropdown" ng-class="{active: activePath == '/goalOfUnit', active: activePath == '/aboutUnit'}">
+		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+			About
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation" ng-class="{active: activePath == '/aboutUnit'}">
+				<a href="#/aboutUnit">About Unit</a>
+			</li>
+			<li role="presentation" ng-class="{active: activePath == '/goalOfUnit'}">
+				<a href="#/goalOfUnit">Goal of the Unit</a>
+			</li>
+		</ul>
+	</li>
+	<li role="presentation">
+		<a href="#">KAU Rankings</a>
+	</li>
+	<li role="presentation" class="dropdown" ng-class="{active: activePath.indexOf('/data')==0}">
+		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+			Data
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation">
+				<a href="#/">University</a>
+			</li>
+			<li role="presentation">
+				<a href="#/">Campuses</a>
+			</li>
+			<li role="presentation">
+				<a href="#/">Faculties</a>
+			</li>
+			<li role="presentation">
+				<a href="#/">Departments</a>
+			</li>
+			<li role="presentation" ng-class="{active: activePath.indexOf('/data/category/students')==0}">
+				<a href="#/data/category/students/subcategory/freshmen">Students</a>
+			</li>
+			<li role="presentation">
+				<a href="#/">Spending on Education</a>
+			</li>
+			<li role="presentation">
+				<a href="#/">Quality &amp; Scientific Research</a>
+			</li>
+		</ul>
+	</li>
+	<li role="presentation">
+		<a href="#">Indicators</a>
+	</li>
+	<li role="presentation">
+		<a href="#">Comparisons</a>
+	</li>
+</ul>
+
