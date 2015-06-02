@@ -62,9 +62,12 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	  getNewData : createDeferredFunction(JSON_PATH + PLAIN_FILE),
 	  getDataMetadata : createDeferredFunction(JSON_PATH + 'data/'
 	      + METADATA_FILE),
-	  getMetadata : function(path) {
-		  return createDeferredFunction(JSON_PATH + path + '/' + METADATA_FILE)();
+
+	  getMetadata : function(root) {
+	  	$log.log("ROOT", root);
+		  return createDeferredFunction(JSON_PATH + root + '/' + METADATA_FILE)();
 	  },
+
 	  getYears : createDeferredFunction(JSON_PATH + YEARS_FILE),
 	  getAboutUnit : createDeferredFunction(JSON_PATH + ABOUT_UNIT_FILE),
 

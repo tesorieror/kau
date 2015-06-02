@@ -1,989 +1,1009 @@
 [ {
-  "name" : "Students",
-  "image" : "./img/students.png",
-  "title" : "Students",
-  "description" : "Data regarding student statistics.",
-  "href" : "#/data/category/students",
-  "children" : [ {
-    "name" : "Freshmen",
-    "image" : "./img/students-freshmen.png",
-    "title" : "Freshmen",
-    "description" : "Data regarding freshmen student statistics.",
-    "href" : "#/data/category/students/subcategory/freshmen",
-    "children" : [ {
-      "name" : "Gender",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      } ]
-    }, {
-      "name" : "Nationality",
-      "children" : [ {
-        "name" : "Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Non-Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Degree",
-      "children" : [ {
-        "name" : "Bachelore",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Higher Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Master",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "PhD",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Field",
-      "children" : [ {
-        "name" : "Education",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Humanities and Arts",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Social Sciences, Business and Law",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Science",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Engineering, Manufacturing Industries and Construction",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Agriculture",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Health and Social Services",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Not known programmes",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Administrative Areas",
-      "children" : [ {
-        "name" : "Riyad",
-        "children" : []
-      }, {
-        "name" : "Makkah",
-        "children" : []
-      }, {
-        "name" : "Jazan",
-        "children" : []
-      }, {
-        "name" : "Eastern Province",
-        "children" : []
-      }, {
-        "name" : "Asir",
-        "children" : []
-      }, {
-        "name" : "Al-Qassim",
-        "children" : []
-      }, {
-        "name" : "Ha'il",
-        "children" : []
-      }, {
-        "name" : "Al-Madinah",
-        "children" : []
-      }, {
-        "name" : "Al-Baha",
-        "children" : []
-      }, {
-        "name" : "Northern Border",
-        "children" : []
-      }, {
-        "name" : "Tabuk",
-        "children" : []
-      }, {
-        "name" : "Najran",
-        "children" : []
-      }, {
-        "name" : "Al-Jawf",
-        "children" : []
-      } ]
-    } ]
-  }, {
-    "name" : "Enrolled",
-    "image" : "./img/students-enrolled.png",
-    "title" : "Enrolled",
-    "description" : "Data regarding enrolled student statistics.",
-    "href" : "#/data/category/students/subcategory/enrolled",
-    "children" : [ {
-      "name" : "Gender",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      } ]
-    }, {
-      "name" : "Nationality",
-      "children" : [ {
-        "name" : "Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Non-Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Degree",
-      "children" : [ {
-        "name" : "Bachelore",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Higher Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Master",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "PhD",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Field",
-      "children" : [ {
-        "name" : "Education",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Humanities and Arts",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Social Sciences, Business and Law",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Science",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Engineering, Manufacturing Industries and Construction",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Agriculture",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Health and Social Services",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Not known programmes",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Administrative Areas",
-      "children" : [ {
-        "name" : "Riyad",
-        "children" : []
-      }, {
-        "name" : "Makkah",
-        "children" : []
-      }, {
-        "name" : "Jazan",
-        "children" : []
-      }, {
-        "name" : "Eastern Province",
-        "children" : []
-      }, {
-        "name" : "Asir",
-        "children" : []
-      }, {
-        "name" : "Al-Qassim",
-        "children" : []
-      }, {
-        "name" : "Ha'il",
-        "children" : []
-      }, {
-        "name" : "Al-Madinah",
-        "children" : []
-      }, {
-        "name" : "Al-Baha",
-        "children" : []
-      }, {
-        "name" : "Northern Border",
-        "children" : []
-      }, {
-        "name" : "Tabuk",
-        "children" : []
-      }, {
-        "name" : "Najran",
-        "children" : []
-      }, {
-        "name" : "Al-Jawf",
-        "children" : []
-      } ]
-    } ]
-  }, {
-    "name" : "Graduated",
-    "image" : "./img/students-graduated.png",
-    "title" : "Graduated",
-    "description" : "Data regarding graduated student statistics.",
-    "href" : "#/data/category/students/subcategory/graduated",
-    "children" : [ {
-      "name" : "Gender",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      } ]
-    }, {
-      "name" : "Nationality",
-      "children" : [ {
-        "name" : "Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Non-Saudi",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Degree",
-      "children" : [ {
-        "name" : "Bachelore",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Higher Diploma",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Master",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "PhD",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Field",
-      "children" : [ {
-        "name" : "Education",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Humanities and Arts",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Social Sciences, Business and Law",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Science",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Engineering, Manufacturing Industries and Construction",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Agriculture",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Health and Social Services",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Not known programmes",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    }, {
-      "name" : "Administrative Areas",
-      "children" : [ {
-        "name" : "Riyad",
-        "children" : []
-      }, {
-        "name" : "Makkah",
-        "children" : []
-      }, {
-        "name" : "Jazan",
-        "children" : []
-      }, {
-        "name" : "Eastern Province",
-        "children" : []
-      }, {
-        "name" : "Asir",
-        "children" : []
-      }, {
-        "name" : "Al-Qassim",
-        "children" : []
-      }, {
-        "name" : "Ha'il",
-        "children" : []
-      }, {
-        "name" : "Al-Madinah",
-        "children" : []
-      }, {
-        "name" : "Al-Baha",
-        "children" : []
-      }, {
-        "name" : "Northern Border",
-        "children" : []
-      }, {
-        "name" : "Tabuk",
-        "children" : []
-      }, {
-        "name" : "Najran",
-        "children" : []
-      }, {
-        "name" : "Al-Jawf",
-        "children" : []
-      } ]
-    } ]
-  }, {
-    "name" : "Aboard",
-    "image" : "./img/students-aboard.png",
-    "title" : "Aboard",
-    "description" : "Data regarding aboard student statistics.",
-    "href" : "#/data/category/students/subcategory/aboard",
-    "children" : [ {
-      "name" : "Gender",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      } ]
-    }, {
-      "name" : "Scholarships",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      }]
-    }, {
-      "name" : "Own experience",
-      "children" : [ {
-        "name" : "Male",
-        "children" : []
-      }, {
-        "name" : "Female",
-        "children" : []
-      } ]
-    }, {
-      "name" : "Degree",
-      "children" : [ {
-        "name" : "Bachelore",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Master",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "PhD",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Fellowship",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Other levels",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }
+	"name" : "Students",
+	"image" : "./img/students.png",
+	"title" : "Students",
+	"description" : "Data regarding student statistics.",
+	"href" : "#/data/category/Students",
+	"children" : [ {
+		"name" : "Freshmen",
+		"image" : "./img/students-freshmen.png",
+		"title" : "Freshmen",
+		"description" : "Data regarding freshmen student statistics.",
+		"href" : "#/data/category/Students/subcategory/Freshmen",
+		"children" : [ {
+			"name" : "Gender",
+			"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Gender",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Nationality",
+			"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Nationality",
+			"children" : [ {
+				"name" : "Saudi",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Nationality/subsubsubcategory/Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Non-Saudi",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Nationality/subsubsubcategory/Non-Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Degree",
+			"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree/subsubsubcategory/Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Diploma",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree/subsubsubcategory/Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Higher Diploma",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree/subsubsubcategory/Higher Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree/subsubsubcategory/Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Degree/subsubsubcategory/PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Field",
+			"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field",
+			"children" : [ {
+				"name" : "Education",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences, Business and Law",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Social Sciences, Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering, Manufacturing Industries and Construction",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Engineering, Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Field/subsubsubcategory/Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Administrative Areas",
+			"href" : "#/data/category/Students/subcategory/Freshmen/subsubcategory/Administrative Areas",
+			"children" : [ {
+				"name" : "Riyad",
+				"children" : []
+			}, {
+				"name" : "Makkah",
+				"children" : []
+			}, {
+				"name" : "Jazan",
+				"children" : []
+			}, {
+				"name" : "Eastern Province",
+				"children" : []
+			}, {
+				"name" : "Asir",
+				"children" : []
+			}, {
+				"name" : "Al-Qassim",
+				"children" : []
+			}, {
+				"name" : "Ha'il",
+				"children" : []
+			}, {
+				"name" : "Al-Madinah",
+				"children" : []
+			}, {
+				"name" : "Al-Baha",
+				"children" : []
+			}, {
+				"name" : "Northern Border",
+				"children" : []
+			}, {
+				"name" : "Tabuk",
+				"children" : []
+			}, {
+				"name" : "Najran",
+				"children" : []
+			}, {
+				"name" : "Al-Jawf",
+				"children" : []
+			} ]
+		} ]
+	}, {
+		"name" : "Enrolled",
+		"image" : "./img/students-enrolled.png",
+		"title" : "Enrolled",
+		"description" : "Data regarding enrolled student statistics.",
+		"href" : "#/data/category/Students/subcategory/Enrolled",
+		"children" : [ {
+			"name" : "Gender",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Nationality",
+			"children" : [ {
+				"name" : "Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Non-Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Higher Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Field",
+			"children" : [ {
+				"name" : "Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences, Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering, Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Administrative Areas",
+			"children" : [ {
+				"name" : "Riyad",
+				"children" : []
+			}, {
+				"name" : "Makkah",
+				"children" : []
+			}, {
+				"name" : "Jazan",
+				"children" : []
+			}, {
+				"name" : "Eastern Province",
+				"children" : []
+			}, {
+				"name" : "Asir",
+				"children" : []
+			}, {
+				"name" : "Al-Qassim",
+				"children" : []
+			}, {
+				"name" : "Ha'il",
+				"children" : []
+			}, {
+				"name" : "Al-Madinah",
+				"children" : []
+			}, {
+				"name" : "Al-Baha",
+				"children" : []
+			}, {
+				"name" : "Northern Border",
+				"children" : []
+			}, {
+				"name" : "Tabuk",
+				"children" : []
+			}, {
+				"name" : "Najran",
+				"children" : []
+			}, {
+				"name" : "Al-Jawf",
+				"children" : []
+			} ]
+		} ]
+	}, {
+		"name" : "Graduated",
+		"image" : "./img/students-graduated.png",
+		"title" : "Graduated",
+		"description" : "Data regarding graduated student statistics.",
+		"href" : "#/data/category/Students/subcategory/Graduated",
+		"children" : [ {
+			"name" : "Gender",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Nationality",
+			"children" : [ {
+				"name" : "Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Non-Saudi",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Higher Diploma",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Field",
+			"children" : [ {
+				"name" : "Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences, Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering, Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		}, {
+			"name" : "Administrative Areas",
+			"children" : [ {
+				"name" : "Riyad",
+				"children" : []
+			}, {
+				"name" : "Makkah",
+				"children" : []
+			}, {
+				"name" : "Jazan",
+				"children" : []
+			}, {
+				"name" : "Eastern Province",
+				"children" : []
+			}, {
+				"name" : "Asir",
+				"children" : []
+			}, {
+				"name" : "Al-Qassim",
+				"children" : []
+			}, {
+				"name" : "Ha'il",
+				"children" : []
+			}, {
+				"name" : "Al-Madinah",
+				"children" : []
+			}, {
+				"name" : "Al-Baha",
+				"children" : []
+			}, {
+				"name" : "Northern Border",
+				"children" : []
+			}, {
+				"name" : "Tabuk",
+				"children" : []
+			}, {
+				"name" : "Najran",
+				"children" : []
+			}, {
+				"name" : "Al-Jawf",
+				"children" : []
+			} ]
+		} ]
+	}, {
+		"name" : "Aboard",
+		"image" : "./img/students-aboard.png",
+		"title" : "Aboard",
+		"description" : "Data regarding aboard student statistics.",
+		"href" : "#/data/category/Students/subcategory/Aboard",
+		"children" : [ {
+			"name" : "Gender",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Scholarships",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Own experience",
+			"children" : [ {
+				"name" : "Male",
+				"children" : []
+			}, {
+				"name" : "Female",
+				"children" : []
+			} ]
+		}, {
+			"name" : "Degree",
+			"children" : [ {
+				"name" : "Bachelore",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Master",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "PhD",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Fellowship",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Other levels",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}
 
-      ]
-    }, {
-      "name" : "Field",
-      "children" : [ {
-        "name" : "Education",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Humanities and Arts",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Social Sciences, Business and Law",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Science",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Engineering, Manufacturing Industries and Construction",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Agriculture",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Health and Social Services",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      }, {
-        "name" : "Not known programmes",
-        "children" : [ {
-          "name" : "Male",
-          "children" : []
-        }, {
-          "name" : "Female",
-          "children" : []
-        }, {
-          "name" : "Total",
-          "children" : []
-        } ]
-      } ]
-    } ]
-  } ]
+			]
+		}, {
+			"name" : "Field",
+			"children" : [ {
+				"name" : "Education",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Humanities and Arts",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Social Sciences, Business and Law",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Science",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Engineering, Manufacturing Industries and Construction",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Agriculture",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Health and Social Services",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			}, {
+				"name" : "Not known programmes",
+				"children" : [ {
+					"name" : "Male",
+					"children" : []
+				}, {
+					"name" : "Female",
+					"children" : []
+				}, {
+					"name" : "Total",
+					"children" : []
+				} ]
+			} ]
+		} ]
+	} ]
 }, {
-  "name" : "University",
-  "image" : "./img/university.png",
-  "title" : "Univesity",
-  "description" : "Data regarding university statistics.",
-  "href" : "#/data/category/university",
-  "children" : []
+	"name" : "University",
+	"image" : "./img/university.png",
+	"title" : "Univesity",
+	"description" : "Data regarding university statistics.",
+	"href" : "#/data/category/University",
+	"children" : []
 }, {
-  "name" : "Campuses",
-  "image" : "./img/campuses.png",
-  "title" : "Campuses",
-  "description" : "Data regarding campus statistics.",
-  "href" : "#/data/category/campuses",
-  "children" : []
+	"name" : "Campuses",
+	"image" : "./img/campuses.png",
+	"title" : "Campuses",
+	"description" : "Data regarding campus statistics.",
+	"href" : "#/data/category/Campuses",
+	"children" : []
 }, {
-  "name" : "Faculties",
-  "image" : "./img/faculties.png",
-  "title" : "Faculties",
-  "description" : "Data regarding faculty statistics.",
-  "href" : "#/data/category/faculties",
-  "children" : []
+	"name" : "Faculties",
+	"image" : "./img/faculties.png",
+	"title" : "Faculties",
+	"description" : "Data regarding faculty statistics.",
+	"href" : "#/data/category/Faculties",
+	"children" : []
 }, {
-  "name" : "Departments",
-  "image" : "./img/departments.png",
-  "title" : "Departments",
-  "description" : "Data regarding department statistics.",
-  "href" : "#/data/category/departments",
-  "children" : []
+	"name" : "Departments",
+	"image" : "./img/departments.png",
+	"title" : "Departments",
+	"description" : "Data regarding department statistics.",
+	"href" : "#/data/category/Departments",
+	"children" : []
 }, {
-  "name" : "Education",
-  "image" : "./img/education.png",
-  "title" : "Education",
-  "description" : "Data regarding education statistics.",
-  "href" : "#/data/category/education",
-  "children" : []
+	"name" : "Education",
+	"image" : "./img/education.png",
+	"title" : "Education",
+	"description" : "Data regarding education statistics.",
+	"href" : "#/data/category/Education",
+	"children" : []
 }, {
-  "name" : "Quality & services",
-  "image" : "./img/qualityAndService.png",
-  "title" : "Quality & Services",
-  "description" : "Data regarding quality and service statistics.",
-  "href" : "#/data/category/qas",
-  "children" : []
+	"name" : "Quality & services",
+	"image" : "./img/qualityAndService.png",
+	"title" : "Quality & Services",
+	"description" : "Data regarding quality and service statistics.",
+	"href" : "#/data/category/QaS",
+	"children" : []
 } ]

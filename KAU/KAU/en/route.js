@@ -76,17 +76,12 @@ app
 	              templateUrl : './pages/bar.html',
 	              controller : 'BarCtrl'
 
-	            // }).when('/Data/:category/:subcategory', {
-	            // templateUrl : './pages/data-table.html',
-	            // controller : 'DataTableCtrl'
-	            // }).when('/Data/:category/:subcategory/:group', {
-	            // templateUrl : './pages/data-bar.html',
-	            // controller : 'DataBarCtrl'
-	            // }).when('/Data/:category/:subcategory/:group/:subsubcategory',
-	            // {
-	            // templateUrl : './pages/data-line.html',
-	            // controller : 'DataLineCtrl'
-
+	            })
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory/:subsubcategory/subsubsubcategory/:subsubsubcategory',
+	            {
+	              templateUrl : './pages/bar-2.html',
+	              controller : 'BarCtrl2'
 	            }).otherwise({
 		        redirectTo : '/index.html'
 	        });

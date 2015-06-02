@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+</head>
+<body data-ng-controller="ModuleController" data-ng-app="app">
+	{{service}}
+	<br />
+	<br /> {{provider}}
+	<br />
+	<br /> {{factory}}
+	<br />
+	<br />
+	<p>service.name = {{serviceExample.name}}</p>
+	<script>
+var app = angular.module('app',[]);
+
+var fun = function(){
+	this.name = 'SameName';
+	this.$get = function(){
+		this.name = "New Name";
+		return "Default fun.$get(). this.name = " + this.name;
+	};
+	return "fun() . this.name = " + this.name;
+};
+
+app.service( 'serviceExample', fun);
+app.provider( 'providerExample', fun);
+app.factory( 'factoryExample', fun);
+
+app.controller('ModuleController', function($scope, $log, serviceExample, providerExample, factoryExample){
+		$scope.service = "the Service is Actual Function value = " + serviceExample;
+		$scope.serviceExample = serviceExample;
+		$log.log("serviceExample: ", serviceExample.name);
+		$log.log("$scope.service: ", $scope.serviceExample.name);
+		$scope.provider = "the Provider is provider $getFunction = " + providerExample;
+		$scope.factory = "this Factory is function return value = "+factoryExample;
+});
+
+
+</script>
+</body>
+</html>

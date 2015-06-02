@@ -10,11 +10,9 @@
 </div>
 <div class="row">
 	<div class="col-xs-12">
-		<ul class="nav nav-tabs" ng-show="activePath.toLowerCase().indexOf('/{{rootPathName}}/category/{{categoryName}}'.toLowerCase()) == 0">
-			<li ng-repeat="subcat in subcategoryNames" role="presentation"
-				ng-class="{active : activePath.toLowerCase().indexOf('/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat.toLowerCase()}}'.toLowerCase()) == 0}"
-			>
-				<a href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat.toLowerCase()}}">{{subcat}}</a>
+		<ul class="nav nav-tabs kau">
+			<li ng-repeat="subcat in subcategories" role="presentation" ng-class="{active : subcat == subcategory}">
+				<a href="{{subcat.href}}">{{subcat.name}}</a>
 			</li>
 		</ul>
 	</div>
@@ -24,20 +22,23 @@
 		<div class="panel panel-default kau-panel">
 			<div class="panel-header">
 				<ul class="nav nav-pills">
-					<li role="presentation" ng-repeat="subcat in subcategory.children"
-						ng-class="{active : activePath.indexOf('/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcategoryName}}/subsubcategory/{{subcat.name}}') == 0}"
-					>
-						<a href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcategoryName}}/subsubcategory/{{subcat.name}}/">{{subcat.name}}</a>
+					<li role="presentation" ng-repeat="subcat in subsubcategories" ng-class="{active : subcat == subsubcategory}">
+						<a href="{{subcat.href}}">{{subcat.name}}</a>
 					</li>
 				</ul>
 			</div>
 			<div class="panel-header">
+				<ul class="nav nav-pills kau2">
+					<li role="presentation" ng-repeat="subcat in subsubsubcategories" ng-class="{active : subcat == subsubsubcategory}">
+						<a href="{{subcat.href}}">{{subcat.name}}</a>
+					</li>
+				</ul>
+			</div>
+			<!--  style="background-color: rgb(200, 245, 200);" -->
+			<div class="panel-header">
 				<div class="kau-check">
-					<div ng-repeat="subcat in subsubcategory.children">
-						<input type="checkbox" ng-change="chartRefresh()" ng-model="filter[subcat.name]">
-						<a
-							href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcategoryName}}/subsubcategory/{{subsubcategoryName}}/subsubsubcategory/{{subcat.name}}"
-						>{{subcat.name}}</a>
+					<div ng-repeat="subcat in subsubsubsubcategories">
+						<input type="checkbox" ng-change="chartRefresh()" ng-model="filter[subcat.name]"> {{subcat.name}}
 					</div>
 				</div>
 			</div>
@@ -56,15 +57,14 @@
 						</select>
 					</div>
 					<div class="form-group form-group-sm">
-						<label for="chartType">Chart Type&nbsp;</label> <select ng-model="selectedChartType" id="chartType" class="form-control" ng-change="chartTypeChanged()"
-							ng-options="chType.name for chType in chartType"
+						<label for="chartType">Chart Type&nbsp;</label> <select ng-model="chartType" id="chartType" class="form-control" ng-change="chartTypeChanged()"
+							ng-options="chType.name for chType in chartTypes"
 						>
 						</select>
 					</div>
 				</form>
 			</div>
 			<div class="panel-body">
-				<!-- Column Bar Chart -->
 				<div class="row">
 					<div class="col-xs-12">
 						<div google-chart chart="chart" on-ready="chartReady(chartWrapper)" on-select="chartSelectedItem(selectedItem)" on-click="chartClicked(chart)"

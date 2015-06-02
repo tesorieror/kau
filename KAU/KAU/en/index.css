@@ -1,70 +1,127 @@
 /**
-* Check button
+* KAU form
 */
-div.checkButton {
-	display: inline-block;
-	border-radius: 4px;
-	box-sizing: border-box;
-	/*border: 1px SOLID blue;*/
-	padding: 10px 15px 10px 15px;
-/*  	margin-top: 5px;
-	margin-bottom: 0px;
-	margin-left: 5px;"*/
-}
-
-div.checkButton:hover {
-	background-color: #060;
-	
-}
-
-div.checkButton input {
-	/*margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;*/	
-}
-
-div.checkButton a {
-	color: black;
-}
-
-div.checkButton a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-/**
-* Nav
-*/
-/**
-* Level 1
-*/
-ul.nav-pills.kau {
+form.kau {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: 1px SOLID LIGHTGREY;
 	background-color: rgb(245, 245, 245);
-	/*margin-bottom: 5px;*/
 }
 
-ul.nav-pills.kau li {
+/**
+* KAU Check only
+*/
+div.kau-check {
+	background-color: rgb(245, 245, 245);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px SOLID LIGHTGREY;
+}
+
+div.kau-check div {
+	display: inline-block;
+	padding: 10px 15px 10px 15px;
+}
+
+div.kau-check div a {
+	color: #060;
+}
+
+div.kau-check div a:hover {
+	color: black;
+	text-decoration: none;
+	/*background-color: #060;*/
+}
+
+div.kau-check div input {
+	color: #060;
+	background-color: #060;
+}
+
+/**
+* KAU nav-tabs
+*/
+ul.nav-tabs li.active a {
+	background-repeat: no-repeat;
+	background-image: none;
+	background-attachment: inherit;
+	background-color: rgb(245, 245, 245);
+	color: #060;
+}
+
+ul.nav-tabs li a {
+	color: #060;
+}
+
+/**
+* KAU panel 
+*/
+div.kau-panel {
+	border-top: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+/**
+* KAU panel nav-pills
+*/
+div.kau-panel div.panel-header ul.nav-pills {
+	background-color: rgb(245, 245, 245);
+	border-bottom: 1px SOLID LIGHTGREY;
+}
+
+div.kau-panel div.panel-header ul.nav-pills li {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 5px;
 }
 
-ul.nav-pills.kau li a {
+div.kau-panel div.panel-header ul.nav-pills li a {
 	color: #060;
 }
 
-ul.nav-pills.kau li.active a {
+div.kau-panel div.panel-header ul.nav-pills li.active a {
 	background-color: #060;
 	color: white;
 }
 
-ul.nav-pills.kau li a:hover {
+div.kau-panel div.panel-header ul.nav-pills li a:hover {
 	background-color: #060;
 	color: white;
 }
 
 /**
-* Level 1
+* KAU Main nav-pills
+*/
+div.kau-main ul.nav-pills.kau {
+	background-color: rgb(245, 245, 245);
+	border: 1px SOLID LIGHTGREY;
+	margin-bottom: 5px;
+}
+
+div.kau-main ul.nav-pills.kau li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+div.kau-main ul.nav-pills.kau li a {
+	color: #060;
+}
+
+div.kau-main ul.nav-pills.kau li.active a {
+	background-color: #060;
+	color: white;
+}
+
+div.kau-main ul.nav-pills.kau li a:hover {
+	background-color: #060;
+	color: white;
+}
+
+/**
+* Main nav
 */
 ul.nav-pills.kau li.dropdown ul.dropdown-menu {
 	color: #060;
@@ -90,35 +147,6 @@ ul.nav-pills.kau li.dropdown ul.dropdown-menu li a:hover {
 	background-image: none;
 	background-attachment: inherit;
 	background-color: #060;
-}
-
-/**
-* Level 2
-*/
-ul.nav-pills.kau2 {
-	background-color: #CCE0FF;
-}
-
-ul.nav-pills.kau2 li {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-}
-
-ul.nav-pills.kau2 li a {
-	/*color: #060;*/
-	
-}
-
-ul.nav-pills.kau2 li.active a {
-	/*background-color: #060;
-	color: white;*/
-	
-}
-
-ul.nav-pills.kau2 li a:hover {
-	background-color: rgb(51, 122, 183);
-	color: white;	
 }
 
 /**
@@ -586,7 +614,8 @@ div.data h2 {
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: rgb(51, 122, 183);
+	/*color: rgb(51, 122, 183);*/
+	color: #060;
 	text-align: center;
 }
 

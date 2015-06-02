@@ -1,77 +1,46 @@
-var DATA_JSON = '../test/json/';
+/**
+ * New node file
+ */
 
-function Indicator() {
-	category: null;
-	subcategory: null;
-	subsubcategory: null;
-	filter: null;
-	group: null;
-	period: null;
-	// years: [];
-}
+function Indicator(pathString) {
 
-Indicator.prototype.getTitle = function() {
+	this.categorySeparators = [];
+	this.categorySeparators[1] = 'category';
+	this.categorySeparators[3] = 'subcategory';
+	this.categorySeparators[5] = 'subsubcategory';
+	this.categorySeparators[7] = 'subsubsubcategory';
+	this.categorySeparators[9] = 'subsubsubsubcategory';
 
-	var answer = '';
-	answer = answer + (this.filter ? (this.filter + ' ') : '');
-	answer = answer + (this.subsubcategory ? (this.subsubcategory + ' ') : '');
-	answer = answer + (this.group ? (this.group + ' ') : '');
-	answer = answer + (this.subcategory ? (this.subcategory + ' ') : '');
-	answer = answer + (this.category ? (this.category + ' ') : '');
-	// console.log(answer);
-	return answer.toLowerCase().firstToUpper();
-}
+	this.path = [];
 
-Indicator.prototype.getSubTitle = function() {
-	var answer = '';
-	if (this.years) {
-		answer = answer + ' (' + this.years[this.years.length - 1] + ' to '
-				+ this.years[0] + ')';
-	}
-	return answer.toLowerCase().firstToUpper();
-}
+	// this.root = null;
+	// this.category = null;
+	// this.subcategory = null;
+	// this.subsubcategory = null;
+	// this.subsubsubcategory = null;
+	// this.subsubsubsubcategory = null;
 
-Indicator.prototype.setPeriod = function(p) {
-	this.years = p.getPeriod();
-}
+	this.setPathString(pathString);
+};
 
-Indicator.prototype.setValuesFromArray = function(arr) {
-	this.category = ('category' in arr) ? arr['category'] : this.category;
-	this.subcategory = ('subcategory' in arr) ? arr['subcategory']
-			: this.subcategory;
-	this.subsubcategory = ('subcategory' in arr) ? arr['subsubcategory']
-			: this.subsubcategory;
-	this.filter = ('filter' in arr) ? arr['filter'] : this.filter;
-	this.group = ('group' in arr) ? arr['group'] : this.group;
-	this.years = ('years' in arr) ? arr['years'] : this.years;
-}
-
-Indicator.prototype.getDataFilenames = function() {
-	var category = this.category.toLowerCase();
-	var subcategory = this.subcategory.toLowerCase();
-	// var subsubcategoty = this.subsubcategory.toLowerCase();
-	// var filter = this.filter.toLowerCase();
-
-//	console.log('[Indicator] category ', category);
-//	console.log('[Indicator] subcategory ', subcategory);
-//	console.log('[Indicator] period ', this.period.getPeriod());
-//	console.log(this.period);
-	var result = [];
-	angular.forEach(this.period.getPeriod(), function(yr) {
-		result.push(DATA_JSON + yr + '_' + category + '_' + subcategory
-				+ '_data.json')
+Indicator.prototype.setPathString = function(pathString) {
+	this.path = pathString.split("/");
+	this.path = _.filter(this.path, function(e) {
+		return e.length > 0;
 	});
-	return result;
-}
+	// this.root = this.path[0];
+	// this.category = this.path[2];
+	// this.subcategory = this.path[4];
+	// this.subsubcategory = this.path[6];
+	// this.subsubsubcategory = this.path[8];
+	// this.subsubsubsubcategory = this.path[10];
+};
 
-Indicator.prototype.getDescriptionFilenames = function() {
-	var category = this.category.toLowerCase();
-	var subcategory = this.subcategory.toLowerCase();
-	// var subsubcategoty = this.subsubcategory.toLowerCase();
-	// var filter = this.filter.toLowerCase();
-	var result = [];
-	for (yr in this.years)
-		result.push(DATA_JSON + years[yr] + '_' + category + '_' + subcategory
-				+ '_desc.json');
+Indicator.prototype.getPathString = function() {
+	var result = '/'.concat(this.path[0] ? this.path[0].concat('/') : '');
+	for (i = 2; i < this.path.length; i = i + 2) {
+		result = result.concat(this.path[i] ? this.path[i - 1].concat('/').concat(
+		    this.path[i]).concat('/') : '');
+	}
 	return result;
-}
+};
