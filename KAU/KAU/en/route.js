@@ -67,21 +67,21 @@ app
 	          controller : 'CategoryCtrl'
 	        })
 	        .when('/data/category/:category/subcategory/:subcategory', {
-	          templateUrl : './pages/table.html',
-	          controller : 'TableCtrl'
+	          templateUrl : './pages/subcategory.html',
+	          controller : 'SubcategoryCtrl'
 	        })
 	        .when(
 	            '/data/category/:category/subcategory/:subcategory/subsubcategory/:subsubcategory',
 	            {
-	              templateUrl : './pages/bar.html',
-	              controller : 'BarCtrl'
+	              templateUrl : './pages/subsubcategory.html',
+	              controller : 'SubsubcategoryCtrl'
 
 	            })
 	        .when(
 	            '/data/category/:category/subcategory/:subcategory/subsubcategory/:subsubcategory/subsubsubcategory/:subsubsubcategory',
 	            {
-	              templateUrl : './pages/bar-2.html',
-	              controller : 'BarCtrl2'
+	              templateUrl : './pages/subsubsubcategory.html',
+	              controller : 'SubsubsubcategoryCtrl'
 	            }).otherwise({
 		        redirectTo : '/index.html'
 	        });

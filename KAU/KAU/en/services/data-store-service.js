@@ -64,7 +64,6 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	      + METADATA_FILE),
 
 	  getMetadata : function(root) {
-	  	$log.log("ROOT", root);
 		  return createDeferredFunction(JSON_PATH + root + '/' + METADATA_FILE)();
 	  },
 

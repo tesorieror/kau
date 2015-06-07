@@ -2,7 +2,7 @@
  * New node file
  */
 
-app.controller('TableCtrl',
+app.controller('SubcategoryCtrl',
     function($scope, $modal, $log, $location, $q, $route, $filter, $location,
         $window, dataStoreService) {
 

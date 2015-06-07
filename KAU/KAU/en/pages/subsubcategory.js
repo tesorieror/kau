@@ -2,8 +2,8 @@
  * New node file
  */
 
-app.controller('BarCtrl', function($scope, $log, $location, $q, $route,
-    $filter, $location, dataStoreService) {
+app.controller('SubsubcategoryCtrl', function($scope, $log, $location, $q,
+    $route, $filter, $location, dataStoreService) {
 
 	// Navigation active item
 	$scope.activePath = $location.path();
