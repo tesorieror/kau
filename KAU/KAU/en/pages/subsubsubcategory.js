@@ -3,7 +3,7 @@
  */
 
 app.controller('SubsubsubcategoryCtrl', function($scope, $log, $location, $q,
-    $route, $filter, $location, indicatorFactory, columnBarFactory) {
+    $route, $filter, $location, indicatorFactory, columnBarFactory, lineFactory) {
 	$log.info("Loading Column Bar Data Controller");
 
 	// Set up indicator
@@ -48,7 +48,7 @@ app.controller('SubsubsubcategoryCtrl', function($scope, $log, $location, $q,
 		}, {
 		  name : "Lines",
 		  id : "LineChart",
-		  factory : columnBarFactory
+		  factory : lineFactory
 		// TODO Set properly
 		} ];
 
@@ -62,7 +62,7 @@ app.controller('SubsubsubcategoryCtrl', function($scope, $log, $location, $q,
 			indicator.setFrom($scope.from);
 			indicator.setTo($scope.to);
 			indicator.setFilter($scope.filter);
-			columnBarFactory.build(function(chart) {
+			$scope.chartType.factory.build(function(chart) {
 				$scope.chart = chart;
 			});
 		}

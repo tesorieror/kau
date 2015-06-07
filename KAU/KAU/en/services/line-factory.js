@@ -1,7 +1,7 @@
 /**
  * New node file
  */
-app.factory('columnBarFactory', function($http, $q, $log, indicatorFactory,
+app.factory('lineFactory', function($http, $q, $log, indicatorFactory,
     dataStoreService) {
 
 	var factory = {};
@@ -32,7 +32,7 @@ app.factory('columnBarFactory', function($http, $q, $log, indicatorFactory,
 			var chart = null;
 			var keys = indicatorFactory.getFilteredKeysForPath();
 			var chart = {
-			  "type" : 'ColumnChart',
+			  "type" : 'LineChart',
 			  "displayed" : true,
 			  "data" : {
 			    "cols" : buildCols(keys),
