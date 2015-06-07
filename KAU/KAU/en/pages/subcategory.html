@@ -12,7 +12,7 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" ng-show="activePath.indexOf('/{{rootPathName}}/category/{{categoryName}}') == 0">
 			<li ng-repeat="subcat in subcategoryNames" role="presentation"
-				ng-class="{active : activePath.indexOf('/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat}}') == 0}"
+				ng-class="{active : activePath.toLowerCase().indexOf('/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat}}'.toLowerCase()) == 0}"
 			>
 				<a href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat}}">{{subcat}}</a>
 			</li>

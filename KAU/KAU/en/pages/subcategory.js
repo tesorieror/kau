@@ -62,6 +62,9 @@ app.controller('SubcategoryCtrl',
 
 		    // Chart
 		    $scope.chartRefresh();
+		    
+		    
+		    $log.log("Subcategory activePath", $scope.activePath);
 	    }
 
 	    $scope.chart;

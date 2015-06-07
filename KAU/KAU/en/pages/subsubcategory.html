@@ -35,9 +35,10 @@
 				<div class="kau-check">
 					<div ng-repeat="subcat in subsubcategory.children">
 						<input type="checkbox" ng-change="chartRefresh()" ng-model="filter[subcat.name]">
-						<a
+						<a data-ng-show="subcat.children.length>0"
 							href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcategoryName}}/subsubcategory/{{subsubcategoryName}}/subsubsubcategory/{{subcat.name}}"
 						>{{subcat.name}}</a>
+						<span data-ng-show="subcat.children.length==0">{{subcat.name}}</span>
 					</div>
 				</div>
 			</div>
