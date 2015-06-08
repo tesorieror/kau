@@ -4,10 +4,13 @@
 
 app.controller('SubsubcategoryCtrl', function($scope, $log, $location, $q,
     $route, $filter, $location, dataStoreService) {
-
+	$log.info("Loading Subsubcategory Controller");
+	$log.log("Params",$route.current.params);
+	
 	// Navigation active item
 	$scope.activePath = $location.path();
 
+	
 	var metadata;
 	var years;
 	var path = $location.path();

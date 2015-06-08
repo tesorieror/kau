@@ -14,7 +14,7 @@
 			<li ng-repeat="subcat in subcategoryNames" role="presentation"
 				ng-class="{active : activePath.toLowerCase().indexOf('/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat.toLowerCase()}}'.toLowerCase()) == 0}"
 			>
-				<a href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat.toLowerCase()}}">{{subcat}}</a>
+				<a href="#/{{rootPathName}}/category/{{categoryName}}/subcategory/{{subcat}}">{{subcat}}</a>
 			</li>
 		</ul>
 	</div>

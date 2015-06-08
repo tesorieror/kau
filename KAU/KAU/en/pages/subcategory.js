@@ -5,7 +5,10 @@
 app.controller('SubcategoryCtrl',
     function($scope, $modal, $log, $location, $q, $route, $filter, $location,
         $window, dataStoreService) {
-
+	    $log.info("Loading Subcategory Controller");
+	    $log.log("Params", $route.current.params);
+	    
+	    
 	    // Navigation active item
 	    $scope.activePath = $location.path();
 
@@ -62,8 +65,7 @@ app.controller('SubcategoryCtrl',
 
 		    // Chart
 		    $scope.chartRefresh();
-		    
-		    
+
 		    $log.log("Subcategory activePath", $scope.activePath);
 	    }
 

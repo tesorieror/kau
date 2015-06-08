@@ -91,6 +91,8 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 	};
 
 	factory.getCategoryAtLevel = function(level) {
+		$log.log("getCategoryAtLevel", _stringPathArray);
+		$log.log("getCategoryAtLevel", level);
 		var children = _categories;
 		var result = _stringPathArray[0];
 		for (i = 1; i <= level; i++) {

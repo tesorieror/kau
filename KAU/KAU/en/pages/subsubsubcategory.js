@@ -4,8 +4,9 @@
 
 app.controller('SubsubsubcategoryCtrl', function($scope, $log, $location, $q,
     $route, $filter, $location, indicatorFactory, columnBarFactory, lineFactory) {
-	$log.info("Loading Column Bar Data Controller");
-
+	$log.info("Loading Subsubsubcategory Controller");
+	$log.log("Params",$route.current.params);
+	
 	// Set up indicator
 	var indicator = indicatorFactory;
 
