@@ -59,6 +59,25 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	 */
 
 	return {
+
+	  getDataForPath : function(path) {
+		  var p = _.reduce(path, function(s, pe) {
+			  return s.concat('/').concat(pe.toLowerCase());
+		  }, JSON_PATH.slice(0, JSON_PATH.length - 1));
+		  p = p.concat('.json');
+//		  $log.log("p", p);
+		  return createDeferredFunction(p)();
+	  },
+
+	  getDataForPathAndYear : function(path, year) {
+		  var p = _.reduce(path, function(s, pe) {
+			  return s.concat('/').concat(pe.toLowerCase());
+		  }, JSON_PATH.slice(0, JSON_PATH.length - 1));
+		  p = p + '/' + year + '.json';
+//		  $log.log("p", p);
+		  return createDeferredFunction(p)();
+	  },
+
 	  getNewData : createDeferredFunction(JSON_PATH + PLAIN_FILE),
 	  getDataMetadata : createDeferredFunction(JSON_PATH + 'data/'
 	      + METADATA_FILE),
@@ -67,7 +86,11 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		  return createDeferredFunction(JSON_PATH + root + '/' + METADATA_FILE)();
 	  },
 
-	  getYears : createDeferredFunction(JSON_PATH + YEARS_FILE),
+	  getYears : function(path) {
+		  return createDeferredFunction(
+		      JSON_PATH + path[0] + '/' + path[1] + '/' + path[2] + '/'
+		          + YEARS_FILE)();
+	  },
 	  getAboutUnit : createDeferredFunction(JSON_PATH + ABOUT_UNIT_FILE),
 
 	  getDataForYear : function(categoryPath, year) {
@@ -75,11 +98,11 @@ app.factory('dataStoreService', function($http, $q, $log) {
 		      JSON_PATH + dataFilenameFor(categoryPath, year))();
 	  },
 
-	  getDataForPath : function(path) {
-		  return createDeferredFunction(
-		      JSON_PATH + path[0] + '/' + path[1] + '/' + path[2] + '/'
-		          + _.last(path) + '.json')();
-	  },
+	  // getDataForPath : function(path) {
+	  // return createDeferredFunction(
+	  // JSON_PATH + path[0] + '/' + path[1] + '/' + path[2] + '/'
+	  // + _.last(path) + '.json')();
+	  // },
 
 	  getDescriptionForPath : function(path) {
 		  return createDeferredFunction(

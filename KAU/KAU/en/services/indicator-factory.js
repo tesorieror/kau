@@ -9,8 +9,8 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 
 	var factory = {};
 
-	var params = [ '', 'category', 'subcategory', 'subsubcategory',
-	    'subsubsubcategory', 'subsubsubsubcategory' ];
+	// var params = [ '', 'category', 'subcategory', 'subsubcategory',
+	// 'subsubsubcategory', 'subsubsubsubcategory' ];
 
 	var _stringPath = null;
 	var _stringPathArray = [];
@@ -29,30 +29,30 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 
 		var rootString = _stringPathArray[0];
 
-		$q
-		    .all(
-		        [ dataStoreService.getMetadata(rootString),
-		            dataStoreService.getYears() ]).then(
-		        function(results) {
-			        _categories = results[0];
-			        _years = results[1];
-			        _from = _.last(_years);
-			        _to = _.first(_years);
+		$q.all(
+		    [ dataStoreService.getMetadata(rootString),
+		        dataStoreService.getYears(_stringPathArray) ]).then(
+		    function(results) {
+			    _categories = results[0];
+			    _years = results[1];
+			    _from = _.last(_years);
+			    _to = _.first(_years);
 
-			        // Filter DO NOT REMOVE! filter defaults!
-			        _filter = _.reduce(factory.getCategoryAtLevel(4).children,
-			            function(filter, cat) {
-				            filter[cat.name] = cat.name != 'Total'; // Avoid
-				            // selecting
-				            // total
-				            return filter;
-			            }, []);
-			        //
-			        // // Keys
-			        // _keys = getAllKeys();
+			    // Filter DO NOT REMOVE! filter defaults!
+			    _filter = _.reduce(factory
+			        .getCategoryAtLevel(_stringPathArray.length - 1).children,
+			        function(filter, cat) {
+				        filter[cat.name] = cat.name != 'Total'; // Avoid
+				        // selecting
+				        // total
+				        return filter;
+			        }, []);
+			    //
+			    // // Keys
+			    // _keys = getAllKeys();
 
-			        loaded();
-		        });
+			    loaded();
+		    });
 	};
 
 	factory.getStringPathArray = function() {
@@ -81,21 +81,43 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 		return _years.slice(s, e + 1);
 	}
 
+	// factory.getTitle = function() {
+	// var revPath = _stringPathArray.slice(0).reverse();
+	// // Converts data into Data
+	// revPath[revPath.length - 1] = revPath[revPath.length - 1].firstToUpper();
+	// return _.reduce(revPath, function(result, elem) {
+	// return result.concat(elem).concat(' ');
+	// }, '');
+	// };
+
 	factory.getTitle = function() {
-		var revPath = _stringPathArray.slice(0).reverse();
-		// Converts data into Data
-		revPath[revPath.length - 1] = revPath[revPath.length - 1].firstToUpper();
-		return _.reduce(revPath, function(result, elem) {
-			return result.concat(elem).concat(' ');
+		var catPath = [];
+
+		// Convert to category path
+		for (var i = 1; i < _stringPathArray.length; i++) {
+			catPath.push(factory.getCategoryAtLevel(i))
+		}
+
+		// Reverse
+		catPath.reverse();
+		// Concat title or name
+		var result = _.reduce(catPath, function(result, elem) {
+			return result.concat(elem.title == null ? elem.name : elem.title).concat(
+			    ' ');
 		}, '');
+
+		// Add root at the end
+		result = result.concat(_stringPathArray[0].firstToUpper());
+		return result;
+
 	};
 
 	factory.getCategoryAtLevel = function(level) {
-		$log.log("getCategoryAtLevel", _stringPathArray);
-		$log.log("getCategoryAtLevel", level);
+		// $log.log("getCategoryAtLevel", _stringPathArray);
+		// $log.log("getCategoryAtLevel", level);
 		var children = _categories;
 		var result = _stringPathArray[0];
-		for (i = 1; i <= level; i++) {
+		for (var i = 1; i <= level; i++) {
 			result = _.detect(children, function(cat) {
 				return cat.name == _stringPathArray[i];
 			});
@@ -107,6 +129,12 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 	/**
 	 * Keys
 	 */
+
+	factory.getRelativeFilteredKeysForPath = function() {
+		return _.map(factory.getFilteredKeysForPath(), function(k) {
+			return k.slice(_stringPathArray.length, _stringPathArray.length + 1);
+		});
+	}
 
 	factory.getFilteredKeysForPath = function() {
 		var keys = getKeysForPathLevel();
@@ -198,6 +226,15 @@ app.factory('indicatorFactory', function($http, $q, $log, dataStoreService) {
 
 	factory.setFilter = function(filter) {
 		_filter = filter;
+	}
+
+	/**
+	 * Get Data
+	 */
+	factory.getPathData = function(loaded) {
+		dataStoreService.getDataForPath(_stringPathArray).then(function(result) {
+			loaded(result);
+		});
 	}
 
 	/**

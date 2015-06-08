@@ -5,12 +5,11 @@
 app.controller('SubsubcategoryCtrl', function($scope, $log, $location, $q,
     $route, $filter, $location, dataStoreService) {
 	$log.info("Loading Subsubcategory Controller");
-	$log.log("Params",$route.current.params);
-	
+	$log.log("Params", $route.current.params);
+
 	// Navigation active item
 	$scope.activePath = $location.path();
 
-	
 	var metadata;
 	var years;
 	var path = $location.path();
@@ -29,14 +28,15 @@ app.controller('SubsubcategoryCtrl', function($scope, $log, $location, $q,
 
 	$log.info("Loading Column Bar Data Controller");
 
-	$q
-	    .all(
-	        [ dataStoreService.getMetadata(rootPathName),
-	            dataStoreService.getYears() ]).then(function(result) {
-		    metadata = result[0];
-		    years = result[1];
-		    initialize();
-	    });
+	$q.all(
+	    [
+	        dataStoreService.getMetadata(rootPathName),
+	        dataStoreService.getYears([ rootPathName, categoryName,
+	            subcategoryName, subsubcategoryName ]) ]).then(function(result) {
+		metadata = result[0];
+		years = result[1];
+		initialize();
+	});
 
 	function initialize() {
 		// Title

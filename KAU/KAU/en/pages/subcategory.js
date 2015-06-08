@@ -7,8 +7,7 @@ app.controller('SubcategoryCtrl',
         $window, dataStoreService) {
 	    $log.info("Loading Subcategory Controller");
 	    $log.log("Params", $route.current.params);
-	    
-	    
+
 	    // Navigation active item
 	    $scope.activePath = $location.path();
 
@@ -30,9 +29,15 @@ app.controller('SubcategoryCtrl',
 	    // $log.info("Route parameters", $route.current.params);
 	    // $log.info("Template", $route.current.templateUrl);
 
+	    $log.log(rootPathName);
+	    $log.log(categoryName);
+	    $log.log(subcategoryName);
+
 	    $q.all(
-	        [ dataStoreService.getMetadata(rootPathName),
-	            dataStoreService.getYears() ]).then(function(result) {
+	        [
+	            dataStoreService.getMetadata(rootPathName),
+	            dataStoreService.getYears([ rootPathName, categoryName,
+	                subcategoryName ]) ]).then(function(result) {
 		    metadata = result[0];
 		    years = result[1];
 		    initialize();

@@ -82,7 +82,18 @@ app
 	            {
 	              templateUrl : './pages/subsubsubcategory.html',
 	              controller : 'SubsubsubcategoryCtrl'
-	            }).otherwise({
+	            })
+
+	        // QSR
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory2/:subsubcategory',
+	            {
+	              templateUrl : './pages/qsr-wok-publications/qsr-wok-publications.html',
+	              controller : 'QSRWoKPublicationsCtrl'
+
+	            })
+
+	        .otherwise({
 		        redirectTo : '/index.html'
 	        });
 	    // configure html5 to get links working on jsfiddle

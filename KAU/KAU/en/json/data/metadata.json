@@ -983,8 +983,7 @@
 													"name" : "Total",
 													"children" : []
 												} ]
-											}
-									]
+											} ]
 								},
 								{
 									"name" : "Field",
@@ -1059,7 +1058,8 @@
 													"name" : "Total",
 													"children" : []
 												} ]
-											}, {
+											},
+											{
 												"name" : "Agriculture",
 												"href" : "#/data/category/Students/subcategory/Aboard/subsubcategory/Field/subsubsubcategory/Agriculture",
 												"children" : [ {
@@ -1072,7 +1072,8 @@
 													"name" : "Total",
 													"children" : []
 												} ]
-											}, {
+											},
+											{
 												"name" : "Health and Social Services",
 												"href" : "#/data/category/Students/subcategory/Aboard/subsubcategory/Field/subsubsubcategory/Health and Social Services",
 												"children" : [ {
@@ -1085,7 +1086,8 @@
 													"name" : "Total",
 													"children" : []
 												} ]
-											}, {
+											},
+											{
 												"name" : "Not known programmes",
 												"href" : "#/data/category/Students/subcategory/Aboard/subsubcategory/Field/subsubsubcategory/Not known programmes",
 												"children" : [ {
@@ -1101,46 +1103,111 @@
 											} ]
 								} ]
 					} ]
-		}, {
+		},
+		{
 			"name" : "University",
 			"image" : "./img/university.png",
 			"title" : "Univesity",
 			"description" : "Data regarding university statistics.",
 			"href" : "#/data/category/University",
 			"children" : []
-		}, {
+		},
+		{
 			"name" : "Campuses",
 			"image" : "./img/campuses.png",
 			"title" : "Campuses",
 			"description" : "Data regarding campus statistics.",
 			"href" : "#/data/category/Campuses",
 			"children" : []
-		}, {
+		},
+		{
 			"name" : "Faculties",
 			"image" : "./img/faculties.png",
 			"title" : "Faculties",
 			"description" : "Data regarding faculty statistics.",
 			"href" : "#/data/category/Faculties",
 			"children" : []
-		}, {
+		},
+		{
 			"name" : "Departments",
 			"image" : "./img/departments.png",
 			"title" : "Departments",
 			"description" : "Data regarding department statistics.",
 			"href" : "#/data/category/Departments",
 			"children" : []
-		}, {
+		},
+		{
 			"name" : "Education",
 			"image" : "./img/education.png",
 			"title" : "Education",
 			"description" : "Data regarding education statistics.",
 			"href" : "#/data/category/Education",
 			"children" : []
-		}, {
-			"name" : "Quality & services",
+		},
+		{
+			"name" : "QSR",
 			"image" : "./img/qualityAndService.png",
-			"title" : "Quality & Services",
-			"description" : "Data regarding quality and service statistics.",
-			"href" : "#/data/category/QaS",
-			"children" : []
+			"title" : "Quality and Scientific Research",
+			"description" : "Data regarding quality and scientific research statistics.",
+			"href" : "#/data/category/QSR",
+			"children" : [
+					{
+						"name" : "WoK",
+						"title" : "Web of Knowledge",
+						"href" : "#/data/category/QSR/subsubcategory/WoK",
+						"children" : [
+								{
+									"name" : "Publications",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Publications",
+									"children" : [ {
+										"name" : "Publications",
+										"children" : []
+									}, {
+										"name" : "Articles",
+										"children" : []
+									}, {
+										"name" : "Conferences",
+										"children" : []
+									}, {
+										"name" : "Editorials",
+										"children" : []
+									}, {
+										"name" : "Open Access",
+										"children" : []
+									}, {
+										"name" : "Inccorect Affiliation",
+										"children" : []
+									} ]
+								},
+								{
+									"name" : "Document Type",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Document Type",
+									"children" : []
+								},
+								{
+									"name" : "Research Area",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Research Area",
+									"children" : []
+								},
+								{
+									"name" : "Countries",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Countries",
+									"children" : []
+								},
+								{
+									"name" : "Institutions",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Institutions",
+									"children" : []
+								},
+								{
+									"name" : "Founding",
+									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Founding",
+									"children" : []
+								} ]
+					},
+					{
+						"name" : "Scopus",
+						"href" : "#/data/category/Quality and Scientific Research/subsubcategory/Scopus",
+						"children" : []
+					} ]
 		} ]

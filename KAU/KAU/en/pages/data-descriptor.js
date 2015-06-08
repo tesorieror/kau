@@ -38,7 +38,8 @@ app.controller('DataDescriptorCtrl', function($scope, $log, $q, $modalInstance,
 	var descriptions;
 
 	$q.all(
-	    [ dataStoreService.getYears(),
+
+	    [ dataStoreService.getYears(path),
 	        dataStoreService.getDescriptionForPath(path) ]).then(
 	    function(results) {
 		    years = results[0];
@@ -93,7 +94,11 @@ app.controller('DataDescriptorCtrl', function($scope, $log, $q, $modalInstance,
 		var period = getPeriod();
 
 		$q.all(_.map(period, function(year) {
-			return dataStoreService.getDataForPath(path.concat(year));
+
+			return dataStoreService.getDataForPathAndYear(path.slice(0,3), year);
+
+			// return dataStoreService.getDataForPath(path.concat(year));
+
 		})).then(function(results) {
 			var data = _.reduce(period, function(data, year) {
 				data[year] = results[period.indexOf(year)];
