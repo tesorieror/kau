@@ -38,12 +38,19 @@ app.factory('qsrWoKPublicationsTable', function($http, $q, $log,
 			    "rows" : buildRows()
 			  },
 			  "options" : {
-			    "width" : "670",
+			    "width" : "100%",
 			    "height" : "450",
 			    "pageSize" : "10",
 			    "page" : "enable",
 			    "showRowNumber" : false,
 			    "sort" : "enable"
+			  },
+			  "formatters" : {
+				  "number" : [ {
+				    "columnNum" : 2,
+				    "suffix" : "%",
+				    "fractionDigits" : 2
+				  } ]
 			  }
 			};
 			chartBuilt(chart);
@@ -104,7 +111,7 @@ app.factory('qsrWoKPublicationsTable', function($http, $q, $log,
 						    return sum + rowValue(_data, key)[yr];
 					    }, 0)
 				    }, {
-					    "v" : ref / total
+					    "v" : (total / ref)*100
 				    } ])
 			};
 		});

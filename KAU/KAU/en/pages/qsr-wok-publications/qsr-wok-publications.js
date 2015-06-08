@@ -1,8 +1,9 @@
 app.controller('QSRWoKPublicationsCtrl', function($scope, $log, $location, $q,
-    $route, $filter, $location, indicatorFactory, qsrWoKPublicationsTable) {
+    $route, $filter, $location, indicatorFactory, qsrWoKPublicationsTable,
+    qsrWoKPublicationsLine, qsrWoKPublicationsColumn) {
 
 	$log.info("Loading QSRWoKPublicationsCtrl Controller");
-//	$log.log("Params", $route.current.params);
+	// $log.log("Params", $route.current.params);
 
 	// Set up indicator
 	var indicator = indicatorFactory;
@@ -39,7 +40,10 @@ app.controller('QSRWoKPublicationsCtrl', function($scope, $log, $location, $q,
 		// Period
 		$scope.years = indicator.getYears();
 		$scope.from = indicator.getFrom();
-		$scope.to = indicator.getTo();
+
+		// Patch to select all but the last one
+		// $scope.to = indicator.getTo();
+		$scope.to = indicator.getYears()[1];
 		//
 		// ChartType
 		$scope.chartTypes = [ {
@@ -47,13 +51,14 @@ app.controller('QSRWoKPublicationsCtrl', function($scope, $log, $location, $q,
 		  id : "Table",
 		  factory : qsrWoKPublicationsTable
 		}, {
-		  name : "Columns",
-		  id : "ColumnChart",
-		  factory : null
-		}, {
 		  name : "Lines",
 		  id : "LineChart",
-		  factory : null
+		  factory : qsrWoKPublicationsLine
+		// TODO Set properly
+		}, {
+		  name : "Columns",
+		  id : "ColumnChart",
+		  factory : qsrWoKPublicationsColumn
 		// TODO Set properly
 		} ];
 
@@ -74,15 +79,15 @@ app.controller('QSRWoKPublicationsCtrl', function($scope, $log, $location, $q,
 		// Show default chart
 		$scope.refreshChart();
 	}
-	//
-	// /**
-	// * Hide chart if no information is chosen
-	// */
-	//
-	// $scope.isFilterEmpty = function() {
-	// var result = false;
-	// for (filterElement in $scope.filter)
-	// result = result || $scope.filter[filterElement];
-	// return !result;
-	// }
+
+	/**
+	 * Hide chart if no information is chosen
+	 */
+
+	$scope.isFilterEmpty = function() {
+		var result = false;
+		for (filterElement in $scope.filter)
+			result = result || $scope.filter[filterElement];
+		return !result;
+	}
 });
