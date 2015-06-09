@@ -92,8 +92,19 @@ app
 	              controller : 'QSRWoKPublicationsCtrl'
 
 	            })
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory3/:subsubcategory',
+	            {
+	              templateUrl : './pages/qsr-wok-document-type/qsr-wok-document-type.html',
+	              controller : 'QSRWoKDocumentTypesCtrl'
 
-	        .otherwise({
+	            })
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory4/:subsubcategory',
+	            {
+	              templateUrl : './pages/qsr-wok-research-area/qsr-wok-research-area.html',
+	              controller : 'QSRWoKResearchAreasCtrl'
+	            }).otherwise({
 		        redirectTo : '/index.html'
 	        });
 	    // configure html5 to get links working on jsfiddle

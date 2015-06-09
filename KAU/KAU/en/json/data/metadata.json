@@ -1154,11 +1154,11 @@
 					{
 						"name" : "WoK",
 						"title" : "Web of Knowledge",
-						"href" : "#/data/category/QSR/subsubcategory/WoK",
+						"href" : "#/data/category/QSR/subcategory/WoK",
 						"children" : [
 								{
 									"name" : "Publications",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Publications",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory2/Publications",
 									"children" : [ {
 										"name" : "Publications",
 										"children" : []
@@ -1180,28 +1180,96 @@
 									} ]
 								},
 								{
-									"name" : "Document Type",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Document Type",
-									"children" : []
+									"name" : "document-type",
+									"title" : "Document Type",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory3/document-type",
+									"children" : [ {
+										"name" : "Documents",
+										"children" : []
+									}, {
+										"name" : "Article",
+										"children" : []
+									}, {
+										"name" : "Review",
+										"children" : []
+									}, {
+										"name" : "Meeting Abstract",
+										"children" : []
+									}, {
+										"name" : "Proceedings Paper",
+										"children" : []
+									}, {
+										"name" : "Editorial Material",
+										"children" : []
+									}, {
+										"name" : "Correction",
+										"children" : []
+									}, {
+										"name" : "Letter",
+										"children" : []
+									}, {
+										"name" : "Review",
+										"children" : []
+									}, {
+										"name" : "Book Review",
+										"children" : []
+									}, {
+										"name" : "Biographical Item",
+										"children" : []
+									}, {
+										"name" : "News Item",
+										"children" : []
+									} ]
 								},
 								{
-									"name" : "Research Area",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Research Area",
-									"children" : []
+									"name" : "research-area",
+									"title" : "Research Area",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory4/research-area",
+									"children" : [ {
+										"name" : "Publications",
+										"children" : []
+									}, {
+										"name" : "Chemestry",
+										"children" : []
+									}, {
+										"name" : "Mathematics",
+										"children" : []
+									}, {
+										"name" : "Engineering",
+										"children" : []
+									}, {
+										"name" : "Physics",
+										"children" : []
+									}, {
+										"name" : "Material Sciences",
+										"children" : []
+									}, {
+										"name" : "Computer Science",
+										"children" : []
+									}, {
+										"name" : "Pharmacy",
+										"children" : []
+									}, {
+										"name" : "Life Sciences",
+										"children" : []
+									}, {
+										"name" : "Business Economics",
+										"children" : []
+									} ]
 								},
 								{
 									"name" : "Countries",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Countries",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory2/Countries",
 									"children" : []
 								},
 								{
 									"name" : "Institutions",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Institutions",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory2/Institutions",
 									"children" : []
 								},
 								{
 									"name" : "Founding",
-									"href" : "#/data/category/QSR/subsubcategory/WoK/subsubsubcategory/Founding",
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory2/Founding",
 									"children" : []
 								} ]
 					},
