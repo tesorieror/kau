@@ -120,6 +120,11 @@ div.kau-main ul.nav-pills.kau li a:hover {
 	color: white;
 }
 
+div.kau-main ul.nav-pills.kau li.disabled a:hover{
+		background-color: lightgrey;
+	color: grey;
+}
+
 /**
 * Main nav
 */
@@ -148,6 +153,15 @@ ul.nav-pills.kau li.dropdown ul.dropdown-menu li a:hover {
 	background-attachment: inherit;
 	background-color: #060;
 }
+
+ul.nav-pills.kau li.dropdown ul.dropdown-menu li.disabled a:hover {
+	color: grey;
+	background-repeat: no-repeat;
+	background-image: none;
+	background-attachment: inherit;
+	background-color: lightgrey;
+}
+
 
 /**
 * DD patch
