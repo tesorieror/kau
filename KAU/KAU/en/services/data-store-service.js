@@ -27,10 +27,10 @@ app.factory('dataStoreService', function($http, $q, $log) {
 	 */
 
 	function createDeferredFunction(filename) {
-		$log.info("Deferred Function for path: ", filename);
+		$log.info("Deferred Function for path: ", filename.toLowerCase());
 		return function() {
 			var deferred = $q.defer();
-			$http.get(filename).then(function(result) {
+			$http.get(filename.toLowerCase()).then(function(result) {
 				deferred.resolve(result.data);
 			}, function(error) {
 				deferred.reject(error);
