@@ -1,8 +1,8 @@
 /**
  * New node file
  */
-app.factory('qsrWoKCountriesLine', function($http, $q, $log,
-    indicatorFactory, dataStoreService) {
+app.factory('qsrWoKCountriesLine', function($http, $q, $log, indicatorFactory,
+    dataStoreService) {
 
 	var factory = {};
 
@@ -72,9 +72,11 @@ app.factory('qsrWoKCountriesLine', function($http, $q, $log,
 			    "rows" : rows
 			  },
 			  "options" : {
+			    "width" : "700px",
+			    "height" : "450px",
 			    "legend" : {
-				    "position" : "top",
-				    "maxLines" : "3",
+			      "position" : "top",
+			      "maxLines" : "3",
 			    },
 			    "displayExactValues" : true,
 			    "vAxis" : {

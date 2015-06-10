@@ -37,9 +37,16 @@
 			</div>
 			-->
 			<div class="kau-filter-accordeon">
-				<accordion> <accordion-group is-open="filterStatus.open"> <accordion-heading> Filter <i
-					class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filterStatus.open, 'glyphicon-chevron-right': !filter.status.open}"
-				></i> </accordion-heading>
+				<accordion> <accordion-group is-open="filterStatus.open"> <accordion-heading>
+				<div class="btn-group btn-group-xs" role="group">
+					<button type="button" class="btn btn-default" ng-click="filterSelectAll();">
+						<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default" ng-click="filterUnselectAll();">
+						<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+					</button>
+				</div>
+				Filter <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filterStatus.open, 'glyphicon-chevron-right': !filterStatus.open}"></i> </accordion-heading>
 				<div class="kau-check-accordeon">
 					<div ng-repeat="subcat in subsubsubcategories">
 						<input type="checkbox" ng-change="refreshChart()" ng-model="filter[subcat.name]"> {{subcat.name}}
@@ -72,7 +79,7 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-xs-12">
-						<div google-chart chart="chart" on-ready="chartReady(chartWrapper)" on-select="chartSelectedItem(selectedItem)" on-click="chartClicked(chart)"
+						<div google-chart chart="chart" on-ready="chartReady(chartWrapper)" on-select="chartSelectedItem(selectedItems, selectedItem, chartWrapper)" on-click="chartClicked(chart)"
 							style="width: 700px; height: 450px;" data-ng-show="!isFilterEmpty()"
 						></div>
 					</div>

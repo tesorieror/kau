@@ -27,18 +27,17 @@
 					</li>
 				</ul>
 			</div>
-			<!-- 
-			<div class="panel-header">
-				<div class="kau-check">
-					<div ng-repeat="subcat in subsubsubcategories">
-						<input type="checkbox" ng-change="refreshChart()" ng-model="filter[subcat.name]"> {{subcat.name}}
-					</div>
-				</div>
-			</div> -->
 			<div class="kau-filter-accordeon">
-				<accordion> <accordion-group is-open="filterStatus.open"> <accordion-heading> Filter <i class="pull-right glyphicon"
-					ng-class="{'glyphicon-chevron-down': filterStatus.open, 'glyphicon-chevron-right': !filter.status.open}"
-				></i> </accordion-heading>
+				<accordion> <accordion-group is-open="filterStatus.open"> <accordion-heading>
+				<div class="btn-group btn-group-xs" role="group">
+					<button type="button" class="btn btn-default" ng-click="filterSelectAll();">
+						<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default" ng-click="filterUnselectAll();">
+						<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+					</button>
+				</div>
+				Filter <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filterStatus.open, 'glyphicon-chevron-right': !filterStatus.open}"></i> </accordion-heading>
 				<div class="kau-check-accordeon">
 					<div ng-repeat="subcat in subsubsubcategories">
 						<input type="checkbox" ng-change="refreshChart()" ng-model="filter[subcat.name]"> {{subcat.name}}
@@ -48,14 +47,6 @@
 			</div>
 			<div class="panel-header">
 				<form class="form-inline kau">
-				<!-- 
-					<div class="form-group form-group-sm">
-						<label class="control-label" for="searchString">Search <input class="form-control" id="searchString" type="text" ng-model="searchString"
-							placeholder="Filter" ng-change="refreshChart()"
-						/>
-						</label>
-					</div>
-					 -->
 					<div class="form-group form-group-sm">
 						<label for="fromYear">From&nbsp;</label> <select data-ng-model="from" class="form-control" id="fromYear" data-ng-change="refreshChart()"
 							data-ng-options="yr as yr for yr in years | filterFromYears: to"
@@ -76,11 +67,11 @@
 					</div>
 				</form>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body" >
 				<div class="row">
 					<div class="col-xs-12">
-						<div google-chart chart="chart" on-ready="chartReady(chartWrapper)" on-select="chartSelectedItem(selectedItem)" on-click="chartClicked(chart)"
-							style="width: 700px; height: 450px;" data-ng-show="!isFilterEmpty()"
+						<div google-chart chart="chart" on-ready="chartReady(chartWrapper)" on-select="chartSelectedItem(selectedItems, selectedItem, chartWrapper)"
+							on-click="chartClicked(chart)" style="width: 700px; height: 450px;" data-ng-show="!isFilterEmpty()"
 						></div>
 					</div>
 				</div>

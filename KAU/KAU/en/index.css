@@ -1,4 +1,11 @@
 /**
+* Aboid button focus
+*/
+.btn:focus {
+	outline: none;
+}
+
+/**
 * KAU form
 */
 form.kau {
@@ -48,7 +55,13 @@ div.kau-filter-accordeon div div div.panel-heading {
 }
 
 div.kau-filter-accordeon div div div.in div.panel-body {
-	margin-top-size: 0px;
+	border-top: 0px !important;
+	border-bottom: 1px SOLID rgb(211, 211, 211);
+}
+
+div.kau-filter-accordeon div div div.collapsing div.panel-body {
+	border-top: 0px !important;
+	border-bottom: 1px SOLID rgb(211, 211, 211);
 }
 
 div.kau-filter-accordeon div div div.panel-heading h4 a span {
@@ -534,7 +547,6 @@ div.goal-unit p {
 	text-justify: inter-word;
 	margin: 10px;
 }
-
 
 /**
 * Data Table

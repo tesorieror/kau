@@ -67,7 +67,9 @@ app.controller('QSRWoKInstitutionsCtrl', function($scope, $log, $location, $q,
 		// filter
 		$scope.filter = indicator.getFilter();
 		$scope.filter['King Abdulaziz University'] = false;
-
+    $scope.filterStatus = {
+		    open : false
+	    };
 		// Refresh chart
 		$scope.refreshChart = function() {
 			indicator.setFrom($scope.from);
@@ -91,4 +93,41 @@ app.controller('QSRWoKInstitutionsCtrl', function($scope, $log, $location, $q,
 			result = result || $scope.filter[filterElement];
 		return !result;
 	}
+	
+  $scope.chartSelectedItem = function(selectedItems, selectedItem,
+      chartWrapper) {
+    $log.log("Selected Item", selectedItem);
+    // Patch to unselect!
+    chartWrapper.getChart().setSelection(null);
+
+    var key = $scope.chart.data.rows[selectedItem.row]["c"][0]["v"]
+    $log.log(key);
+
+    for (k in $scope.filter) {
+	    $scope.filter[k] = k == key;
+    }
+
+    $scope.chartType = $scope.chartTypes[1];
+    $scope.refreshChart();
+  }
+
+  $scope.filterSelectAll = function() {
+    for (k in $scope.filter) {
+	    $scope.filter[k] = k != 'King Abdulaziz University';
+    }		    
+    $scope.refreshChart();
+    $scope.filterStatus.open = true;
+  }
+
+  $scope.filterUnselectAll = function() {
+    for (k in $scope.filter) {
+	    $scope.filter[k] = k == 'King Abdulaziz University';
+    }		    
+    $scope.refreshChart();		    
+    $scope.filterStatus.open = true;
+  }
+	
+	
+	
+	
 });
