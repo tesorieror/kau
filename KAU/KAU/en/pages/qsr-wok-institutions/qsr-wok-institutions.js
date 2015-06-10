@@ -1,9 +1,8 @@
-app.controller('QSRWoKCountriesCtrl', function($scope, $log, $location, $q,
-    $route, $filter, $location, indicatorFactory, qsrWoKCountriesTable,
-    qsrWoKCountriesLine, qsrWoKCountriesColumn,
-    qsrWoKCountriesLineByPublications, qsrWoKCountriesColumnByPublications) {
+app.controller('QSRWoKInstitutionsCtrl', function($scope, $log, $location, $q,
+    $route, $filter, $location, indicatorFactory, qsrWoKInstitutionTable,
+    qsrWoKInstitutionLine, qsrWoKInstitutionColumn) {
 
-	$log.info("Loading QSRWoKCountriesCtrl Controller");
+	$log.info("Loading QSRWoKInstitutionCtrl Controller");
 	// $log.log("Params", $route.current.params);
 
 	// Set up indicator
@@ -50,26 +49,16 @@ app.controller('QSRWoKCountriesCtrl', function($scope, $log, $location, $q,
 		$scope.chartTypes = [ {
 		  name : "Table",
 		  id : "Table",
-		  factory : qsrWoKCountriesTable
+		  factory : qsrWoKInstitutionTable
 		}, {
-		  name : "Lines (byYear)",
+		  name : "Lines",
 		  id : "LineChart",
-		  factory : qsrWoKCountriesLine
+		  factory : qsrWoKInstitutionLine
 		// TODO Set properly
 		}, {
-		  name : "Lines (by Publications)",
-		  id : "LineChart",
-		  factory : qsrWoKCountriesLineByPublications
-		// TODO Set properly
-		}, {
-		  name : "Columns (by Year)",
+		  name : "Columns",
 		  id : "ColumnChart",
-		  factory : qsrWoKCountriesColumn
-		// TODO Set properly
-		}, {
-		  name : "Columns (by Publications)",
-		  id : "ColumnChart",
-		  factory : qsrWoKCountriesColumnByPublications
+		  factory : qsrWoKInstitutionColumn
 		// TODO Set properly
 		} ];
 
@@ -77,10 +66,7 @@ app.controller('QSRWoKCountriesCtrl', function($scope, $log, $location, $q,
 
 		// filter
 		$scope.filter = indicator.getFilter();
-		$scope.filter['Saudi Arabia'] = false;
-		$scope.filterStatus = {
-			open : false
-		};
+		$scope.filter['King Abdulaziz University'] = false;
 
 		// Refresh chart
 		$scope.refreshChart = function() {
@@ -88,12 +74,6 @@ app.controller('QSRWoKCountriesCtrl', function($scope, $log, $location, $q,
 			indicator.setTo($scope.to);
 			indicator.setFilter($scope.filter);
 			$scope.chartType.factory.build(function(chart) {
-				// String filter
-				// TODO See if it should be in indicator
-
-				// chart.data.rows = $filter('filter')(chart.data.rows,
-				// $scope.searchString);
-
 				$scope.chart = chart;
 			});
 		}

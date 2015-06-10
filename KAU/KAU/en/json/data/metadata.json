@@ -1475,8 +1475,278 @@
 								},
 								{
 									"name" : "Institutions",
-									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory2/Institutions",
-									"children" : []
+									"href" : "#/data/category/QSR/subcategory/WoK/subsubcategory6/Institutions",
+									"children" : [
+											{
+												"name" : "King Abdulaziz University",
+												"children" : []
+											},
+											{
+												"name" : "QUAID I AZAM UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITI MALAYA",
+												"children" : []
+											},
+											{
+												"name" : "CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS",
+												"children" : []
+											},
+											{
+												"name" : "CAIRO UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "CHINESE ACADEMY OF SCIENCES",
+												"children" : []
+											},
+											{
+												"name" : "KING SAUD UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF CALIFORNIA SYSTEM",
+												"children" : []
+											},
+											{
+												"name" : "FLORIDA STATE UNIVERSITY SYSTEM",
+												"children" : []
+											},
+											{
+												"name" : "SUEZ CANAL UNIV",
+												"children" : []
+											},
+											{
+												"name" : "ASSIUT UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "AIN SHAMS UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "TEXAS A M UNIVERSITY SYSTEM",
+												"children" : []
+											},
+											{
+												"name" : "MANSOURA UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "ALEXANDRIA UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "BENI SUEF UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF SOUTHAMPTON",
+												"children" : []
+											},
+											{
+												"name" : "NATIONAL RESEARCH CENTRE NRC",
+												"children" : []
+											},
+											{
+												"name" : "INST SPACE SCI",
+												"children" : []
+											},
+											{
+												"name" : "UNITED STATES DEPARTMENT OF ENERGY DOE",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF FLORIDA",
+												"children" : []
+											},
+											{
+												"name" : "CANKAYA UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "PEKING UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "TEXAS A M UNIVERSITY COLLEGE STATION",
+												"children" : []
+											},
+											{
+												"name" : "ALIGARH MUSLIM UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "ISTANBUL TEKNIK UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF LONDON",
+												"children" : []
+											},
+											{
+												"name" : "CONSEJO SUPERIOR DE INVESTIGACIONES CIENTIFICAS CSIC",
+												"children" : []
+											},
+											{
+												"name" : "RUSSIAN ACADEMY OF SCIENCES",
+												"children" : []
+											},
+											{
+												"name" : "AL AZHAR UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "MASSACHUSETTS INSTITUTE OF TECHNOLOGY MIT",
+												"children" : []
+											},
+											{
+												"name" : "MAX PLANCK SOCIETY",
+												"children" : []
+											},
+											{
+												"name" : "NORTHWESTERN UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF IOANNINA",
+												"children" : []
+											},
+											{
+												"name" : "HARVARD UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "IMPERIAL COLLEGE LONDON",
+												"children" : []
+											},
+											{
+												"name" : "NORTHEASTERN UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "SOUTHEAST UNIVERSITY CHINA",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF HELSINKI",
+												"children" : []
+											},
+											{
+												"name" : "COMSATS INSTITUTE OF INFORMATION TECHNOLOGY CIIT",
+												"children" : []
+											},
+											{
+												"name" : "KING ABDULAZIZ UNIVERSITY HOSPITAL RIYADH",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF CHICAGO",
+												"children" : []
+											},
+											{
+												"name" : "FLORIDA STATE UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "KING ABDULAZIZ UNIVERSITY HOSPITAL JEDDAH",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF ILLINOIS SYSTEM",
+												"children" : []
+											},
+											{
+												"name" : "ZAGAZIG UNIV",
+												"children" : []
+											},
+											{
+												"name" : "STATE UNIVERSITY OF NEW YORK SUNY SYSTEM",
+												"children" : []
+											},
+											{
+												"name" : "SOHAG UNIV",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF CALIFORNIA DAVIS",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF COPENHAGEN",
+												"children" : []
+											},
+											{
+												"name" : "RICE UNIVERSITY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY SYSTEM OF MARYLAND",
+												"children" : []
+											},
+											{
+												"name" : "DELAWARE STATE UNIV",
+												"children" : []
+											},
+											{
+												"name" : "ARGONNE NATIONAL LABORATORY",
+												"children" : []
+											},
+											{
+												"name" : "UNIVERSITY OF ZURICH",
+												"children" : []
+											},
+											{
+												"name" : "CALIFORNIA INSTITUTE OF TECHNOLOGY",
+												"children" : []
+											},
+											{
+												"name" : "SWISS FEDERAL INSTITUTE OF TECHNOLOGY ZURICH",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF BELGRADE",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF CALIFORNIA LOS ANGELES",
+												"children" : []
+											}, {
+												"name" : "BOSTON UNIVERSITY",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF CALIFORNIA SANTA BARBARA",
+												"children" : []
+											}, {
+												"name" : "KAFRELSHEIKH UNIVERSITY",
+												"children" : []
+											}, {
+												"name" : "SUNGKYUNKWAN UNIVERSITY",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF VIRGINIA",
+												"children" : []
+											}, {
+												"name" : "BRUNEL UNIVERSITY",
+												"children" : []
+											}, {
+												"name" : "CORNELL UNIVERSITY",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF ATHENS",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF BRISTOL",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF CALIFORNIA RIVERSIDE",
+												"children" : []
+											}, {
+												"name" : "UNIVERSITY OF ILLINOIS CHICAGO",
+												"children" : []
+											}, {
+												"name" : "JOHNS HOPKINS UNIVERSITY",
+												"children" : []
+											} ]
 								},
 								{
 									"name" : "Founding",

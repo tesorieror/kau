@@ -112,7 +112,12 @@ app
 	              templateUrl : './pages/qsr-wok-countries/qsr-wok-countries.html',
 	              controller : 'QSRWoKCountriesCtrl'
 	            })
-
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory6/:subsubcategory',
+	            {
+	              templateUrl : './pages/qsr-wok-institutions/qsr-wok-institutions.html',
+	              controller : 'QSRWoKInstitutionsCtrl'
+	            })
 	        .otherwise({
 		        redirectTo : '/index.html'
 	        });

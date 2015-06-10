@@ -24,9 +24,9 @@ div.kau-check-accordeon {
 	margin: -15px;
 }
 
-div.kau-check-accordeon {
-	padding: 0px;
-	margin: -15px;
+div.kau-check-accordeon div {
+	display: inline-block;
+	padding: 5px;
 }
 
 /**
