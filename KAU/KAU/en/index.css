@@ -19,6 +19,57 @@ div.kau-check {
 	border-bottom: 1px SOLID LIGHTGREY;
 }
 
+div.kau-check-accordeon {
+	padding: 0px;
+	margin: -15px;
+}
+
+div.kau-check-accordeon {
+	padding: 0px;
+	margin: -15px;
+}
+
+/**
+* KAU Filter Accordeon
+*/
+div.kau-filter-accordeon {
+	margin-bottom: -20px;
+}
+
+div.kau-filter-accordeon div div div.panel-heading {
+	background-attachment: inherit;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-color: none;
+	border: 0px;
+	border-radius: 0px;
+	padding: 15px 10px 15px 10px;
+	border-bottom: 1px SOLID rgb(211, 211, 211);
+}
+
+div.kau-filter-accordeon div div div.in div.panel-body {
+	margin-top-size: 0px;
+}
+
+div.kau-filter-accordeon div div div.panel-heading h4 a span {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+div.kau-filter-accordeon div div div.panel-heading h4 a {
+	text-decoration: none;
+}
+
+div.kau-filter-accordeon div div div.panel-heading h4 a:HOVER {
+	text-decoration: none;
+	color: #060;
+}
+
+div.kau-filter-accordeon div div.panel-default {
+	border: 0px;
+}
+
 div.kau-check div {
 	display: inline-block;
 	padding: 10px 15px 10px 15px;
@@ -120,8 +171,8 @@ div.kau-main ul.nav-pills.kau li a:hover {
 	color: white;
 }
 
-div.kau-main ul.nav-pills.kau li.disabled a:hover{
-		background-color: lightgrey;
+div.kau-main ul.nav-pills.kau li.disabled a:hover {
+	background-color: lightgrey;
 	color: grey;
 }
 
@@ -161,7 +212,6 @@ ul.nav-pills.kau li.dropdown ul.dropdown-menu li.disabled a:hover {
 	background-attachment: inherit;
 	background-color: lightgrey;
 }
-
 
 /**
 * DD patch

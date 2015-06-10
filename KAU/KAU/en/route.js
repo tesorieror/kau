@@ -104,7 +104,16 @@ app
 	            {
 	              templateUrl : './pages/qsr-wok-research-area/qsr-wok-research-area.html',
 	              controller : 'QSRWoKResearchAreasCtrl'
-	            }).otherwise({
+	            })
+
+	        .when(
+	            '/data/category/:category/subcategory/:subcategory/subsubcategory5/:subsubcategory',
+	            {
+	              templateUrl : './pages/qsr-wok-countries/qsr-wok-countries.html',
+	              controller : 'QSRWoKCountriesCtrl'
+	            })
+
+	        .otherwise({
 		        redirectTo : '/index.html'
 	        });
 	    // configure html5 to get links working on jsfiddle
