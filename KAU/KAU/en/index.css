@@ -459,7 +459,8 @@ div.about-unit {
 }
 
 div.about-unit div blockquote {
-	border-left-color: #61210B;
+	/*border-left-color: #61210B;*/
+	border-left-color: #060;
 }
 
 div.about-unit h2 {
@@ -468,7 +469,8 @@ div.about-unit h2 {
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: #61210B;
+	/*color: #61210B;*/
+	color: #060;
 	text-align: center;
 }
 
@@ -478,7 +480,8 @@ div.about-unit h3 {
 	font-weight: 900;
 	margin-top: 30px;
 	margin-bottom: 20px;
-	color: #61210B;
+	/*color: #61210B;*/
+	color: #060;
 	text-align: center;
 }
 
@@ -498,7 +501,8 @@ div.goal-unit {
 }
 
 div.goal-unit div blockquote {
-	border-left-color: #61210B;
+	/*border-left-color: #61210B;*/
+	border-left-color: #060;
 }
 
 div.goal-unit h2 {
@@ -507,7 +511,8 @@ div.goal-unit h2 {
 	font-weight: 900;
 	margin-top: 60px;
 	margin-bottom: 40px;
-	color: #61210B;
+	/*color: #61210B;*/
+	color: #060;
 	text-align: center;
 }
 
@@ -517,7 +522,8 @@ div.goal-unit h3 {
 	font-weight: 900;
 	margin-top: 30px;
 	margin-bottom: 20px;
-	color: #61210B;
+	/*color: #61210B;*/
+	color: #060;
 	text-align: center;
 }
 
@@ -528,6 +534,7 @@ div.goal-unit p {
 	text-justify: inter-word;
 	margin: 10px;
 }
+
 
 /**
 * Data Table

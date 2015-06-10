@@ -118,6 +118,13 @@ app
 	              templateUrl : './pages/qsr-wok-institutions/qsr-wok-institutions.html',
 	              controller : 'QSRWoKInstitutionsCtrl'
 	            })
+	        .when(
+	            '/informationNotAvailable',
+	            {
+	              templateUrl : './pages/information-not-available/information-not-available.html',
+	              controller : 'InformationNotAvailableCtrl'
+	            })
+
 	        .otherwise({
 		        redirectTo : '/index.html'
 	        });
